@@ -1,8 +1,8 @@
 # Taps
-tap 'caskroom/cask'
-tap 'caskroom/eid'
-tap 'caskroom/fonts'
-tap 'caskroom/versions'
+tap 'homebrew/cask'
+tap 'homebrew/cask-eid'
+tap 'homebrew/cask-fonts'
+tap 'homebrew/cask-versions'
 tap 'homebrew/bundle'
 
 # Binaries
@@ -34,6 +34,8 @@ brew 'nmap'
 brew 'p7zip'
 brew 'go'
 brew 'imagemagick'
+brew 'pwgen'
+brew 'antigen'
 
 
 
@@ -57,7 +59,6 @@ cask 'handbrake'
 cask 'spotify'
 cask 'tripmode'
 cask 'tunnelblick'
-cask 'hosts'
 cask 'adguard'
 cask 'typora'
 cask 'hazel'
@@ -102,14 +103,16 @@ cask 'font-source-code-pro-for-powerline'
 cask 'font-source-code-pro'
 #cask 'font-source-sans-pro'
 #cask 'font-source-serif-pro'
+cask 'karabiner-elements'
 
 # Mac App Store
 mas '1Password', id: 1333542190
 mas 'Keynote', id: 409183694
 mas 'Tweetbot', id: 1384080005
-mas 'WhatsApp', id: 1147396723 
 mas 'Microsoft Remote Desktop 10', id: 1295203466
 mas 'Tyme2', id: 1063996724
 mas 'Slack', id: 803453959
 mas 'ScanSnap Cloud', id: 1170434079
+
+
 
