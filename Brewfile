@@ -84,6 +84,8 @@ cask 'transmit'
 cask 'vagrant'
 cask 'virtualbox'
 cask 'virtualbox-extension-pack'
+cask 'dropshare'
+cask 'iterm2'
 
 # Quicklook
 #cask 'qlcolorcode'
