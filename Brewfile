@@ -90,10 +90,8 @@ cask 'iterm2'
 
 # Quicklook
 #cask 'qlcolorcode'
-cask 'qlmarkdown'
-cask 'quicklook-json'
-cask 'quicklook-csv'
 #cask 'qlstephen'
+cask 'capture-one'
 
 # Fonts
 cask 'font-lato'
@@ -113,6 +111,8 @@ mas 'Microsoft Remote Desktop 10', id: 1295203466
 mas 'Tyme2', id: 1063996724
 mas 'Slack', id: 803453959
 mas 'ScanSnap Cloud', id: 1170434079
+mas 'Pages'
+mas 'Numbers'
 
 
 

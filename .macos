@@ -148,13 +148,15 @@ defaults write com.apple.dock minimize-to-application -bool true
 # Wipe all (default) app icons from the Dock
 # This is only really useful when setting up a new Mac, or if you don’t use
 # the Dock to launch apps.
-defaults write com.apple.dock persistent-apps -array
+
+### frank - 20191009 WARNING: seems to brake dock: every reboot = empty dock
+#defaults write com.apple.dock persistent-apps -array
 
 # Show only open applications in the Dock
-defaults write com.apple.dock static-only -bool true
+#defaults write com.apple.dock static-only -bool true
 
 # Group windows by application in Mission Control
-#defaults write com.apple.dock expose-group-by-app -bool true
+defaults write com.apple.dock expose-group-by-app -bool true
 
 # Disable Dashboard
 #defaults write com.apple.dashboard mcx-disabled -bool true
