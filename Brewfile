@@ -1,9 +1,9 @@
 # Taps
 tap 'homebrew/cask'
-tap 'homebrew/cask-eid'
 tap 'homebrew/cask-fonts'
 tap 'homebrew/cask-versions'
 tap 'homebrew/bundle'
+tap 'franklouwers/eid-be'
 
 # Binaries
 brew 'awscli'
@@ -33,6 +33,7 @@ brew 'telnet'
 brew 'nmap'
 brew 'p7zip'
 brew 'go'
+brew 'ghostscript'
 brew 'imagemagick'
 brew 'pwgen'
 brew 'antigen'
@@ -46,6 +47,7 @@ brew 'antigen'
 #brew 'nginx'
 brew 'node'
 #brew 'redis'
+brew 'pinentry-mac'
 
 # Apps
 cask 'alfred'
@@ -64,8 +66,6 @@ cask 'typora'
 cask 'hazel'
 cask 'grammarly'
 cask 'backblaze'
-#cask 'eid-be'
-#cask 'eid-be-viewer'
 cask 'firefox'
 #cask 'github'
 #cask 'google-backup-and-sync'
@@ -102,6 +102,10 @@ cask 'font-source-code-pro'
 #cask 'font-source-sans-pro'
 #cask 'font-source-serif-pro'
 cask 'karabiner-elements'
+cask 'finereader'
+cask 'eid-be'
+cask 'eid-be-viewer'
+cask 'moom'
 
 # Mac App Store
 mas '1Password', id: 1333542190
