@@ -95,6 +95,7 @@ cask 'capture-one'
 
 # Fonts
 cask 'font-lato'
+cask 'font-merriweather'
 #cask 'font-open-sans'
 #cask 'font-roboto'
 cask 'font-source-code-pro-for-powerline'
