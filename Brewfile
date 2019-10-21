@@ -11,6 +11,14 @@ brew 'awscli'
 #brew 'bat' # "cat" on steroids
 #brew 'coreutils' # Those that come with macOS are outdated
 brew 'git'
+brew 'git-lfs'
+brew 'watch'
+brew 'git-flow'
+brew 'kops'
+brew 'kubernetes-helm'
+brew 'r'
+brew 'terraform'
+brew 'tree'
 brew 'gnupg2'
 #brew 'grep'
 brew 'httpie'
@@ -107,6 +115,9 @@ cask 'finereader'
 cask 'eid-be'
 cask 'eid-be-viewer'
 cask 'moom'
+
+cask '1password-cli'
+cask 'microsoft-office'
 
 # Mac App Store
 mas '1Password', id: 1333542190
