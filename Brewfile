@@ -34,6 +34,7 @@ brew 'zsh-completions'
 brew 'z'
 brew 'ipcalc'
 brew 'jq'
+brew 'yq'
 brew 'mtr'
 brew 'csshx'
 brew 'recode'
@@ -45,6 +46,10 @@ brew 'ghostscript'
 brew 'imagemagick'
 brew 'pwgen'
 brew 'antigen'
+brew 'kubectx'
+brew 'kubens'
+brew 'go-bindata'
+brew 'glide'
 
 
 
