@@ -49,7 +49,7 @@ brew 'antigen'
 brew 'kubectx'
 brew 'kubens'
 brew 'go-bindata'
-brew 'glide'
+brew 'fzf'
 
 
 
@@ -120,6 +120,7 @@ cask 'finereader'
 cask 'eid-be'
 cask 'eid-be-viewer'
 cask 'moom'
+cask 'robo-3t'
 
 cask '1password-cli'
 cask 'microsoft-office'
