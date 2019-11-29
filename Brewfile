@@ -3,9 +3,11 @@ tap 'homebrew/cask'
 tap 'homebrew/cask-fonts'
 tap 'homebrew/cask-versions'
 tap 'homebrew/bundle'
+tap 'getantibody/tap'
 tap 'franklouwers/eid-be'
 
 # Binaries
+brew 'antibody'
 brew 'awscli'
 #brew 'bash' # Latest Bash version
 #brew 'bat' # "cat" on steroids
@@ -47,9 +49,9 @@ brew 'imagemagick'
 brew 'pwgen'
 brew 'antigen'
 brew 'kubectx'
-brew 'kubens'
 brew 'go-bindata'
 brew 'fzf'
+brew 'coreutils'
 
 
 
@@ -61,6 +63,8 @@ brew 'fzf'
 brew 'node'
 #brew 'redis'
 brew 'pinentry-mac'
+
+brew 'grep'
 
 # Apps
 cask 'alfred'
@@ -96,8 +100,8 @@ cask 'there'
 #cask 'tor-browser'
 cask 'transmit'
 cask 'vagrant'
-cask 'virtualbox'
-cask 'virtualbox-extension-pack'
+#cask 'virtualbox'
+#cask 'virtualbox-extension-pack'
 cask 'dropshare'
 cask 'iterm2'
 
@@ -123,18 +127,19 @@ cask 'moom'
 cask 'robo-3t'
 
 cask '1password-cli'
-cask 'microsoft-office'
+cask 'google-cloud-sdk'
+#cask 'microsoft-office'
 
 # Mac App Store
-mas '1Password', id: 1333542190
-mas 'Keynote', id: 409183694
-mas 'Tweetbot', id: 1384080005
-mas 'Microsoft Remote Desktop 10', id: 1295203466
-mas 'Tyme2', id: 1063996724
-mas 'Slack', id: 803453959
-mas 'ScanSnap Cloud', id: 1170434079
-mas 'Pages'
-mas 'Numbers'
+#mas '1Password', id: 1333542190
+#mas 'Keynote'
+#mas 'Tweetbot'
+#mas 'Microsoft Remote Desktop 10'
+#mas 'Tyme2'
+#mas 'Slack'
+#mas 'ScanSnap Cloud'
+#mas 'Pages'
+#mas 'Numbers'
 
 
 
