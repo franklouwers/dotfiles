@@ -5,6 +5,8 @@ tap 'homebrew/cask-versions'
 tap 'homebrew/bundle'
 tap 'getantibody/tap'
 tap 'franklouwers/eid-be'
+tap 'derailed/k9s'
+
 
 # Binaries
 brew 'antibody'
@@ -52,6 +54,9 @@ brew 'kubectx'
 brew 'go-bindata'
 brew 'fzf'
 brew 'coreutils'
+brew 'k9s' # kuberetes master controller cli
+brew 'stern' # multiple "kubectl logs -f" at once
+brew 'exercism' #exercism.io companion app
 
 
 
