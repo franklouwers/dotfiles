@@ -48,5 +48,5 @@ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 # We will run this last because this will reload the shell
 source .macos
 
-
-npm install --global purer-prompt
+# go tools
+go get -u golang.org/x/lint/golint
