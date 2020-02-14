@@ -57,6 +57,7 @@ brew 'coreutils'
 brew 'k9s' # kuberetes master controller cli
 brew 'stern' # multiple "kubectl logs -f" at once
 brew 'exercism' #exercism.io companion app
+brew 'hyperfine' # cli benchmark tool
 
 
 
@@ -109,6 +110,8 @@ cask 'vagrant'
 #cask 'virtualbox-extension-pack'
 cask 'dropshare'
 cask 'iterm2'
+cask 'muzzle'
+cask 'microsoft-edge'
 
 # Quicklook
 #cask 'qlcolorcode'
