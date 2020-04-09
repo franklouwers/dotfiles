@@ -28,6 +28,10 @@ brew bundle
 ## Install Laravel Valet
 #$HOME/.composer/vendor/bin/valet install
 
+# Install nodejs LTS using n
+n install lts
+n lts
+
 # Install global NPM packages
 npm install --global yarn
 

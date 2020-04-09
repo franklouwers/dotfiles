@@ -66,7 +66,7 @@ brew 'hyperfine' # cli benchmark tool
 #brew 'php@7.2'
 #brew 'mysql'
 #brew 'nginx'
-brew 'node'
+brew 'n'
 #brew 'redis'
 brew 'pinentry-mac'
 
