@@ -33,7 +33,7 @@ n install lts
 n lts
 
 # Install global NPM packages
-npm install --global yarn
+npm install --global yarn semver
 
 # Create a Sites directory
 # This is a default directory for macOS user accounts but doesn't comes pre-installed

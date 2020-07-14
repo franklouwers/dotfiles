@@ -102,7 +102,7 @@ cask 'java'
 cask 'skype'
 #cask 'sublime-text'
 #cask 'tableplus'
-cask 'there'
+#cask 'there' # not updated anymore. Replaced by 'Clocker'
 #cask 'tor-browser'
 cask 'transmit'
 cask 'vagrant'
@@ -112,6 +112,7 @@ cask 'dropshare'
 cask 'iterm2'
 cask 'muzzle'
 cask 'microsoft-edge'
+cask 'vanilla' # hide menu bar icons
 
 # Quicklook
 #cask 'qlcolorcode'
@@ -131,8 +132,8 @@ cask 'karabiner-elements'
 cask 'finereader'
 cask 'eid-be'
 cask 'eid-be-viewer'
-cask 'moom'
 cask 'robo-3t'
+cask 'rectangle'
 
 cask '1password-cli'
 cask 'google-cloud-sdk'
@@ -148,6 +149,7 @@ cask 'google-cloud-sdk'
 #mas 'ScanSnap Cloud'
 #mas 'Pages'
 #mas 'Numbers'
+#mas 'Clocker'
 
 
 
