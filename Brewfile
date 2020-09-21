@@ -18,12 +18,12 @@ brew 'git'
 brew 'git-lfs'
 brew 'watch'
 brew 'git-flow'
-brew 'kops'
-brew 'kubernetes-helm'
-brew 'r'
+#brew 'kops'
+#brew 'kubernetes-helm' #it's a mess
+#brew 'r'
 brew 'terraform'
-brew 'tree'
-brew 'gnupg2'
+#brew 'tree'
+brew 'gnupg2' # doesn't this come with GPG tools?
 #brew 'grep'
 brew 'httpie'
 brew 'hub'
@@ -32,7 +32,6 @@ brew 'mas' # Mac App Store manager
 brew 'pkg-config' # https://github.com/driesvints/dotfiles/issues/20
 brew 'trash' # Manage the Trash bin
 #brew 'tree' # List directories in a tree structure
-brew 'zlib' # Needed for Memcached
 brew 'zsh'
 brew 'zsh-completions'
 brew 'z'
@@ -58,17 +57,19 @@ brew 'k9s' # kuberetes master controller cli
 brew 'stern' # multiple "kubectl logs -f" at once
 brew 'exercism' #exercism.io companion app
 brew 'hyperfine' # cli benchmark tool
-
-
+brew 'luajit' # I don't often do lua. But when I do, I want FAST lua
+brew 'luarocks' # lua packages
+brew 'pgcli' # good postgres cli client
+brew 'neovim' # vim but neo
 
 # Development
 #brew 'php'
 #brew 'php@7.2'
 #brew 'mysql'
 #brew 'nginx'
-brew 'n'
+brew 'n' # multiple node-js versions
 #brew 'redis'
-brew 'pinentry-mac'
+#brew 'pinentry-mac'
 
 brew 'grep'
 
@@ -94,11 +95,7 @@ cask 'firefox'
 #cask 'google-backup-and-sync'
 cask 'google-chrome'
 cask 'gpg-suite'
-cask 'insomnia'
 cask 'java'
-#cask 'mysqlworkbench'
-#cask 'phpstorm'
-#cask 'sequel-pro'
 cask 'skype'
 #cask 'sublime-text'
 #cask 'tableplus'
@@ -113,6 +110,8 @@ cask 'iterm2'
 cask 'muzzle'
 cask 'microsoft-edge'
 cask 'vanilla' # hide menu bar icons
+cask 'lunar' # contrast and sound on external displays
+
 
 # Quicklook
 #cask 'qlcolorcode'
@@ -137,7 +136,8 @@ cask 'rectangle'
 
 cask '1password-cli'
 cask 'google-cloud-sdk'
-#cask 'microsoft-office'
+cask 'microsoft-office'
+cask 'visual-studio-code'
 
 # Mac App Store
 #mas '1Password', id: 1333542190
@@ -150,6 +150,5 @@ cask 'google-cloud-sdk'
 #mas 'Pages'
 #mas 'Numbers'
 #mas 'Clocker'
-
 
 
