@@ -9,15 +9,14 @@ tap 'derailed/k9s'
 
 
 # Binaries
-brew 'antibody'
+brew 'antibody' # zsh management
 brew 'awscli'
 #brew 'bash' # Latest Bash version
 #brew 'bat' # "cat" on steroids
-#brew 'coreutils' # Those that come with macOS are outdated
 brew 'git'
 brew 'git-lfs'
 brew 'watch'
-brew 'git-flow'
+#brew 'git-flow'
 #brew 'kops'
 #brew 'kubernetes-helm' #it's a mess
 #brew 'r'
@@ -48,11 +47,11 @@ brew 'go'
 brew 'ghostscript'
 brew 'imagemagick'
 brew 'pwgen'
-brew 'antigen'
+brew 'antigen' # zsh framework
 brew 'kubectx'
 brew 'go-bindata'
 brew 'fzf'
-brew 'coreutils'
+brew 'coreutils' # gnu coreutils
 brew 'k9s' # kuberetes master controller cli
 brew 'stern' # multiple "kubectl logs -f" at once
 brew 'exercism' #exercism.io companion app
@@ -113,9 +112,6 @@ cask 'vanilla' # hide menu bar icons
 cask 'lunar' # contrast and sound on external displays
 
 
-# Quicklook
-#cask 'qlcolorcode'
-#cask 'qlstephen'
 cask 'capture-one'
 
 # Fonts
@@ -139,16 +135,31 @@ cask 'google-cloud-sdk'
 cask 'microsoft-office'
 cask 'visual-studio-code'
 
-# Mac App Store
-#mas '1Password', id: 1333542190
-#mas 'Keynote'
-#mas 'Tweetbot'
-#mas 'Microsoft Remote Desktop 10'
-#mas 'Tyme2'
-#mas 'Slack'
-#mas 'ScanSnap Cloud'
-#mas 'Pages'
-#mas 'Numbers'
-#mas 'Clocker'
+cask 'dbngin' # multiple database engine manager
+cask 'imageoptim' # image optimizer (for web and other)
 
+# Quicklook
+cask 'qlcolorcode'
+cask 'qlmarkdown'
+cask 'quicklook-json'
+cask 'quicklook-csv'
+cask 'qlstephen'
+
+
+# Mac App Store
+mas '1Password', id: 1333542190
+mas 'Keynote'
+mas 'Tweetbot'
+mas 'Microsoft Remote Desktop 10'
+mas 'Tyme2'
+mas 'Slack'
+mas 'ScanSnap Cloud'
+mas 'Pages'
+mas 'Numbers'
+mas 'Clocker'
+
+# not here yet:
+#
+# cpdf -> //www.coherentpdf.com/
+#
 
