@@ -144,6 +144,7 @@ cask 'dbngin' # multiple database engine manager
 cask 'imageoptim' # image optimizer (for web and other)
 
 cask 'choosy' # easy browser-switcher
+cask 'zoomus' # are friends electric? For video
 
 
 # Quicklook
