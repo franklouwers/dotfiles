@@ -4,8 +4,10 @@ tap 'homebrew/cask-fonts'
 tap 'homebrew/cask-versions'
 tap 'homebrew/bundle'
 tap 'getantibody/tap'
-tap 'franklouwers/eid-be'
+tap 'franklouwers/franklouwers'
 tap 'derailed/k9s'
+tap 'anchore/grype'
+tap 'strongdm/comply'
 
 
 # Binaries
@@ -19,10 +21,11 @@ brew 'watch'
 #brew 'git-flow'
 #brew 'kops'
 #brew 'kubernetes-helm' #it's a mess
+brew 'helm@216'
 #brew 'r'
 brew 'terraform'
 #brew 'tree'
-brew 'gnupg2' # doesn't this come with GPG tools?
+#brew 'gnupg2' # doesn't this come with GPG tools?
 #brew 'grep'
 brew 'httpie'
 brew 'hub'
@@ -60,6 +63,8 @@ brew 'luajit' # I don't often do lua. But when I do, I want FAST lua
 brew 'luarocks' # lua packages
 brew 'pgcli' # good postgres cli client
 brew 'neovim' # vim but neo
+brew 'comply' # comply tool
+brew 'grype'
 
 # Development
 #brew 'php'
