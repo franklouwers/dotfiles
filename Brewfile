@@ -143,6 +143,9 @@ cask 'visual-studio-code'
 cask 'dbngin' # multiple database engine manager
 cask 'imageoptim' # image optimizer (for web and other)
 
+cask 'choosy' # easy browser-switcher
+
+
 # Quicklook
 cask 'qlcolorcode'
 cask 'qlmarkdown'
