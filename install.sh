@@ -15,6 +15,8 @@ brew tap homebrew/bundle
 brew bundle
 
 # Install nodejs LTS using n
+sudo mkdir /usr/local/n
+sudo chown frank /usr/local/n
 n install lts
 n lts
 
@@ -36,3 +38,6 @@ go get -u golang.org/x/lint/golint
 # Set macOS preferences
 # We will run this last because this will reload the shell
 source .macos
+
+open -a Dropbox
+open -a Docker

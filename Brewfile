@@ -65,6 +65,9 @@ brew 'pgcli' # good postgres cli client
 brew 'neovim' # vim but neo
 brew 'comply' # comply tool
 brew 'grype'
+brew 'java' # used to be a cask
+brew 'chruby' # change ruby versions
+brew 'install-chruby' # to install rubies for use with chruby
 
 # Development
 #brew 'php'
@@ -79,6 +82,7 @@ brew 'grep'
 
 # Apps
 cask 'alfred'
+cask '1Password' # you know, for passwords
 cask 'keepingyouawake'
 cask 'discord'
 cask 'docker'
@@ -91,7 +95,7 @@ cask 'tripmode'
 cask 'tunnelblick'
 cask 'adguard'
 cask 'typora'
-cask 'hazel'
+#cask 'hazel' # disabled for now: use beta from the forum
 cask 'grammarly'
 cask 'backblaze'
 cask 'firefox'
@@ -99,7 +103,6 @@ cask 'firefox'
 #cask 'google-backup-and-sync'
 cask 'google-chrome'
 cask 'gpg-suite'
-cask 'java'
 cask 'skype'
 #cask 'sublime-text'
 #cask 'tableplus'
@@ -115,16 +118,13 @@ cask 'muzzle'
 cask 'microsoft-edge'
 cask 'vanilla' # hide menu bar icons
 cask 'lunar' # contrast and sound on external displays
+cask 'desktoppr' # easy set backgrounds
 
 
 cask 'capture-one'
 
 # Fonts
 cask 'font-lato'
-cask 'font-merriweather'
-#cask 'font-open-sans'
-#cask 'font-roboto'
-cask 'font-source-code-pro-for-powerline'
 cask 'font-source-code-pro'
 #cask 'font-source-sans-pro'
 #cask 'font-source-serif-pro'
@@ -147,25 +147,27 @@ cask 'choosy' # easy browser-switcher
 cask 'zoomus' # are friends electric? For video
 
 
+
 # Quicklook
 cask 'qlcolorcode'
 cask 'qlmarkdown'
 cask 'quicklook-json'
 cask 'quicklook-csv'
-cask 'qlstephen'
+#cask 'qlstephen'
+
+cask 'slack'
+cask 'pdf-expert'
 
 
 # Mac App Store
-mas '1Password', id: 1333542190
-mas 'Keynote'
-mas 'Tweetbot'
-mas 'Microsoft Remote Desktop 10'
-mas 'Tyme2'
-mas 'Slack'
-mas 'ScanSnap Cloud'
-mas 'Pages'
-mas 'Numbers'
-mas 'Clocker'
+#mas 'Keynote'
+#mas 'Tweetbot'
+#mas 'Microsoft Remote Desktop 10'
+#mas 'Tyme2'
+#mas 'ScanSnap Cloud'
+#mas 'Pages'
+#mas 'Numbers'
+#mas 'Clocker'
 
 # not here yet:
 #
