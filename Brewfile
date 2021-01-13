@@ -8,11 +8,13 @@ tap 'franklouwers/franklouwers'
 tap 'derailed/k9s'
 tap 'anchore/grype'
 tap 'strongdm/comply'
+tap 'nrlquaker/createzap'
 
 
 # Binaries
 brew 'antibody' # zsh management
 brew 'awscli'
+brew 'aliyun-cli'
 #brew 'bash' # Latest Bash version
 #brew 'bat' # "cat" on steroids
 brew 'git'
@@ -47,6 +49,7 @@ brew 'telnet'
 brew 'nmap'
 brew 'p7zip'
 brew 'go'
+brew 'gopls'
 brew 'ghostscript'
 brew 'imagemagick'
 brew 'pwgen'
@@ -67,7 +70,8 @@ brew 'comply' # comply tool
 brew 'grype'
 brew 'java' # used to be a cask
 brew 'chruby' # change ruby versions
-brew 'install-chruby' # to install rubies for use with chruby
+brew 'ruby-install' # to install rubies for use with chruby
+brew 'tig' # tig for git
 
 # Development
 #brew 'php'
@@ -110,8 +114,8 @@ cask 'skype'
 #cask 'tor-browser'
 cask 'transmit'
 cask 'vagrant'
-#cask 'virtualbox'
-#cask 'virtualbox-extension-pack'
+cask 'virtualbox'
+cask 'virtualbox-extension-pack'
 cask 'dropshare'
 cask 'iterm2'
 cask 'muzzle'
@@ -158,6 +162,9 @@ cask 'quicklook-csv'
 cask 'slack'
 cask 'pdf-expert'
 
+cask 'createzap' # https://github.com/nrlquaker/homebrew-createzap
+
+cask 'adobe-digital-editions' # ePUB protected by Adobe DRM
 
 # Mac App Store
 #mas 'Keynote'
@@ -172,5 +179,4 @@ cask 'pdf-expert'
 # not here yet:
 #
 # cpdf -> //www.coherentpdf.com/
-#
-
+# https://www.canon-europe.com/support/consumer_products/products/printers/laser/i-sensys_lbp613cdw.html?type=drivers&driverdetailid=tcm:13-1943119&os=macos%2010.15%20%28catalina%29&language=en

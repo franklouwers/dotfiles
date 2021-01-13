@@ -19,9 +19,15 @@ sudo mkdir /usr/local/n
 sudo chown frank /usr/local/n
 n install lts
 n lts
-
 # Install global NPM packages
-npm install --global yarn semver
+npm install --global yarn semver auth0-deploy-cli
+
+
+# Install latest ruby ruby
+ruby-install ruby
+chruby ruby
+# Install global ruby packages
+gem install yaml2json
 
 ## Symlink the Mackup config file to the home directory
 ln -s $HOME/.dotfiles/.mackup.cfg $HOME/.mackup.cfg
@@ -41,3 +47,6 @@ source .macos
 
 open -a Dropbox
 open -a Docker
+
+echo "best to run 'mackup restore' now, then reboot"
+echo "may the force be with you!"
