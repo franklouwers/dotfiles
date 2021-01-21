@@ -69,8 +69,8 @@ brew 'neovim' # vim but neo
 brew 'comply' # comply tool
 brew 'grype'
 brew 'java' # used to be a cask
-brew 'chruby' # change ruby versions
-brew 'ruby-install' # to install rubies for use with chruby
+#brew 'chruby' # change ruby versions
+#brew 'ruby-install' # to install rubies for use with chruby
 brew 'tig' # tig for git
 
 # Development
@@ -78,9 +78,11 @@ brew 'tig' # tig for git
 #brew 'php@7.2'
 #brew 'mysql'
 #brew 'nginx'
-brew 'n' # multiple node-js versions
+#brew 'n' # multiple node-js versions
 #brew 'redis'
 #brew 'pinentry-mac'
+
+brew 'asdf'
 
 brew 'grep'
 

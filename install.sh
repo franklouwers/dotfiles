@@ -14,18 +14,33 @@ brew update
 brew tap homebrew/bundle
 brew bundle
 
-# Install nodejs LTS using n
-sudo mkdir /usr/local/n
-sudo chown frank /usr/local/n
-n install lts
-n lts
-# Install global NPM packages
+### Install asdf plugins
+. /usr/local/opt/asdf/asdf.sh
+## Golang
+asdf plugin-add golang https://github.com/kennyp/asdf-golang.git
+# after go getting: asdf reshim golang
+asdf install golang latest
+asdf global golang $(asdf list golang)
+
+## Helm
+asdf plugin-add helm https://github.com/Antiarchitect/asdf-helm.git
+asdf install helm latest
+asdf install helm 2.16.12 #oqton
+asdf global helm 2.16.12
+
+## NodeJS
+asdf plugin-add nodejs https://github.com/asdf-vm/asdf-nodejs.git
+bash -c '${ASDF_DATA_DIR:=$HOME/.asdf}/plugins/nodejs/bin/import-release-team-keyring'
+asdf install nodejs lts
+asdf global nodejs lts
+. /usr/local/opt/asdf/asdf.sh
 npm install --global yarn semver auth0-deploy-cli
 
-
-# Install latest ruby ruby
-ruby-install ruby
-chruby ruby
+## Ruby
+asdf plugin-add ruby https://github.com/asdf-vm/asdf-ruby.git
+asdf install ruby latest
+asdf global ruby $(asdf list ruby)
+. /usr/local/opt/asdf/asdf.sh
 # Install global ruby packages
 gem install yaml2json
 
@@ -37,9 +52,6 @@ mkdir -p $HOME/.vim/swp/ $HOME/.vim/undodir
 # vim stuff
 # vundle
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-
-# go tools
-go get -u golang.org/x/lint/golint
 
 # Set macOS preferences
 # We will run this last because this will reload the shell
