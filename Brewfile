@@ -30,7 +30,9 @@ brew 'terraform'
 #brew 'gnupg2' # doesn't this come with GPG tools?
 #brew 'grep'
 brew 'httpie'
-brew 'hub'
+brew 'hub' # old, better to use gh!
+brew 'gh' # official github tools
+brew 'procmail' # because it includes lockfile!
 brew 'mackup'
 brew 'mas' # Mac App Store manager
 brew 'pkg-config' # https://github.com/driesvints/dotfiles/issues/20
