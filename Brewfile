@@ -5,14 +5,13 @@ tap 'homebrew/cask-versions'
 tap 'homebrew/bundle'
 tap 'getantibody/tap'
 tap 'franklouwers/franklouwers'
-tap 'derailed/k9s'
 tap 'anchore/grype'
 tap 'strongdm/comply'
 tap 'nrlquaker/createzap'
 
 
 # Binaries
-brew 'antibody' # zsh management
+#brew 'antibody' # zsh management
 brew 'awscli'
 brew 'aliyun-cli'
 #brew 'bash' # Latest Bash version
@@ -24,13 +23,11 @@ brew 'watch'
 #brew 'kops'
 #brew 'kubernetes-helm' #it's a mess
 brew 'helm@216'
-#brew 'r'
 brew 'terraform'
-#brew 'tree'
 #brew 'gnupg2' # doesn't this come with GPG tools?
 #brew 'grep'
 brew 'httpie'
-brew 'hub' # old, better to use gh!
+#brew 'hub' # old, better to use gh!
 brew 'gh' # official github tools
 brew 'procmail' # because it includes lockfile!
 brew 'mackup'
@@ -55,12 +52,12 @@ brew 'gopls'
 brew 'ghostscript'
 brew 'imagemagick'
 brew 'pwgen'
-brew 'antigen' # zsh framework
+#brew 'antigen' # zsh framework
 brew 'kubectx'
 brew 'go-bindata'
 brew 'fzf'
 brew 'coreutils' # gnu coreutils
-brew 'k9s' # kuberetes master controller cli
+#brew 'k9s' # kuberetes master controller cli
 brew 'stern' # multiple "kubectl logs -f" at once
 brew 'exercism' #exercism.io companion app
 brew 'hyperfine' # cli benchmark tool
@@ -103,7 +100,7 @@ cask 'tripmode'
 cask 'tunnelblick'
 cask 'adguard'
 cask 'typora'
-#cask 'hazel' # disabled for now: use beta from the forum
+cask 'hazel'
 cask 'grammarly'
 cask 'backblaze'
 cask 'firefox'
@@ -111,7 +108,6 @@ cask 'firefox'
 #cask 'google-backup-and-sync'
 cask 'google-chrome'
 cask 'gpg-suite'
-cask 'skype'
 #cask 'sublime-text'
 #cask 'tableplus'
 #cask 'there' # not updated anymore. Replaced by 'Clocker'
@@ -136,7 +132,7 @@ cask 'font-lato'
 cask 'font-source-code-pro'
 #cask 'font-source-sans-pro'
 #cask 'font-source-serif-pro'
-cask 'karabiner-elements'
+#cask 'karabiner-elements'
 cask 'finereader'
 cask 'eid-be'
 cask 'eid-be-viewer'
@@ -179,6 +175,7 @@ cask 'adobe-digital-editions' # ePUB protected by Adobe DRM
 #mas 'Pages'
 #mas 'Numbers'
 #mas 'Clocker'
+#mas 'SimpleMind Lite'
 
 # not here yet:
 #
