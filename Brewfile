@@ -125,7 +125,7 @@ cask 'lunar' # contrast and sound on external displays
 cask 'desktoppr' # easy set backgrounds
 
 
-cask 'capture-one'
+#cask 'capture-one' # doesn't exist anymore
 
 # Fonts
 cask 'font-lato'
@@ -148,7 +148,7 @@ cask 'dbngin' # multiple database engine manager
 cask 'imageoptim' # image optimizer (for web and other)
 
 cask 'choosy' # easy browser-switcher
-cask 'zoomus' # are friends electric? For video
+cask 'zoom' # you know, for zoom
 
 
 
