@@ -22,7 +22,7 @@ brew 'watch'
 #brew 'git-flow'
 #brew 'kops'
 #brew 'kubernetes-helm' #it's a mess
-brew 'helm@216'
+#brew 'helm@216' disabled, use asdf now
 brew 'terraform'
 #brew 'gnupg2' # doesn't this come with GPG tools?
 #brew 'grep'
@@ -166,6 +166,8 @@ cask 'createzap' # https://github.com/nrlquaker/homebrew-createzap
 
 cask 'adobe-digital-editions' # ePUB protected by Adobe DRM
 
+cask 'camo-studio' # use iphone as webcam
+
 # Mac App Store
 #mas 'Keynote'
 #mas 'Tweetbot'
@@ -179,5 +181,6 @@ cask 'adobe-digital-editions' # ePUB protected by Adobe DRM
 
 # not here yet:
 #
-# cpdf -> //www.coherentpdf.com/
+# cpdf and cpdfsqueeze -> //www.coherentpdf.com/
 # https://www.canon-europe.com/support/consumer_products/products/printers/laser/i-sensys_lbp613cdw.html?type=drivers&driverdetailid=tcm:13-1943119&os=macos%2010.15%20%28catalina%29&language=en
+# Camo
