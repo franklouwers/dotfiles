@@ -65,6 +65,7 @@ brew 'luajit' # I don't often do lua. But when I do, I want FAST lua
 brew 'luarocks' # lua packages
 brew 'pgcli' # good postgres cli client
 brew 'neovim' # vim but neo
+brew 'vim' # modern vim
 brew 'comply' # comply tool
 brew 'grype'
 brew 'java' # used to be a cask
@@ -149,6 +150,8 @@ cask 'imageoptim' # image optimizer (for web and other)
 
 cask 'choosy' # easy browser-switcher
 cask 'zoom' # you know, for zoom
+
+cask 'notion' # notion.so
 
 
 
