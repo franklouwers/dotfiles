@@ -26,7 +26,7 @@ brew 'watch'
 brew 'terraform'
 #brew 'gnupg2' # doesn't this come with GPG tools?
 #brew 'grep'
-brew 'httpie'
+#brew 'httpie'
 #brew 'hub' # old, better to use gh!
 brew 'gh' # official github tools
 brew 'procmail' # because it includes lockfile!
@@ -156,20 +156,24 @@ cask 'notion' # notion.so
 
 
 # Quicklook
-cask 'qlcolorcode'
-cask 'qlmarkdown'
-cask 'quicklook-json'
-cask 'quicklook-csv'
+#cask 'qlcolorcode'
+#cask 'qlmarkdown'
+#cask 'quicklook-json'
+#cask 'quicklook-csv'
 #cask 'qlstephen'
 
 cask 'slack'
-cask 'pdf-expert'
+#cask 'pdf-expert'
 
 cask 'createzap' # https://github.com/nrlquaker/homebrew-createzap
 
 cask 'adobe-digital-editions' # ePUB protected by Adobe DRM
 
 cask 'camo-studio' # use iphone as webcam
+
+cask 'ransomwhere' # generic ransomware activity detection. https://objective-see.com/products/ransomwhere.html
+cask 'knockknock' # who there? https://objective-see.com/products/knockknock.html
+cask 'blockblock' # monitor persistent locations and un-notorized code
 
 # Mac App Store
 #mas 'Keynote'
