@@ -51,7 +51,7 @@ mkdir -p $HOME/.vim/swp/ $HOME/.vim/undodir
 
 # vim stuff
 # vundle
-git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+#git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
 # Set macOS preferences
 # We will run this last because this will reload the shell
@@ -59,6 +59,13 @@ source .macos
 
 open -a Dropbox
 open -a Docker
+
+# vim lsp
+npm install --global dockerfile-language-server-nodejs # dockerfile
+gem install --user-install solargraph # ruby
+
+npm install --global @funboxteam/optimizt # optmize images for the web
+
 
 echo "best to run 'mackup restore' now, then reboot"
 echo "may the force be with you!"

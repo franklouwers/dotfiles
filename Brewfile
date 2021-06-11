@@ -15,7 +15,8 @@ tap 'nrlquaker/createzap'
 brew 'awscli'
 brew 'aliyun-cli'
 #brew 'bash' # Latest Bash version
-#brew 'bat' # "cat" on steroids
+brew 'bat' # "cat" on steroids
+brew 'glow' # for md files
 brew 'git'
 brew 'git-lfs'
 brew 'watch'
