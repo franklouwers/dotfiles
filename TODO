@@ -17,5 +17,20 @@ Nog te configureren:
 
 - dropshare ssh (what a mess)
 
+- Custom font(z), zie iCloud/fonts
 
-- https://oqton.sharepoint.com/Shared%20Documents/Forms/AllItems.aspx?originalPath=aHR0cHM6Ly9vcXRvbi5zaGFyZXBvaW50LmNvbS86ZjovZy9FblJZMFJLQnVXcERwX09KWFBLVXVRY0IxWXQybTE4NTR1am80MGVNdWNqVlhRP3J0aW1lPW5USHVQUjRnMlVn&id=%2FShared%20Documents%2FBrand%20Design%2FFonts
+- createzap!?
+
+## nog niet M1 compat:
+
+- AdGuard cask -> Get nightly from https://github.com/AdguardTeam/AdguardForMac/issues/801#issuecomment-818833500
+- 1password-cli
+- choosy
+- adobe-digital-editions
+- ransomwhere
+- Onedrive hmmm
+- Dropbox -> get Maestral
+- Robo3T
+- Spotify!?
+
+- helm 2.16

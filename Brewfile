@@ -5,7 +5,6 @@ tap 'homebrew/cask-versions'
 tap 'homebrew/bundle'
 tap 'getantibody/tap'
 tap 'franklouwers/franklouwers'
-tap 'anchore/grype'
 tap 'strongdm/comply'
 tap 'nrlquaker/createzap'
 
@@ -20,6 +19,7 @@ brew 'glow' # for md files
 brew 'git'
 brew 'git-lfs'
 brew 'watch'
+brew 'svn' # I know, I know. But cask `font-source-code-pro` seems to require this!?
 #brew 'git-flow'
 #brew 'kops'
 #brew 'kubernetes-helm' #it's a mess
@@ -68,7 +68,6 @@ brew 'pgcli' # good postgres cli client
 brew 'neovim' # vim but neo
 brew 'vim' # modern vim
 brew 'comply' # comply tool
-brew 'grype'
 brew 'java' # used to be a cask
 #brew 'chruby' # change ruby versions
 #brew 'ruby-install' # to install rubies for use with chruby
@@ -114,16 +113,13 @@ cask 'gpg-suite'
 #cask 'tableplus'
 #cask 'there' # not updated anymore. Replaced by 'Clocker'
 #cask 'tor-browser'
-cask 'transmit'
-cask 'vagrant'
-cask 'virtualbox'
-cask 'virtualbox-extension-pack'
-cask 'dropshare'
+#cask 'transmit'
+#cask 'dropshare'
 cask 'iterm2'
-cask 'muzzle'
+#cask 'muzzle'
 cask 'microsoft-edge'
-cask 'vanilla' # hide menu bar icons
-cask 'lunar' # contrast and sound on external displays
+#cask 'vanilla' # hide menu bar icons
+#cask 'lunar' # contrast and sound on external displays
 cask 'desktoppr' # easy set backgrounds
 
 
@@ -132,6 +128,7 @@ cask 'desktoppr' # easy set backgrounds
 # Fonts
 cask 'font-lato'
 cask 'font-source-code-pro'
+cask 'font-sauce-code-pro-nerd-font'
 #cask 'font-source-sans-pro'
 #cask 'font-source-serif-pro'
 #cask 'karabiner-elements'
