@@ -18,17 +18,14 @@ brew bundle
 
 ### Install asdf plugins
 . $(brew --prefix)/opt/asdf/asdf.sh
+
 ## Golang
 asdf plugin-add golang https://github.com/kennyp/asdf-golang.git
 # after go getting: asdf reshim golang
 asdf install golang latest
 asdf global golang $(asdf list golang)
-
-## Helm
-asdf plugin-add helm https://github.com/Antiarchitect/asdf-helm.git
-asdf install helm latest
-asdf install helm 2.16.12 #oqton
-asdf global helm 2.16.12
+. $(brew --prefix)/opt/asdf/asdf.sh
+go get golang.org/x/tools/cmd/goimports
 
 ## NodeJS
 asdf plugin-add nodejs https://github.com/asdf-vm/asdf-nodejs.git
@@ -59,6 +56,7 @@ ln -s $HOME/.dotfiles/.mackup.cfg $HOME/.mackup.cfg
 
 # vim lsp
 npm install --global dockerfile-language-server-nodejs # dockerfile
+npm install --global yarn
 gem install --user-install solargraph # ruby
 
 npm install --global @funboxteam/optimizt # optmize images for the web
@@ -76,6 +74,13 @@ echo 'If you wish to install Rosetta2, run the following command:'
 echo ''
 echo '  sudo softwareupdate --install-rosetta'
 echo ''
+
+# requires rosetta!
+## Helm
+asdf plugin-add helm https://github.com/Antiarchitect/asdf-helm.git
+asdf install helm latest
+arch -x86_64 asdf install helm 2.16.12 #oqton
+asdf global helm 2.16.12
 
 
 
