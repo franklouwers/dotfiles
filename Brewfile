@@ -173,6 +173,10 @@ cask 'ransomwhere' # generic ransomware activity detection. https://objective-se
 cask 'knockknock' # who there? https://objective-see.com/products/knockknock.html
 cask 'blockblock' # monitor persistent locations and un-notorized code
 
+cask 'cleanshot' # nice screenshots and editing
+
+cask 'clockify' # time tracker
+
 # Mac App Store
 #mas 'Keynote'
 #mas 'Tweetbot'
