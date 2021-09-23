@@ -72,6 +72,7 @@ brew 'java' # used to be a cask
 #brew 'chruby' # change ruby versions
 #brew 'ruby-install' # to install rubies for use with chruby
 brew 'tig' # tig for git
+brew 'ripgrep' # faster grep
 
 # Development
 #brew 'php'
@@ -82,9 +83,11 @@ brew 'tig' # tig for git
 #brew 'redis'
 #brew 'pinentry-mac'
 
-brew 'asdf'
+brew 'asdf' # version management
 
-brew 'grep'
+brew 'grep' # gnu grep
+
+brew 'rar' # compression
 
 # Apps
 cask 'alfred'
@@ -150,6 +153,8 @@ cask 'choosy' # easy browser-switcher
 cask 'zoom' # you know, for zoom
 
 cask 'notion' # notion.so
+
+cask 'cask-drivers/yubico-yubikey-manager' # Yubico manager
 
 
 

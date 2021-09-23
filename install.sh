@@ -43,6 +43,7 @@ asdf global ruby $(asdf list ruby)
 . $(brew --prefix)/opt/asdf/asdf.sh
 # Install global ruby packages
 gem install yaml2json
+gem install solargraph
 
 ## Symlink the Mackup config file to the home directory
 ln -s $HOME/.dotfiles/.mackup.cfg $HOME/.mackup.cfg
@@ -57,7 +58,6 @@ ln -s $HOME/.dotfiles/.mackup.cfg $HOME/.mackup.cfg
 # vim lsp
 npm install --global dockerfile-language-server-nodejs # dockerfile
 npm install --global yarn
-gem install --user-install solargraph # ruby
 
 npm install --global @funboxteam/optimizt # optmize images for the web
 
