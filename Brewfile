@@ -88,6 +88,7 @@ brew 'asdf' # version management
 brew 'grep' # gnu grep
 
 brew 'rar' # compression
+brew 'ykman' # cli tool for Yubico Key Manager
 
 # Apps
 cask 'alfred'
