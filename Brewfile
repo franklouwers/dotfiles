@@ -90,6 +90,10 @@ brew 'grep' # gnu grep
 brew 'rar' # compression
 brew 'ykman' # cli tool for Yubico Key Manager
 
+brew 'terminal-notifier'
+
+brew 'protoc'
+
 # Apps
 cask 'alfred'
 cask '1Password' # you know, for passwords
@@ -125,6 +129,9 @@ cask 'microsoft-edge'
 #cask 'vanilla' # hide menu bar icons
 #cask 'lunar' # contrast and sound on external displays
 cask 'desktoppr' # easy set backgrounds
+cask 'maestral' # better dropbox client than dropbox client
+cask 'microsoft-teams'
+cask 'forklift'
 
 
 #cask 'capture-one' # doesn't exist anymore
@@ -187,15 +194,17 @@ cask 'clockify' # time tracker
 #mas 'Keynote'
 #mas 'Tweetbot'
 #mas 'Microsoft Remote Desktop 10'
-#mas 'Tyme2'
+##mas 'Tyme2'
 #mas 'ScanSnap Cloud'
 #mas 'Pages'
 #mas 'Numbers'
 #mas 'Clocker'
 #mas 'SimpleMind Lite'
+#mas 'WireGuard'
 
 # not here yet:
 #
 # cpdf and cpdfsqueeze -> //www.coherentpdf.com/
 # https://www.canon-europe.com/support/consumer_products/products/printers/laser/i-sensys_lbp613cdw.html?type=drivers&driverdetailid=tcm:13-1943119&os=macos%2010.15%20%28catalina%29&language=en
 # Camo
+

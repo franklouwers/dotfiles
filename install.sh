@@ -25,15 +25,15 @@ asdf plugin-add golang https://github.com/kennyp/asdf-golang.git
 asdf install golang latest
 asdf global golang $(asdf list golang)
 . $(brew --prefix)/opt/asdf/asdf.sh
-go get golang.org/x/tools/cmd/goimports
+go install golang.org/x/tools/cmd/goimports@latest
 
 ## NodeJS
 asdf plugin-add nodejs https://github.com/asdf-vm/asdf-nodejs.git
 bash -c '${ASDF_DATA_DIR:=$HOME/.asdf}/plugins/nodejs/bin/import-release-team-keyring'
 #asdf install nodejs lts
 #asdf global nodejs lts
-asdf install nodejs 16.4.0
-asdf global nodejs 16.4.0
+asdf install nodejs 16.13.0
+asdf global nodejs 16.13.0
 . $(brew --prefix)/opt/asdf/asdf.sh
 
 ## Ruby
@@ -59,13 +59,13 @@ ln -s $HOME/.dotfiles/.mackup.cfg $HOME/.mackup.cfg
 npm install --global dockerfile-language-server-nodejs # dockerfile
 npm install --global yarn
 
-npm install --global @funboxteam/optimizt # optmize images for the web
+npm install --global @funboxteam/optimizt # optmize images for the web ### TODO: fix me
 
 # Set macOS preferences
 # We will run this last because this will reload the shell
 source .macos
 
-open -a Dropbox
+#open -a Dropbox
 open -a Docker
 
 # only now install Rosetta2. Everything above should (?) work without Rosetta2 :)
@@ -82,6 +82,7 @@ asdf install helm latest
 arch -x86_64 asdf install helm 2.16.12 #oqton
 asdf global helm 2.16.12
 
+ssh-add  --apple-use-keychain ~/.ssh/id_*
 
 
 echo "best to run 'mackup restore' now, then reboot"
