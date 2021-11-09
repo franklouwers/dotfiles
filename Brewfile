@@ -189,6 +189,7 @@ cask 'blockblock' # monitor persistent locations and un-notorized code
 cask 'cleanshot' # nice screenshots and editing
 
 cask 'clockify' # time tracker
+cask 'clocker' # time zone aware clock in the menu bar
 
 # Mac App Store
 #mas 'Keynote'
