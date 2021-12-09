@@ -131,7 +131,7 @@ cask 'microsoft-edge'
 cask 'desktoppr' # easy set backgrounds
 cask 'maestral' # better dropbox client than dropbox client
 cask 'microsoft-teams'
-cask 'forklift'
+cask 'transmit' # transmit 5, sftp client
 
 
 #cask 'capture-one' # doesn't exist anymore
