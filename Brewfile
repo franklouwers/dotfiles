@@ -31,7 +31,7 @@ brew 'terraform'
 #brew 'hub' # old, better to use gh!
 brew 'gh' # official github tools
 brew 'procmail' # because it includes lockfile!
-brew 'mackup'
+#brew 'mackup'
 brew 'mas' # Mac App Store manager
 brew 'pkg-config' # https://github.com/driesvints/dotfiles/issues/20
 brew 'trash' # Manage the Trash bin
@@ -62,9 +62,9 @@ brew 'coreutils' # gnu coreutils
 brew 'stern' # multiple "kubectl logs -f" at once
 brew 'exercism' #exercism.io companion app
 brew 'hyperfine' # cli benchmark tool
-brew 'luajit' # I don't often do lua. But when I do, I want FAST lua
-brew 'luarocks' # lua packages
-brew 'pgcli' # good postgres cli client
+#brew 'luajit' # I don't often do lua. But when I do, I want FAST lua
+#brew 'luarocks' # lua packages
+#brew 'pgcli' # good postgres cli client
 brew 'neovim' # vim but neo
 brew 'vim' # modern vim
 brew 'comply' # comply tool
@@ -98,43 +98,20 @@ brew 'protoc'
 cask 'alfred'
 cask '1Password' # you know, for passwords
 cask 'keepingyouawake'
-cask 'discord'
 cask 'docker'
-cask 'dropbox'
-cask 'calibre'
 cask 'charles'
-cask 'handbrake'
 cask 'spotify'
-cask 'tripmode'
-cask 'tunnelblick'
 cask 'adguard'
 cask 'typora'
-cask 'hazel'
 cask 'grammarly'
-cask 'backblaze'
 cask 'firefox'
 #cask 'github'
 #cask 'google-backup-and-sync'
 cask 'google-chrome'
-cask 'gpg-suite'
-#cask 'sublime-text'
-#cask 'tableplus'
-#cask 'there' # not updated anymore. Replaced by 'Clocker'
-#cask 'tor-browser'
-#cask 'transmit'
-#cask 'dropshare'
 cask 'iterm2'
-#cask 'muzzle'
-cask 'microsoft-edge'
-#cask 'vanilla' # hide menu bar icons
-#cask 'lunar' # contrast and sound on external displays
-cask 'desktoppr' # easy set backgrounds
-cask 'maestral' # better dropbox client than dropbox client
 cask 'microsoft-teams'
 cask 'transmit' # transmit 5, sftp client
 
-
-#cask 'capture-one' # doesn't exist anymore
 
 # Fonts
 cask 'font-lato'
@@ -143,7 +120,6 @@ cask 'font-sauce-code-pro-nerd-font'
 #cask 'font-source-sans-pro'
 #cask 'font-source-serif-pro'
 #cask 'karabiner-elements'
-cask 'finereader'
 cask 'eid-be'
 cask 'eid-be-viewer'
 cask 'robo-3t'
@@ -152,15 +128,13 @@ cask 'rectangle'
 cask '1password-cli'
 cask 'google-cloud-sdk'
 cask 'microsoft-office'
-cask 'visual-studio-code'
+#cask 'visual-studio-code'
 
 cask 'dbngin' # multiple database engine manager
 cask 'imageoptim' # image optimizer (for web and other)
 
 cask 'choosy' # easy browser-switcher
 cask 'zoom' # you know, for zoom
-
-cask 'notion' # notion.so
 
 cask 'cask-drivers/yubico-yubikey-manager' # Yubico manager
 
@@ -178,10 +152,6 @@ cask 'slack'
 
 cask 'createzap' # https://github.com/nrlquaker/homebrew-createzap
 
-cask 'adobe-digital-editions' # ePUB protected by Adobe DRM
-
-cask 'camo-studio' # use iphone as webcam
-
 cask 'ransomwhere' # generic ransomware activity detection. https://objective-see.com/products/ransomwhere.html
 cask 'knockknock' # who there? https://objective-see.com/products/knockknock.html
 cask 'blockblock' # monitor persistent locations and un-notorized code
@@ -193,19 +163,11 @@ cask 'clocker' # time zone aware clock in the menu bar
 
 # Mac App Store
 #mas 'Keynote'
-#mas 'Tweetbot'
 #mas 'Microsoft Remote Desktop 10'
-##mas 'Tyme2'
-#mas 'ScanSnap Cloud'
 #mas 'Pages'
 #mas 'Numbers'
 #mas 'Clocker'
 #mas 'SimpleMind Lite'
 #mas 'WireGuard'
 
-# not here yet:
-#
-# cpdf and cpdfsqueeze -> //www.coherentpdf.com/
-# https://www.canon-europe.com/support/consumer_products/products/printers/laser/i-sensys_lbp613cdw.html?type=drivers&driverdetailid=tcm:13-1943119&os=macos%2010.15%20%28catalina%29&language=en
-# Camo
 
