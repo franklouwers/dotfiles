@@ -3,14 +3,12 @@ tap 'homebrew/cask'
 tap 'homebrew/cask-fonts'
 tap 'homebrew/cask-versions'
 tap 'homebrew/bundle'
-tap 'getantibody/tap'
 tap 'franklouwers/franklouwers'
 tap 'strongdm/comply'
 tap 'nrlquaker/createzap'
 
 
 # Binaries
-#brew 'antibody' # zsh management
 brew 'awscli'
 brew 'aliyun-cli'
 #brew 'bash' # Latest Bash version
