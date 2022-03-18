@@ -32,8 +32,8 @@ asdf plugin-add nodejs https://github.com/asdf-vm/asdf-nodejs.git
 bash -c '${ASDF_DATA_DIR:=$HOME/.asdf}/plugins/nodejs/bin/import-release-team-keyring'
 #asdf install nodejs lts
 #asdf global nodejs lts
-asdf install nodejs 16.13.0
-asdf global nodejs 16.13.0
+asdf install nodejs 16.14.0
+asdf global nodejs 16.14.0
 . $(brew --prefix)/opt/asdf/asdf.sh
 
 ## Ruby

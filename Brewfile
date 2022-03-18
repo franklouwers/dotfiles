@@ -6,6 +6,7 @@ tap 'homebrew/bundle'
 tap 'franklouwers/franklouwers'
 tap 'strongdm/comply'
 tap 'nrlquaker/createzap'
+tap 'homebrew/cask-drivers'
 
 
 # Binaries
@@ -90,7 +91,7 @@ brew 'ykman' # cli tool for Yubico Key Manager
 
 brew 'terminal-notifier'
 
-brew 'protoc'
+brew 'protoc-gen-go'
 
 # Apps
 cask 'alfred'
@@ -105,7 +106,8 @@ cask 'grammarly'
 cask 'firefox'
 #cask 'github'
 #cask 'google-backup-and-sync'
-cask 'google-chrome'
+#cask 'google-chrome'
+cask 'eloston-chromium' # ungoogled chrome
 cask 'iterm2'
 cask 'microsoft-teams'
 cask 'transmit' # transmit 5, sftp client
@@ -134,7 +136,7 @@ cask 'imageoptim' # image optimizer (for web and other)
 cask 'choosy' # easy browser-switcher
 cask 'zoom' # you know, for zoom
 
-cask 'cask-drivers/yubico-yubikey-manager' # Yubico manager
+cask 'yubico-yubikey-manager' # Yubico manager
 
 
 
@@ -148,7 +150,6 @@ cask 'cask-drivers/yubico-yubikey-manager' # Yubico manager
 cask 'slack'
 #cask 'pdf-expert'
 
-cask 'createzap' # https://github.com/nrlquaker/homebrew-createzap
 
 cask 'ransomwhere' # generic ransomware activity detection. https://objective-see.com/products/ransomwhere.html
 cask 'knockknock' # who there? https://objective-see.com/products/knockknock.html
