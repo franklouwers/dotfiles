@@ -93,6 +93,7 @@ brew 'ykman' # cli tool for Yubico Key Manager
 brew 'terminal-notifier'
 
 brew 'protoc'
+brew 'bufbuild/buf/buf'
 
 # Apps
 cask 'alfred'
