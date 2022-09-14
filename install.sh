@@ -32,8 +32,8 @@ asdf plugin-add nodejs https://github.com/asdf-vm/asdf-nodejs.git
 bash -c '${ASDF_DATA_DIR:=$HOME/.asdf}/plugins/nodejs/bin/import-release-team-keyring'
 #asdf install nodejs lts
 #asdf global nodejs lts
-asdf install nodejs 16.13.0
-asdf global nodejs 16.13.0
+asdf install nodejs 16.14.0
+asdf global nodejs 16.14.0
 . $(brew --prefix)/opt/asdf/asdf.sh
 
 ## Ruby
@@ -65,9 +65,6 @@ npm install --global @funboxteam/optimizt # optmize images for the web ### TODO:
 # We will run this last because this will reload the shell
 source .macos
 
-#open -a Dropbox
-open -a Docker
-
 # only now install Rosetta2. Everything above should (?) work without Rosetta2 :)
 
 echo 'If you wish to install Rosetta2, run the following command:'
@@ -83,7 +80,3 @@ arch -x86_64 asdf install helm 2.16.12 #oqton
 asdf global helm 2.16.12
 
 ssh-add  --apple-use-keychain ~/.ssh/id_*
-
-
-echo "best to run 'mackup restore' now, then reboot"
-echo "may the force be with you!"
