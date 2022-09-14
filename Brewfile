@@ -99,14 +99,13 @@ cask 'keepingyouawake'
 cask 'docker'
 cask 'charles'
 cask 'spotify'
-cask 'adguard'
 cask 'typora'
 cask 'grammarly'
 cask 'firefox'
 #cask 'github'
 #cask 'google-backup-and-sync'
-#cask 'google-chrome'
-cask 'eloston-chromium' # ungoogled chrome
+cask 'google-chrome'
+#cask 'eloston-chromium' # ungoogled chrome
 cask 'iterm2'
 cask 'microsoft-teams'
 cask 'transmit' # transmit 5, sftp client
@@ -132,10 +131,10 @@ cask 'microsoft-office'
 cask 'dbngin' # multiple database engine manager
 cask 'imageoptim' # image optimizer (for web and other)
 
-cask 'choosy' # easy browser-switcher
+#cask 'choosy' # easy browser-switcher
 cask 'zoom' # you know, for zoom
 
-cask 'yubico-yubikey-manager' # Yubico manager
+#cask 'yubico-yubikey-manager' # Yubico manager
 
 
 
@@ -154,10 +153,11 @@ cask 'ransomwhere' # generic ransomware activity detection. https://objective-se
 cask 'knockknock' # who there? https://objective-see.com/products/knockknock.html
 cask 'blockblock' # monitor persistent locations and un-notorized code
 
-cask 'cleanshot' # nice screenshots and editing
+#cask 'cleanshot' # nice screenshots and editing
 
 cask 'clockify' # time tracker
 cask 'clocker' # time zone aware clock in the menu bar
+
 
 # Mac App Store
 #mas 'Keynote'
@@ -167,5 +167,6 @@ cask 'clocker' # time zone aware clock in the menu bar
 #mas 'Clocker'
 #mas 'SimpleMind Lite'
 #mas 'WireGuard'
+#mas 'Velja'
 
 
