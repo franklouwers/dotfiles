@@ -108,6 +108,7 @@ brew 'zsh'
 brew 'zplug'
 brew 'zsh-completions'
 brew 'zsh-syntax-highlighting'
+brew 'starship' # shell
 
 # Apps
 cask 'alfred'
