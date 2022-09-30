@@ -16,6 +16,14 @@ brew update
 brew tap homebrew/bundle
 brew bundle
 
+# zsh files from here...
+ln -s $HOME/.dotfiles/.zshrc $HOME/
+ln -s $HOME/.dotfiles/.zsh $HOME/
+
+# Neovim files from repo
+mkdir -p $HOME/.config
+git clone https://github.com/franklouwers/nvim-basic-ide $HOME/.config/nvim
+
 ### Install asdf plugins
 . $(brew --prefix)/opt/asdf/asdf.sh
 
