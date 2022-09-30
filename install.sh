@@ -60,6 +60,8 @@ npm install --global dockerfile-language-server-nodejs # dockerfile
 npm install --global yarn
 
 npm install --global @funboxteam/optimizt # optmize images for the web ### TODO: fix me
+npm install -i -g yaml-language-server # yamlls
+npm install -i -g bash-language-server # yamlls
 
 # Set macOS preferences
 # We will run this last because this will reload the shell

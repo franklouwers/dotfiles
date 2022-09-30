@@ -10,7 +10,6 @@ tap 'nrlquaker/createzap'
 
 
 # Binaries
-#brew 'antibody' # zsh management
 brew 'awscli'
 brew 'aliyun-cli'
 #brew 'bash' # Latest Bash version
@@ -36,8 +35,6 @@ brew 'mas' # Mac App Store manager
 brew 'pkg-config' # https://github.com/driesvints/dotfiles/issues/20
 brew 'trash' # Manage the Trash bin
 #brew 'tree' # List directories in a tree structure
-brew 'zsh'
-brew 'zsh-completions'
 brew 'z'
 brew 'ipcalc'
 brew 'jq'
@@ -73,6 +70,16 @@ brew 'java' # used to be a cask
 #brew 'ruby-install' # to install rubies for use with chruby
 brew 'tig' # tig for git
 brew 'ripgrep' # faster grep
+brew 'wget' # yeah, can't get rid of this one yet
+
+# code formatters
+brew 'prettier' # maybe move to npm install?
+brew 'black'
+brew 'stylua' # lua
+brew 'flake8' # python
+brew 'google-java-format' # java
+
+brew 'fd' # better find, my noevim setup uses this
 
 # Development
 #brew 'php'
@@ -90,10 +97,17 @@ brew 'grep' # gnu grep
 brew 'rar' # compression
 brew 'ykman' # cli tool for Yubico Key Manager
 
-brew 'terminal-notifier'
+brew 'terminal-notifier'  # send apple notifs from the cli
+brew 'diff-so-fancy' # so fancy diffs±
 
 brew 'protoc'
 brew 'bufbuild/buf/buf'
+
+# zshzsh
+brew 'zsh'
+brew 'zplug'
+brew 'zsh-completions'
+brew 'zsh-syntax-highlighting'
 
 # Apps
 cask 'alfred'
