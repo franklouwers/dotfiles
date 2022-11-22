@@ -100,7 +100,6 @@ brew 'ykman' # cli tool for Yubico Key Manager
 brew 'terminal-notifier'  # send apple notifs from the cli
 brew 'diff-so-fancy' # so fancy diffs±
 
-brew 'protoc'
 brew 'bufbuild/buf/buf'
 
 # zshzsh
@@ -108,6 +107,7 @@ brew 'zsh'
 brew 'zplug'
 brew 'zsh-completions'
 brew 'zsh-syntax-highlighting'
+brew 'starship' # shell
 
 # Apps
 cask 'alfred'
@@ -158,7 +158,7 @@ cask 'font-sauce-code-pro-nerd-font'
 #cask 'font-source-sans-pro'
 #cask 'font-source-serif-pro'
 #cask 'karabiner-elements'
-cask 'finereader'
+cask 'abbyy-finereader-pdf'
 cask 'eid-be'
 cask 'eid-be-viewer'
 cask 'robo-3t'
@@ -172,12 +172,12 @@ cask 'visual-studio-code'
 cask 'dbngin' # multiple database engine manager
 cask 'imageoptim' # image optimizer (for web and other)
 
-cask 'choosy' # easy browser-switcher
+#cask 'choosy' # easy browser-switcher
 cask 'zoom' # you know, for zoom
 
 cask 'notion' # notion.so
 
-cask 'cask-drivers/yubico-yubikey-manager' # Yubico manager
+#cask 'cask-drivers/yubico-yubikey-manager' # Yubico manager
 
 
 
@@ -190,8 +190,6 @@ cask 'cask-drivers/yubico-yubikey-manager' # Yubico manager
 
 cask 'slack'
 #cask 'pdf-expert'
-
-cask 'createzap' # https://github.com/nrlquaker/homebrew-createzap
 
 cask 'adobe-digital-editions' # ePUB protected by Adobe DRM
 
@@ -217,6 +215,7 @@ cask 'clocker' # time zone aware clock in the menu bar
 #mas 'Clocker'
 #mas 'SimpleMind Lite'
 #mas 'WireGuard'
+mas 'Velja'
 
 # not here yet:
 #
