@@ -21,3 +21,6 @@ alias grep='grep  --color=auto --exclude-dir={.bzr,CVS,.git,.hg,.svn}'
 function _scale() {
   kubectl scale deployment $1 --replicas=$2
 }
+
+# neovim for vimdiff
+alias vimdiff='neovim -d'
