@@ -3,7 +3,7 @@ export ZPLUG_HOME=/opt/homebrew/opt/zplug
 source $ZPLUG_HOME/init.zsh
 
 # asdf
-. $(brew --prefix)/opt/asdf/asdf.sh
+. $(brew --prefix)/opt/asdf/libexec/asdf.sh
 
 # aliases
 source $HOME/.zsh/aliases.zsh
@@ -16,8 +16,8 @@ source $HOME/.zsh/plugin-config.zsh # config plugins
 # default settings (not plugin specific)
 source $HOME/.zsh/defaults.zsh
 
-# Oqton specific
-source $HOME/.zsh/_notpublic-oqton.zsh
+# yubikey ssh agent
+#export SSH_AUTH_SOCK="/opt/homebrew/var/run/yubikey-agent.sock"
 
 ## Zplug needs update?
 # Install plugins if there are plugins that have not been installed
@@ -27,3 +27,4 @@ if ! zplug check --verbose; then
         echo; zplug install
     fi
 fi
+#eval "$(chef shell-init zsh)"
