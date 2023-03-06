@@ -42,7 +42,7 @@ autoload -U compinit compdef
 autoload -U promptinit; promptinit
 
 # Kube-ps1 doesn't work properly with the zplug install procedures
-source "/opt/homebrew/opt/kube-ps1/share/kube-ps1.sh"
+#source "/opt/homebrew/opt/kube-ps1/share/kube-ps1.sh"
 if type brew &>/dev/null; then
   FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
 
