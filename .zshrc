@@ -3,7 +3,7 @@ export ZPLUG_HOME=/opt/homebrew/opt/zplug
 source $ZPLUG_HOME/init.zsh
 
 # asdf
-. $(brew --prefix)/opt/asdf/asdf.sh
+. /opt/homebrew/opt/asdf/libexec/asdf.sh
 
 # aliases
 source $HOME/.zsh/aliases.zsh

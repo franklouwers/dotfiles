@@ -109,6 +109,8 @@ brew 'zsh-completions'
 brew 'zsh-syntax-highlighting'
 brew 'starship' # shell
 
+brew 'kreuzwerker/taps/m1-terraform-provider-helper'
+
 # Apps
 cask 'alfred'
 cask '1Password' # you know, for passwords
