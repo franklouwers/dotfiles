@@ -27,6 +27,11 @@ git clone https://github.com/franklouwers/nvim-basic-ide $HOME/.config/nvim
 # starship config
 ln -s $HOME/.dotfiles/starship.toml $HOME/.config/
 
+# Alacritty
+ln -s $HOME/.dotfiles/.alacritty.yml $HOME/
+ln -s $HOME/.dotfiles/alacritty $HOME/.config
+
+
 ### Install asdf plugins
 . $(brew --prefix)/opt/asdf/asdf.sh
 

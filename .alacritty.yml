@@ -1,7 +1,10 @@
 import:
-  #- ~/.config/alacritty/themes/themes/ayu_dark.yaml
- - ~/.config/alacritty/themes/themes/ayu_dark.yaml
-
+  #- ~/.config/alacritty/themes/themes/ayu_dark.yaml 
+  #- ~/.config/alacritty/themes/themes/ayu_mirage.yaml
+  #- ~/.config/alacritty/themes/themes/frank_mirage.yaml
+  #- ~/.config/alacritty/themes/themes/one_dark.yaml
+  #  - ~/.config/alacritty/themes/themes/solarized-dark.yaml
+  - ~/.config/alacritty/themes/themes/afterglow.yaml
 font:
   normal:
     family: SauceCodePro Nerd Font
@@ -26,6 +29,21 @@ font:
   glyph_offset:
     x: 0
     y: 3
-      #  use_thin_strokes: true
+    #  use_thin_strokes: true
 
-draw_bold_text_with_bright_colors: true
+bell:
+  duration: 500 # visual bell for alerts
+
+mouse:
+  # When set to `true`, selected text will be copied to the primary clipboard.
+  save_to_clipboard: true
+
+dynamic_title: true
+
+shell:
+  program: /opt/homebrew/bin/zsh # Use the Brew installation of ZSH
+  args:
+    - --login
+
+key_bindings:
+- { key: N, mods: Command, action: CreateNewWindow }
