@@ -28,3 +28,5 @@ alias vimdiff='neovim -d'
 function license_finder() {
   command license_finder $* --decisions-file=.licensefinder/dependency_decisions.yml
 }
+
+alias tflock='terraform providers lock -platform=darwin_arm64; terraform providers lock -platform=darwin_amd64; terraform providers lock -platform=linux_amd64'
