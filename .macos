@@ -730,8 +730,8 @@ sudo pmset destroyfvkeyonstandby 1
 # Kill affected applications                                                  #
 ###############################################################################
 
-# apple smooth fonts
-defaults write -g AppleFontSmoothing -int 0
+# apple smooth fonts in Alacritty only (thinner fonts)
+defaults write io.alacritty AppleFontSmoothing -int 0
 
 for app in "Activity Monitor" \
     "Address Book" \
