@@ -4,18 +4,20 @@ fpath=( "$HOME/.zsh/plugins" $fpath )
 zplug "mafredri/zsh-async", from:"github"
 
 # fzf plugin
-#zplug 'unixorn/fzf-zsh-plugin'
+zplug 'unixorn/fzf-zsh-plugin'
 zplug 'chitoku-k/fzf-zsh-completions'
 
 # enhance cd
-#zplug "b4b4r07/enhancd", use:init.sh
+zplug "b4b4r07/enhancd", use:init.sh
 
+autoload -Uz colors && colors
 
 ## following 3 need to be in this order!
 # auto-suggestions
 zplug 'zsh-users/zsh-autosuggestions'
 # syntax-highlighting
-zplug 'zsh-users/zsh-syntax-highlighting'
+#zplug 'zsh-users/zsh-syntax-highlighting'
+zplug 'zdharma-continuum/fast-syntax-highlighting'
 # better vi mode then bindkeys -v
 zplug "jeffreytse/zsh-vi-mode"
 
@@ -49,6 +51,6 @@ if type brew &>/dev/null; then
   autoload -Uz compinit
   compinit
 fi
-
+#
 # FZF
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

@@ -1,10 +1,9 @@
-import:
-  #- ~/.config/alacritty/themes/themes/ayu_dark.yaml 
-  #- ~/.config/alacritty/themes/themes/ayu_mirage.yaml
-  #- ~/.config/alacritty/themes/themes/frank_mirage.yaml
-  #- ~/.config/alacritty/themes/themes/one_dark.yaml
-  #  - ~/.config/alacritty/themes/themes/solarized-dark.yaml
-  - ~/.config/alacritty/themes/themes/afterglow.yaml
+env:
+  TERM: xterm-256color
+  #  TERM: alacritty
+
+draw_bold_text_with_bright_colors: true
+
 font:
   normal:
     family: SauceCodePro Nerd Font
@@ -47,3 +46,15 @@ shell:
 
 key_bindings:
 - { key: N, mods: Command, action: CreateNewWindow }
+
+
+colors:
+
+import:
+  #    - ~/.config/alacritty/themes/themes/ayu_dark.yaml 
+  #  - ~/.config/alacritty/themes/themes/ayu_mirage.yaml
+  #  - ~/.config/alacritty/themes/themes/frank_mirage.yaml
+  #  - ~/.config/alacritty/themes/themes/one_dark.yaml
+  #   - ~/.config/alacritty/themes/themes/solarized-dark.yaml
+     - ~/.config/alacritty/themes/themes/afterglow.yaml
+
