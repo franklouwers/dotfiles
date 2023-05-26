@@ -9,8 +9,9 @@ source $ZPLUG_HOME/init.zsh
 source $HOME/.zsh/aliases.zsh
 
 # plugins
+source $HOME/.zsh/plugin-config-pre.zsh # load plugins
 source $HOME/.zsh/plugins.zsh # load plugins
-source $HOME/.zsh/plugin-config.zsh # config plugins
+source $HOME/.zsh/plugin-config-post.zsh # config plugins
 
 
 # default settings (not plugin specific)

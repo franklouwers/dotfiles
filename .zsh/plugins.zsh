@@ -10,7 +10,7 @@ zplug 'chitoku-k/fzf-zsh-completions'
 # enhance cd
 zplug "b4b4r07/enhancd", use:init.sh
 
-autoload -Uz colors && colors
+#autoload -Uz colors && colors
 
 ## following 3 need to be in this order!
 # auto-suggestions
@@ -23,8 +23,6 @@ zplug "jeffreytse/zsh-vi-mode"
 
 zplug 'axieax/zsh-starship' # theme
 
-# z for easy cd
-. /opt/homebrew/etc/profile.d/z.sh
 
 
 # Install plugins if there are plugins that have not been installed
@@ -40,17 +38,17 @@ zplug load
 
 ## non-zplug ones below
 
-autoload -U compinit compdef
-autoload -U promptinit; promptinit
+#autoload -U compinit compdef
+#autoload -U promptinit; promptinit
 
 # Kube-ps1 doesn't work properly with the zplug install procedures
 #source "/opt/homebrew/opt/kube-ps1/share/kube-ps1.sh"
-if type brew &>/dev/null; then
-  FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
-
-  autoload -Uz compinit
-  compinit
-fi
+#if type brew &>/dev/null; then
+#  FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
+#
+#  autoload -Uz compinit
+#  compinit
+#fi
 #
 # FZF
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+#[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

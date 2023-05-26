@@ -147,8 +147,7 @@ cask 'microsoft-edge'
 #cask 'vanilla' # hide menu bar icons
 #cask 'lunar' # contrast and sound on external displays
 cask 'desktoppr' # easy set backgrounds
-cask 'maestral' # better dropbox client than dropbox client
-cask 'microsoft-teams'
+# cask 'microsoft-teams' # not bothering untill the multi-tenant version comes out
 cask 'transmit' # transmit 5, sftp client
 
 

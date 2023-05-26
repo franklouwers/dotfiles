@@ -95,10 +95,8 @@ echo ''
 
 # requires rosetta!
 ## Helm
-asdf plugin-add helm https://github.com/Antiarchitect/asdf-helm.git
+asdf plugin-add helm
 asdf install helm latest
-arch -x86_64 asdf install helm 2.16.12 #oqton
-asdf global helm 2.16.12
 
 ssh-add  --apple-use-keychain ~/.ssh/id_*
 

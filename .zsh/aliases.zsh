@@ -9,6 +9,7 @@ alias pr="gh pr create --web"
 alias vim=nvim
 alias vi=nvim
 
+alias k=kubectl
 # get kube image for pod
 function _k_img() {
   kubectl get pods -o name | grep $1  | xargs kubectl get -o yaml | grep image:
@@ -30,3 +31,5 @@ function license_finder() {
 }
 
 alias tflock='terraform providers lock -platform=darwin_arm64; terraform providers lock -platform=darwin_amd64; terraform providers lock -platform=linux_amd64'
+
+alias kubenodes="kubectl get nodes -o custom-columns=NAME:'{.metadata.name}',REGION:'{.metadata.labels.topology\.kubernetes\.io/region}',ZONE:'{metadata.labels.topology\.kubernetes\.io/zone}'"
