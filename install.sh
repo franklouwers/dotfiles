@@ -20,6 +20,9 @@ brew bundle
 ln -s $HOME/.dotfiles/.zshrc $HOME/
 ln -s $HOME/.dotfiles/.zsh $HOME/
 
+# git config
+ln -s $HOME/.dotfiles/.gitconfig $HOME/
+
 # Neovim files from repo
 mkdir -p $HOME/.config
 git clone https://github.com/franklouwers/nvim-basic-ide $HOME/.config/nvim
