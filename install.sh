@@ -63,6 +63,7 @@ asdf global ruby $(asdf list ruby)
 # Install global ruby packages
 gem install yaml2json
 gem install solargraph
+gem install ruby-lsp
 
 ## Symlink the Mackup config file to the home directory
 ln -s $HOME/.dotfiles/.mackup.cfg $HOME/.mackup.cfg
@@ -86,15 +87,7 @@ npm install -i -g bash-language-server # yamlls
 # We will run this last because this will reload the shell
 source .macos
 
-#open -a Dropbox
-open -a Docker
-
-# only now install Rosetta2. Everything above should (?) work without Rosetta2 :)
-
-echo 'If you wish to install Rosetta2, run the following command:'
-echo ''
-echo '  sudo softwareupdate --install-rosetta'
-echo ''
+open -a Dropbox
 
 # requires rosetta!
 ## Helm
@@ -102,6 +95,16 @@ asdf plugin-add helm
 asdf install helm latest
 
 ssh-add  --apple-use-keychain ~/.ssh/id_*
+
+# new style auth plugin for gcloud
+gcloud components install gke-gcloud-auth-plugin
+
+# only now install Rosetta2. Everything above should (?) work without Rosetta2 :)
+
+echo 'If you wish to install Rosetta2, run the following command:'
+echo ''
+echo '  sudo softwareupdate --install-rosetta'
+echo ''
 
 
 echo "best to run 'mackup restore' now, then reboot"
