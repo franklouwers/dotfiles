@@ -598,15 +598,18 @@ defaults -currentHost write com.apple.ImageCapture disableHotPlug -bool true
 ###############################################################################
 # Google Chrome & Google Chrome Canary                                        #
 ###############################################################################
+#
+### Note: If you enable these, Chrome will be set as "Company Managed"
+### This means that some settings (e.g. DoH) can't be enabled.
 
 # Disable the all too sensitive backswipe on trackpads
-defaults write com.google.Chrome AppleEnableSwipeNavigateWithScrolls -bool false
+#defaults write com.google.Chrome AppleEnableSwipeNavigateWithScrolls -bool false
 
 # Use the system-native print preview dialog
-defaults write com.google.Chrome DisablePrintPreview -bool true
+#defaults write com.google.Chrome DisablePrintPreview -bool true
 
  # Expand the print dialog by default
-defaults write com.google.Chrome PMPrintingExpandedStateForPrint2 -bool true
+#defaults write com.google.Chrome PMPrintingExpandedStateForPrint2 -bool true
 
 ###############################################################################
 # Tweetbot.app                                                                #
