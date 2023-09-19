@@ -24,7 +24,7 @@ function _scale() {
 }
 
 # neovim for vimdiff
-alias vimdiff='neovim -d'
+alias vimdiff='nvim -d'
 
 function license_finder() {
   command license_finder $* --decisions-file=.licensefinder/dependency_decisions.yml
