@@ -97,7 +97,10 @@ ssh-add --apple-use-keychain ~/.ssh/id_*
 gcloud components install gke-gcloud-auth-plugin
 
 mkdir -p $HOME/bin
-cp ipv6*sh $HOME/bin
+cp ipv6-on.sh $HOME/bin
+cp ipv6-off.sh $HOME/bin
+mkdir -p $HOME/.config/swiftbar
+cp ipv6-toggle.1s.sh
 
 # only now install Rosetta2. Everything above should (?) work without Rosetta2 :)
 
