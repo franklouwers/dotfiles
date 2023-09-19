@@ -4,9 +4,9 @@ echo "Setting up your Mac..."
 
 # Check for Homebrew and install if we don't have it
 if test ! $(which brew); then
-  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
-  echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/$USER/.zprofile
-  eval "$(/opt/homebrew/bin/brew shellenv)"
+	/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+	echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >>/Users/$USER/.zprofile
+	eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
 
 # Update Homebrew recipes
@@ -34,7 +34,6 @@ ln -s $HOME/.dotfiles/starship.toml $HOME/.config/
 ln -s $HOME/.dotfiles/.alacritty.yml $HOME/
 ln -s $HOME/.dotfiles/alacritty $HOME/.config
 
-
 ### Install asdf plugins
 . $(brew --prefix)/opt/asdf/asdf.sh
 
@@ -51,8 +50,8 @@ asdf plugin-add nodejs https://github.com/asdf-vm/asdf-nodejs.git
 bash -c '${ASDF_DATA_DIR:=$HOME/.asdf}/plugins/nodejs/bin/import-release-team-keyring'
 #asdf install nodejs lts
 #asdf global nodejs lts
-asdf install nodejs 16.13.0
-asdf global nodejs 16.13.0
+asdf install nodejs 18.18.0
+asdf global nodejs 18.18.0
 . $(brew --prefix)/opt/asdf/asdf.sh
 
 ## Ruby
@@ -68,20 +67,18 @@ gem install ruby-lsp
 ## Symlink the Mackup config file to the home directory
 ln -s $HOME/.dotfiles/.mackup.cfg $HOME/.mackup.cfg
 
-
 # vim stuff
 # vundle
 #mkdir -p $HOME/.vim/swp/ $HOME/.vim/undodir
 #git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-
 
 # vim lsp
 npm install --global dockerfile-language-server-nodejs # dockerfile
 npm install --global yarn
 
 npm install --global @funboxteam/optimizt # optmize images for the web ### TODO: fix me
-npm install -i -g yaml-language-server # yamlls
-npm install -i -g bash-language-server # yamlls
+npm install -i -g yaml-language-server    # yamlls
+npm install -i -g bash-language-server    # yamlls
 
 # Set macOS preferences
 # We will run this last because this will reload the shell
@@ -94,10 +91,13 @@ open -a Dropbox
 asdf plugin-add helm
 asdf install helm latest
 
-ssh-add  --apple-use-keychain ~/.ssh/id_*
+ssh-add --apple-use-keychain ~/.ssh/id_*
 
 # new style auth plugin for gcloud
 gcloud components install gke-gcloud-auth-plugin
+
+mkdir -p $HOME/bin
+cp ipv6*sh $HOME/bin
 
 # only now install Rosetta2. Everything above should (?) work without Rosetta2 :)
 
@@ -106,6 +106,4 @@ echo ''
 echo '  sudo softwareupdate --install-rosetta'
 echo ''
 
-
-echo "best to run 'mackup restore' now, then reboot"
 echo "may the force be with you!"
