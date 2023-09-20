@@ -3,20 +3,32 @@ tap 'homebrew/cask'
 tap 'homebrew/cask-fonts'
 tap 'homebrew/cask-versions'
 tap 'homebrew/bundle'
-tap 'getantibody/tap'
+#tap 'getantibody/tap'
 tap 'franklouwers/franklouwers'
-tap 'nrlquaker/createzap'
 
 
 # Binaries
-brew 'awscli'
+#
+# cloud provider and IaC / Kubernetes stuff
+brew 'awscli' # AWS
+brew 'terraform'
+brew 'kubectx'
+brew 'k9s' # kuberetes master controller cli
+brew 'stern' # multiple "kubectl logs -f" at once
+brew 'kreuzwerker/taps/m1-terraform-provider-helper' # helper for terraform for modules than don't have an arm64 mac component yet
+brew 'ansible'
+brew 'ansible-lint'
+brew 'azure/kubelogin/kubelogin'
+brew 'azurecli'
+
+
+# other
 brew 'bat' # "cat" on steroids
 brew 'glow' # for md files
 brew 'git'
 brew 'git-lfs'
 brew 'watch'
 brew 'svn' # I know, I know. But cask `font-source-code-pro` seems to require this!?
-brew 'terraform'
 #brew 'gnupg2' # doesn't this come with GPG tools?
 #brew 'grep'
 #brew 'httpie'
@@ -42,12 +54,9 @@ brew 'ghostscript'
 brew 'imagemagick'
 brew 'pwgen'
 #brew 'antigen' # zsh framework
-brew 'kubectx'
 brew 'go-bindata'
 brew 'fzf'
 brew 'coreutils' # gnu coreutils
-brew 'k9s' # kuberetes master controller cli
-brew 'stern' # multiple "kubectl logs -f" at once
 brew 'exercism' #exercism.io companion app
 brew 'hyperfine' # cli benchmark tool
 brew 'luajit' # I don't often do lua. But when I do, I want FAST lua
@@ -95,9 +104,6 @@ brew 'zsh-completions'
 brew 'zsh-syntax-highlighting'
 brew 'starship' # shell
 
-brew 'kreuzwerker/taps/m1-terraform-provider-helper' # helper for terraform for modules than don't have an arm64 mac component yet
-brew 'ansible'
-brew 'ansible-lint'
 
 # Apps
 cask 'alfred'
@@ -197,6 +203,8 @@ cask 'cleanshot' # nice screenshots and editing
 
 cask 'clockify' # time tracker
 #cask 'clocker' # time zone aware clock in the menu bar
+
+cask 'logi-options-plus' #for logitech keyboard stuff
 
 # Mac App Store
 #mas 'Keynote'
