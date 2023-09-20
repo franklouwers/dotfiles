@@ -47,6 +47,10 @@ defaults write NSGlobalDomain AppleFontSmoothing -int 2
 # Always show scrollbars.
 defaults write NSGlobalDomain AppleShowScrollBars -string "Always"
 
+# Highlight color
+#
+defaults write NSGlobalDomain AppleHighlightColor -string "0.698039 0.843137 1.000000"
+
 # Use “natural” (Lion-style) scrolling.
 #defaults write NSGlobalDomain com.apple.swipescrolldirection -bool true
 
@@ -58,6 +62,10 @@ defaults write NSGlobalDomain AppleShowScrollBars -string "Always"
 
 # Set a fast initial key repeat. We prefer 4 (60ms). The default minimum is 15 (225ms). May require reboot.
 #defaults write NSGlobalDomain InitialKeyRepeat -int 4
+#
+# Localization
+defaults write NSGlobalDomain AppleLanguages -array en-BE nl-BE
+defaults write NSGlobalDomain AppleLocale -string en-BE
 
 ## NSGlobalDomain NS*
 
@@ -134,6 +142,10 @@ defaults write com.apple.finder "_FXSortFoldersFirst" -bool "true"
 # Empty bin after 30d
 defaults write com.apple.finder "FXRemoveOldTrashItems" -bool "true"
 
+# Maybe we don't want real files on the Desktop?
+#defaults write com.apple.finder "CreateDesktop" -bool "false"
+#
+
 ########### DOCK
 # ## Dock
 
@@ -194,7 +206,7 @@ defaults write com.apple.Safari "ShowFullURLInSmartSearchField" -bool "true" && 
 defaults write com.apple.Safari IncludeDevelopMenu -bool true
 
 # Include the Internal Debug menu.
-defaults write com.apple.Safari IncludeInternalDebugMenu -bool true
+#defaults write com.apple.Safari IncludeInternalDebugMenu -bool true
 
 # Enable WebKit Developer Extras preference key
 defaults write com.apple.Safari WebKitDeveloperExtrasEnabledPreferenceKey -bool true
@@ -219,6 +231,13 @@ defaults write com.apple.Safari AutoFillFromAddressBook -bool true
 defaults write com.apple.Safari AutoFillPasswords -bool false
 defaults write com.apple.Safari AutoFillCreditCardData -bool false
 defaults write com.apple.Safari AutoFillMiscellaneousForms -bool true
+
+# Do spellcheck in Safari
+defaults write com.apple.Safari WebContinuousSpellCheckingEnabled -bool true
+# But don't correct spelling
+defaults write com.apple.Safari WebAutomaticSpellingCorrectionEnabled -bool false
+
+#
 
 ## Network Browser
 # Use AirDrop over every interface.
@@ -264,6 +283,18 @@ defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool
 defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 sudo defaults write com.apple.AppleMultitouchTrackpad Clicking 1
+
+# No siri please
+defaults write com.apple.assistant.support "Assistant Enabled" -bool "false"
+
+# Close printer app when job is complete
+default write com.apple.print.
+
+# No seconds in menu clock
+defaults write com.apple.menuextra.clock ShowSeconds -bool "false"
+
+# Velja (browser switcher)
+default write com.sindresorhus.Velja preferredBrowsers -array com.apple.Safari org.mozilla.firefox com.google.Chrome
 
 ## Flags
 

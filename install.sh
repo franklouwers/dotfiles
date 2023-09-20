@@ -2,6 +2,10 @@
 
 echo "Setting up your Mac..."
 
+mkdir -p ~/.ssh
+chmod 700 ~/.ssh
+ln -s $HOME/.dotfiles/.ssh_config $HOME/.ssh/config
+
 # Check for Homebrew and install if we don't have it
 if test ! $(which brew); then
 	/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
@@ -25,7 +29,7 @@ ln -s $HOME/.dotfiles/.gitconfig $HOME/
 
 # Neovim files from repo
 mkdir -p $HOME/.config
-git clone https://github.com/franklouwers/nvim-basic-ide $HOME/.config/nvim
+git clone git@github.com:franklouwers/neovim-config.git $HOME/.config/nvim
 
 # starship config
 ln -s $HOME/.dotfiles/starship.toml $HOME/.config/

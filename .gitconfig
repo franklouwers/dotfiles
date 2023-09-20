@@ -18,3 +18,7 @@
 	defaultBranch = main
 [push]
 	autoSetupRemote = true
+  default = current
+
+[github]
+  user = franklouwers

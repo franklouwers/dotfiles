@@ -1,8 +1,8 @@
-- Capture One
-
-- Load my iterm theme
-
-Nog te configureren:
-
 - Custom font(z), zie iCloud/fonts
 
+- coherent pdf stuff?
+
+- replace Hazel by hammerspoon? https://github.com/Hammerspoon/hammerspoon/wiki/Sample-Configurations
+
+
+- use https://github.com/kcrawford/dockutil to add / fix / reorg the Dock
