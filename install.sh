@@ -39,30 +39,30 @@ ln -s $HOME/.dotfiles/.alacritty.yml $HOME/
 ln -s $HOME/.dotfiles/alacritty $HOME/.config
 
 ### Install asdf plugins
-. $(brew --prefix)/opt/asdf/asdf.sh
+. $(brew --prefix)/opt/asdf/libexec/asdf.sh
 
 ## Golang
 asdf plugin-add golang https://github.com/kennyp/asdf-golang.git
 # after go getting: asdf reshim golang
 asdf install golang latest
 asdf global golang $(asdf list golang)
-. $(brew --prefix)/opt/asdf/asdf.sh
+. $(brew --prefix)/opt/asdf/libexec/asdf.sh
 go install golang.org/x/tools/cmd/goimports@latest
 
 ## NodeJS
 asdf plugin-add nodejs https://github.com/asdf-vm/asdf-nodejs.git
-bash -c '${ASDF_DATA_DIR:=$HOME/.asdf}/plugins/nodejs/bin/import-release-team-keyring'
+#bash -c '${ASDF_DATA_DIR:=$HOME/.asdf}/plugins/nodejs/bin/import-release-team-keyring'
 #asdf install nodejs lts
 #asdf global nodejs lts
 asdf install nodejs 18.18.0
 asdf global nodejs 18.18.0
-. $(brew --prefix)/opt/asdf/asdf.sh
+. $(brew --prefix)/opt/asdf/libexec/asdf.sh
 
 ## Ruby
 asdf plugin-add ruby https://github.com/asdf-vm/asdf-ruby.git
 asdf install ruby latest
 asdf global ruby $(asdf list ruby)
-. $(brew --prefix)/opt/asdf/asdf.sh
+. $(brew --prefix)/opt/asdf/libexec/asdf.sh
 # Install global ruby packages
 gem install yaml2json
 gem install solargraph
@@ -70,11 +70,6 @@ gem install ruby-lsp
 
 ## Symlink the Mackup config file to the home directory
 ln -s $HOME/.dotfiles/.mackup.cfg $HOME/.mackup.cfg
-
-# vim stuff
-# vundle
-#mkdir -p $HOME/.vim/swp/ $HOME/.vim/undodir
-#git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
 # vim lsp
 npm install --global dockerfile-language-server-nodejs # dockerfile
@@ -95,7 +90,7 @@ open -a Dropbox
 asdf plugin-add helm
 asdf install helm latest
 
-ssh-add --apple-use-keychain ~/.ssh/id_*
+#ssh-add --apple-use-keychain ~/.ssh/id_*
 
 # new style auth plugin for gcloud
 gcloud components install gke-gcloud-auth-plugin
@@ -104,7 +99,7 @@ mkdir -p $HOME/bin
 cp ipv6-on.sh $HOME/bin
 cp ipv6-off.sh $HOME/bin
 mkdir -p $HOME/.config/swiftbar
-cp ipv6-toggle.1s.sh
+cp ipv6-toggle.1s.sh $HOME/.config/swiftbar
 
 ### mark-text isn't properly signed
 # needed as long as https://github.com/marktext/marktext/issues/2983 is open

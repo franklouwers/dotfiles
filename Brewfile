@@ -3,8 +3,10 @@ tap 'homebrew/cask'
 tap 'homebrew/cask-fonts'
 tap 'homebrew/cask-versions'
 tap 'homebrew/bundle'
-#tap 'getantibody/tap'
 tap 'franklouwers/franklouwers'
+tap 'kreuzwerker/taps'
+tap 'azure/kubelogin'
+tap 'bufbuild/buf'
 
 
 # Binaries
@@ -19,7 +21,7 @@ brew 'kreuzwerker/taps/m1-terraform-provider-helper' # helper for terraform for 
 brew 'ansible'
 brew 'ansible-lint'
 brew 'azure/kubelogin/kubelogin'
-brew 'azurecli'
+brew 'azure-cli'
 
 
 # other
@@ -89,7 +91,6 @@ brew 'asdf' # version management
 
 brew 'grep' # gnu grep
 
-brew 'rar' # compression
 brew 'ykman' # cli tool for Yubico Key Manager
 
 brew 'terminal-notifier'  # send apple notifs from the cli
@@ -135,7 +136,7 @@ cask 'gpg-suite'
 #cask 'iterm2'
 cask 'alacritty' # terminal 
 cask 'orbstack' # better docker desktop
-cask 'switftbar' # custom entries in the menubar
+cask 'swiftbar' # custom entries in the menubar
 cask 'mark-text' # markdown, actually good
 cask 'deepl' # translations
 cask "hiddenbar" # hide menu bar
@@ -146,6 +147,7 @@ cask "hiddenbar" # hide menu bar
 #cask 'desktoppr' # easy set backgrounds
 # cask 'microsoft-teams' # not bothering untill the multi-tenant version comes out
 #cask 'transmit' # transmit 5, sftp client
+cask 'rar' # compression
 
 
 #cask 'capture-one' # doesn't exist anymore
@@ -193,10 +195,12 @@ cask 'slack'
 #cask 'pdf-expert'
 
 cask 'adobe-digital-editions' # ePUB protected by Adobe DRM
+### Note: requires rosetta2!
 
 cask 'camo-studio' # use iphone as webcam
 
 cask 'ransomwhere' # generic ransomware activity detection. https://objective-see.com/products/ransomwhere.html
+# requires rosetta!
 cask 'knockknock' # who there? https://objective-see.com/products/knockknock.html
 cask 'blockblock' # monitor persistent locations and un-notorized code
 
@@ -218,7 +222,7 @@ cask 'logi-options-plus' #for logitech keyboard stuff
 #mas 'Clocker'
 #mas 'SimpleMind Lite'
 #mas 'WireGuard'
-mas 'Velja'
+#mas 'Velja'
 
 # not here yet:
 #

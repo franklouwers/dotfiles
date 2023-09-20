@@ -196,7 +196,6 @@ defaults write com.apple.screensaver askForPasswordDelay -int 0
 
 ##### SAFARI
 #
-## Safari
 
 # Show full URL. Yes. Always.
 defaults write com.apple.Safari "ShowFullURLInSmartSearchField" -bool "true" && killall Safari
@@ -288,13 +287,13 @@ sudo defaults write com.apple.AppleMultitouchTrackpad Clicking 1
 defaults write com.apple.assistant.support "Assistant Enabled" -bool "false"
 
 # Close printer app when job is complete
-default write com.apple.print.
+defaults write com.apple.print.PrintingPrefs "Quit When Finished" -bool true
 
 # No seconds in menu clock
 defaults write com.apple.menuextra.clock ShowSeconds -bool "false"
 
 # Velja (browser switcher)
-default write com.sindresorhus.Velja preferredBrowsers -array com.apple.Safari org.mozilla.firefox com.google.Chrome
+defaults write com.sindresorhus.Velja preferredBrowsers -array com.apple.Safari org.mozilla.firefox com.google.Chrome
 
 ## Flags
 
