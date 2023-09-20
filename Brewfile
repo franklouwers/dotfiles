@@ -138,6 +138,7 @@ cask 'orbstack' # better docker desktop
 cask 'switftbar' # custom entries in the menubar
 cask 'mark-text' # markdown, actually good
 cask 'deepl' # translations
+cask "hiddenbar" # hide menu bar
 #cask 'muzzle'
 #cask 'microsoft-edge'
 #cask 'vanilla' # hide menu bar icons
