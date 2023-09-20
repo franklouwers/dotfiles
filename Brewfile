@@ -5,29 +5,21 @@ tap 'homebrew/cask-versions'
 tap 'homebrew/bundle'
 tap 'getantibody/tap'
 tap 'franklouwers/franklouwers'
-tap 'strongdm/comply'
 tap 'nrlquaker/createzap'
 
 
 # Binaries
 brew 'awscli'
-brew 'aliyun-cli'
-#brew 'bash' # Latest Bash version
 brew 'bat' # "cat" on steroids
 brew 'glow' # for md files
 brew 'git'
 brew 'git-lfs'
 brew 'watch'
 brew 'svn' # I know, I know. But cask `font-source-code-pro` seems to require this!?
-#brew 'git-flow'
-#brew 'kops'
-#brew 'kubernetes-helm' #it's a mess
-#brew 'helm@216' disabled, use asdf now
 brew 'terraform'
 #brew 'gnupg2' # doesn't this come with GPG tools?
 #brew 'grep'
 #brew 'httpie'
-#brew 'hub' # old, better to use gh!
 brew 'gh' # official github tools
 brew 'procmail' # because it includes lockfile!
 brew 'mackup'
@@ -54,7 +46,7 @@ brew 'kubectx'
 brew 'go-bindata'
 brew 'fzf'
 brew 'coreutils' # gnu coreutils
-#brew 'k9s' # kuberetes master controller cli
+brew 'k9s' # kuberetes master controller cli
 brew 'stern' # multiple "kubectl logs -f" at once
 brew 'exercism' #exercism.io companion app
 brew 'hyperfine' # cli benchmark tool
@@ -62,12 +54,7 @@ brew 'luajit' # I don't often do lua. But when I do, I want FAST lua
 brew 'luarocks' # lua packages
 brew 'pgcli' # good postgres cli client
 brew 'neovim' # vim but neo
-brew 'vim' # modern vim
-brew 'comply' # comply tool
 brew 'java' # used to be a cask
-#brew 'chruby' # change ruby versions
-#brew 'ruby-install' # to install rubies for use with chruby
-brew 'tig' # tig for git
 brew 'ripgrep' # faster grep
 brew 'wget' # yeah, can't get rid of this one yet
 
@@ -171,10 +158,9 @@ cask 'google-cloud-sdk'
 cask 'microsoft-office'
 cask 'visual-studio-code'
 
-cask 'dbngin' # multiple database engine manager
+#cask 'dbngin' # multiple database engine manager
 cask 'imageoptim' # image optimizer (for web and other)
 
-#cask 'choosy' # easy browser-switcher
 cask 'zoom' # you know, for zoom
 
 cask 'notion' # notion.so
@@ -204,7 +190,7 @@ cask 'blockblock' # monitor persistent locations and un-notorized code
 cask 'cleanshot' # nice screenshots and editing
 
 cask 'clockify' # time tracker
-cask 'clocker' # time zone aware clock in the menu bar
+#cask 'clocker' # time zone aware clock in the menu bar
 
 # Mac App Store
 #mas 'Keynote'
