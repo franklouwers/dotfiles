@@ -2,7 +2,7 @@
 
 echo "Setting up your Mac..."
 
-mkdir -p ~/.ssh
+mkdir -p ~/.ssh/control
 chmod 700 ~/.ssh
 ln -s $HOME/.dotfiles/.ssh_config $HOME/.ssh/config
 
