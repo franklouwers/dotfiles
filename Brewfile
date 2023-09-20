@@ -95,7 +95,9 @@ brew 'zsh-completions'
 brew 'zsh-syntax-highlighting'
 brew 'starship' # shell
 
-brew 'kreuzwerker/taps/m1-terraform-provider-helper'
+brew 'kreuzwerker/taps/m1-terraform-provider-helper' # helper for terraform for modules than don't have an arm64 mac component yet
+brew 'ansible'
+brew 'ansible-lint'
 
 # Apps
 cask 'alfred'
@@ -110,7 +112,6 @@ cask 'spotify'
 cask 'tripmode'
 #cask 'tunnelblick'
 cask 'adguard'
-cask 'typora'
 cask 'hazel'
 cask 'grammarly'
 cask 'backblaze'
@@ -128,7 +129,9 @@ cask 'gpg-suite'
 #cask 'iterm2'
 cask 'alacritty' # terminal 
 cask 'orbstack' # better docker desktop
-cask 'switftbar'
+cask 'switftbar' # custom entries in the menubar
+cask 'mark-text' # markdown, actually good
+cask 'deepl' # translations
 #cask 'muzzle'
 #cask 'microsoft-edge'
 #cask 'vanilla' # hide menu bar icons
@@ -164,6 +167,9 @@ cask 'imageoptim' # image optimizer (for web and other)
 cask 'zoom' # you know, for zoom
 
 cask 'notion' # notion.so
+
+cask 'openvpn-connect' # openvpn connect
+cask 'telegram' # telegram messaging
 
 #cask 'cask-drivers/yubico-yubikey-manager' # Yubico manager
 

@@ -106,6 +106,10 @@ cp ipv6-off.sh $HOME/bin
 mkdir -p $HOME/.config/swiftbar
 cp ipv6-toggle.1s.sh
 
+### mark-text isn't properly signed
+# needed as long as https://github.com/marktext/marktext/issues/2983 is open
+xattr -r -d com.apple.quarantine /Applications/MarkText.app
+
 # only now install Rosetta2. Everything above should (?) work without Rosetta2 :)
 
 echo 'If you wish to install Rosetta2, run the following command:'
