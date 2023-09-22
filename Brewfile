@@ -104,6 +104,7 @@ brew 'zplug'
 brew 'zsh-completions'
 brew 'zsh-syntax-highlighting'
 brew 'starship' # shell
+brew 'dockutil'
 
 
 # Apps
