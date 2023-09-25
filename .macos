@@ -203,6 +203,9 @@ defaults write com.apple.Safari "ShowFullURLInSmartSearchField" -bool "true" && 
 # DuckDuckGo for search
 defaults write com.apple.com "SearchProviderShortName" -string "DuckDuckGo"
 
+# status bar
+defaults write com.apple.com ShowOverlayStatusBar -int 1
+
 # Do these still work?
 # Include the Develop menu
 defaults write com.apple.Safari IncludeDevelopMenu -bool true

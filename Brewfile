@@ -105,6 +105,7 @@ brew 'zsh-completions'
 brew 'zsh-syntax-highlighting'
 brew 'starship' # shell
 brew 'dockutil'
+brew 'marp-cli' # MARP, voor markdown presentaties
 
 
 # Apps
@@ -157,6 +158,7 @@ cask 'rar' # compression
 cask 'font-lato'
 cask 'font-source-code-pro'
 cask 'font-sauce-code-pro-nerd-font'
+cask 'font-inter'
 #cask 'font-source-sans-pro'
 #cask 'font-source-serif-pro'
 #cask 'karabiner-elements'
