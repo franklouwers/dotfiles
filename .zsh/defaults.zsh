@@ -3,7 +3,7 @@ export VISUAL=nvim
 export EDITOR=nvim
 
 # PATH/CPPFLAGS for java
-export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
+export PATH="$PATH:/opt/homebrew/opt/openjdk/bin"
 export CPPFLAGS="-I/opt/homebrew/opt/openjdk/include"
 
 # add bin to path and krew stuff
@@ -11,3 +11,6 @@ export PATH="$HOME/bin:${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 
 # Use new gke auth mech
 export USE_GKE_GCLOUD_AUTH_PLUGIN=True
+
+# Share history
+set share_history
