@@ -7,6 +7,7 @@ tap 'franklouwers/franklouwers'
 tap 'kreuzwerker/taps'
 tap 'azure/kubelogin'
 tap 'bufbuild/buf'
+tap 'mike-engel/jwt-cli'
 
 
 # Binaries
@@ -106,9 +107,11 @@ brew 'zsh-syntax-highlighting'
 brew 'starship' # shell
 brew 'dockutil'
 brew 'marp-cli' # MARP, voor markdown presentaties
+brew 'mike-engel/jwt-cli/jwt-cli' # jwt cli
 
 
 # Apps
+cask 'session-manager-plugin' # AWS ssm
 cask 'alfred'
 cask '1Password' # you know, for passwords
 cask 'keepingyouawake'

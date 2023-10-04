@@ -13,6 +13,10 @@ if test ! $(which brew); then
 	eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
 
+# We use submodules in this repo...
+git submodule init
+git submodule update
+
 # Update Homebrew recipes
 brew update
 

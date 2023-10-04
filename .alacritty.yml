@@ -55,7 +55,8 @@ import:
   #    - ~/.config/alacritty/themes/themes/ayu_dark.yaml 
   #  - ~/.config/alacritty/themes/themes/ayu_mirage.yaml
   #  - ~/.config/alacritty/themes/themes/frank_mirage.yaml
-  #  - ~/.config/alacritty/themes/themes/one_dark.yaml
-  #   - ~/.config/alacritty/themes/themes/solarized-dark.yaml
-     - ~/.config/alacritty/themes/themes/afterglow.yaml
+  #   - ~/.config/alacritty/themes/themes/one_dark.yaml
+       - ~/.config/alacritty/themes/themes/solarized-dark.yaml
+  #       - ~/.config/alacritty/catppuccin/catppuccin-frappe.yml
+  #   - ~/.config/alacritty/themes/themes/afterglow.yaml
 
