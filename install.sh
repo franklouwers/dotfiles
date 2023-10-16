@@ -100,8 +100,7 @@ asdf install helm latest
 gcloud components install gke-gcloud-auth-plugin
 
 mkdir -p $HOME/bin
-cp ipv6-on.sh $HOME/bin
-cp ipv6-off.sh $HOME/bin
+cp -a bin/* $HOME/bin
 mkdir -p $HOME/.config/swiftbar
 cp ipv6-toggle.1s.sh $HOME/.config/swiftbar
 

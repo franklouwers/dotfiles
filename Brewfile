@@ -23,6 +23,7 @@ brew 'ansible'
 brew 'ansible-lint'
 brew 'azure/kubelogin/kubelogin'
 brew 'azure-cli'
+brew 'doctl' # digital ocean
 
 
 # other
