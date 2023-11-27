@@ -67,6 +67,7 @@ brew 'luajit' # I don't often do lua. But when I do, I want FAST lua
 brew 'luarocks' # lua packages
 brew 'pgcli' # good postgres cli client
 brew 'neovim' # vim but neo
+brew 'lazygit' # git for neovim
 brew 'java' # used to be a cask
 brew 'ripgrep' # faster grep
 brew 'wget' # yeah, can't get rid of this one yet
@@ -217,6 +218,8 @@ cask 'clockify' # time tracker
 #cask 'clocker' # time zone aware clock in the menu bar
 
 cask 'logi-options-plus' #for logitech keyboard stuff
+cask 'nordvpn' # vpn
+cask 'openvpn-connect' # vpn
 
 # Mac App Store
 #mas 'Keynote'
