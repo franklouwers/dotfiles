@@ -1,5 +1,8 @@
 fpath=( "$HOME/.zsh/plugins" $fpath )
 
+# have zplug manage zplug
+zplug 'zplug/zplug', hook-build:'zplug --self-manage'
+
 # Async because fast
 zplug "mafredri/zsh-async", from:"github"
 
@@ -23,32 +26,14 @@ zplug "jeffreytse/zsh-vi-mode"
 
 zplug 'axieax/zsh-starship' # theme
 
-
-
-# Install plugins if there are plugins that have not been installed
-if ! zplug check --verbose; then
-    printf "Install? [y/N]: "
-    if read -q; then
-        echo; zplug install
-    fi
-fi
-
 # Then, source plugins and add commands to $PATH
 zplug load
 
 ## non-zplug ones below
 
-#autoload -U compinit compdef
-#autoload -U promptinit; promptinit
+if type brew &>/dev/null; then
+  FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
 
-# Kube-ps1 doesn't work properly with the zplug install procedures
-#source "/opt/homebrew/opt/kube-ps1/share/kube-ps1.sh"
-#if type brew &>/dev/null; then
-#  FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
-#
 #  autoload -Uz compinit
 #  compinit
-#fi
-#
-# FZF
-#[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+fi

@@ -1,5 +1,5 @@
 # Path to the secrets file, NOT in git!!!
-secrets_file="$HOME/.zsh/secret_values.zsh"
+secrets_file="$HOME/.zsh/_notpublic_secrets.zsh"
 
 
 fetch_and_save_secret() {
@@ -22,9 +22,10 @@ if [[ -f "$secrets_file" ]]; then
     source "$secrets_file"
 else
     # Empty or create the secrets file
-    > "$secrets_file"
+    rm "$secrets_file" || true
+    touch "$secrets_file"
+    chmod 600 "$secrets_file"
 
-    eval $(op signin louwers)
     # Fetch secrets and store them in the secrets file
     # Example usage: fetch_and_save_secret "myaccount.1password.com" "uuid-of-secret-item" "API_KEY"
     fetch_and_save_secret "louwers" "op://Personal/chatgpt.nvim token/credential" "OPENAI_API_KEY"

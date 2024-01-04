@@ -65,12 +65,6 @@ symbol = ""
 style = "dimmed green"
 disabled = false
 
-[kubernetes.context_aliases]
-"(?P<var_cluster>[\\w-]+).oqton.ai" = "$var_cluster"
-"(?P<var_cluster>[\\w-]+).oqton.com.cn" = "$var_cluster"
-
-
-
 # single line prompt?
 [line_break]
 disabled = true
