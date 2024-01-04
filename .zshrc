@@ -17,6 +17,9 @@ source $HOME/.zsh/plugin-config-post.zsh # config plugins
 # default settings (not plugin specific)
 source $HOME/.zsh/defaults.zsh
 
+# secret stuff (api keys, ...)
+source $HOME/.zsh/secrets.zsh
+
 # yubikey ssh agent
 #export SSH_AUTH_SOCK="/opt/homebrew/var/run/yubikey-agent.sock"
 
