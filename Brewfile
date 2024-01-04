@@ -27,6 +27,7 @@ brew 'doctl' # digital ocean
 
 
 # other
+brew 'yamlfmt' # yaml formatter
 brew 'bat' # "cat" on steroids
 brew 'glow' # for md files
 brew 'git'
@@ -165,6 +166,7 @@ cask 'font-lato'
 cask 'font-source-code-pro'
 cask 'font-sauce-code-pro-nerd-font'
 cask 'font-inter'
+cask 'font-mullish'
 #cask 'font-source-sans-pro'
 #cask 'font-source-serif-pro'
 #cask 'karabiner-elements'
