@@ -141,9 +141,9 @@ cask 'gpg-suite'
 #cask 'tor-browser'
 #cask 'transmit'
 #cask 'dropshare'
-#cask 'iterm2'
+cask 'iterm2'
 #cask 'alacritty' # terminal 
-cask 'kitty' #terminal
+#cask 'kitty' #terminal
 cask 'orbstack' # better docker desktop
 cask 'swiftbar' # custom entries in the menubar
 cask 'mark-text' # markdown, actually good

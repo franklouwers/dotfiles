@@ -38,10 +38,6 @@ git clone git@github.com:franklouwers/neovim-config.git $HOME/.config/nvim
 # starship config
 ln -s $HOME/.dotfiles/starship.toml $HOME/.config/
 
-# Alacritty
-ln -s $HOME/.dotfiles/.alacritty.yml $HOME/
-ln -s $HOME/.dotfiles/alacritty $HOME/.config
-
 ### Install asdf plugins
 . $(brew --prefix)/opt/asdf/libexec/asdf.sh
 
