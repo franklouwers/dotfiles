@@ -1,22 +1,14 @@
 Include ~/.orbstack/ssh/config
-
-# old, old, old systems
-Host whiskey.openminds.be
-   Ciphers aes256-cbc
-   KexAlgorithms diffie-hellman-group-exchange-sha1
-Host fantong.getfoxyproxy.org
-    PubkeyAcceptedAlgorithms +ssh-rsa
-    HostkeyAlgorithms +ssh-rsa
-
+Include ~/.dotfiles/ssh_config-secret
 
 ## Default
 Host *
   AddKeysToAgent yes
-  UseKeychain yes # e.g. Forklift needs this for sftp
+#  UseKeychain yes # e.g. Forklift needs this for sftp
   ServerAliveInterval 60
   IdentityAgent "~/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock"
 
-  # Speed up reconnects
-  #  ControlPath ~/.ssh/control/%C
-  #ControlMaster auto
-  #ControlPersist 1h
+  #Speed up reconnects
+  ControlPath ~/.ssh/control_%C
+  ControlMaster auto
+  ControlPersist 1h

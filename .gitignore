@@ -1,3 +1,4 @@
 Brewfile.lock.json
 default.profraw
 .DS_Store
+ssh_config-secret
