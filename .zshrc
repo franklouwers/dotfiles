@@ -32,3 +32,6 @@ if ! zplug check --verbose; then
     fi
 fi
 #eval "$(chef shell-init zsh)"
+
+eval "$(zoxide init zsh)"
+

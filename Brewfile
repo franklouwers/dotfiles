@@ -81,6 +81,8 @@ brew 'flake8' # python
 brew 'google-java-format' # java
 
 brew 'fd' # better find, my noevim setup uses this
+brew 'oxide' # better z, which is a better cd
+
 
 # Development
 #brew 'php'

@@ -10,9 +10,6 @@ zplug "mafredri/zsh-async", from:"github"
 zplug 'unixorn/fzf-zsh-plugin'
 zplug 'chitoku-k/fzf-zsh-completions'
 
-# enhance cd
-zplug "b4b4r07/enhancd", use:init.sh
-
 #autoload -Uz colors && colors
 
 ## following 3 need to be in this order!
