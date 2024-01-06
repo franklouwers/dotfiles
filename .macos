@@ -168,13 +168,16 @@ defaults write com.apple.dock show-process-indicators -bool true
 defaults write com.apple.dock "mineffect" -string "scale"
 
 # Remove the auto-hiding Dock delay. (Default: 0.5)
-#defaults write com.apple.Dock autohide-delay -float 0
+defaults write com.apple.Dock autohide-delay -float 0
 
 # Automatically hide and show the Dock.
 defaults write com.apple.dock autohide -bool true
 
 # Disable expose animation.
 defaults write com.apple.dock expose-animation-duration -float 0
+
+# scroll on dock item to open expose for only that app's windows
+defaults write com.apple.dock scroll-to-open -bool true
 
 ### Mission Control (falls under Dock)
 #
@@ -201,10 +204,10 @@ defaults write com.apple.screensaver askForPasswordDelay -int 0
 defaults write com.apple.Safari "ShowFullURLInSmartSearchField" -bool "true" && killall Safari
 
 # DuckDuckGo for search
-defaults write com.apple.com "SearchProviderShortName" -string "DuckDuckGo"
+defaults write com.apple.Safari "SearchProviderShortName" -string "DuckDuckGo"
 
 # status bar
-defaults write com.apple.com ShowOverlayStatusBar -int 1
+defaults write com.apple.Safari ShowOverlayStatusBar -int 1
 
 # Do these still work?
 # Include the Develop menu
@@ -217,7 +220,7 @@ defaults write com.apple.Safari IncludeDevelopMenu -bool true
 defaults write com.apple.Safari WebKitDeveloperExtrasEnabledPreferenceKey -bool true
 
 # Enable WebKit Developer Extras
-defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebKit2DeveloperExtrasEnabled -bool true
+defaults write com.apple.Safari.ContentPageGroupIdentifier.WebKit2DeveloperExtrasEnabled -bool true
 
 # Disable universal search because we prefer privacy
 #defaults write com.apple.Safari UniversalSearchEnabled -bool false
