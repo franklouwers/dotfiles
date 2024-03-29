@@ -8,6 +8,7 @@ tap 'kreuzwerker/taps'
 tap 'azure/kubelogin'
 tap 'bufbuild/buf'
 tap 'mike-engel/jwt-cli'
+tap 'UpCloudLtd/tap'
 
 
 # Binaries
@@ -18,18 +19,20 @@ brew 'terraform'
 brew 'kubectx'
 brew 'k9s' # kuberetes master controller cli
 brew 'stern' # multiple "kubectl logs -f" at once
-brew 'kreuzwerker/taps/m1-terraform-provider-helper' # helper for terraform for modules than don't have an arm64 mac component yet
+#brew 'kreuzwerker/taps/m1-terraform-provider-helper' # helper for terraform for modules than don't have an arm64 mac component yet
 brew 'ansible'
 brew 'ansible-lint'
 brew 'azure/kubelogin/kubelogin'
 brew 'azure-cli'
 brew 'doctl' # digital ocean
+brew 'upcloud-cli' #UpCloud
 
 
 # other
 brew 'yamlfmt' # yaml formatter
 brew 'bat' # "cat" on steroids
 brew 'glow' # for md files
+brew 'deno' # JS runtime, vim plugin 'peek.nvim' needs this
 brew 'git'
 brew 'git-lfs'
 brew 'watch'
@@ -180,6 +183,7 @@ cask 'rectangle'
 
 cask '1password-cli'
 cask 'google-cloud-sdk'
+cask 'google-drive'
 cask 'microsoft-office'
 cask 'visual-studio-code'
 

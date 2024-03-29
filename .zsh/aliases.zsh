@@ -22,18 +22,18 @@ alias grep='grep  --color=auto --exclude-dir={.bzr,CVS,.git,.hg,.svn}'
 function _scale() {
   kubectl scale deployment $1 --replicas=$2
 }
+function _scalests() {
+  kubectl scale sts $1 --replicas=$2
+}
 
 # neovim for vimdiff
 alias vimdiff='nvim -d'
 
-function license_finder() {
-  command license_finder $* --decisions-file=.licensefinder/dependency_decisions.yml
-}
+alias kubenodes="kubectl get nodes -o custom-columns=NAME:'{.metadata.name}',REGION:'{.metadata.labels.topology\.kubernetes\.io/region}',ZONE:'{metadata.labels.topology\.kubernetes\.io/zone}',TYPE:'{metadata.labels.beta\.kubernetes\.io/instance-type}',ARCH:'{.metadata.labels.beta\.kubernetes\.io/arch}',CAPACITY_aws:'{.metadata.labels.eks\.amazonaws\.com/capacityType}',NODEID:'{.metadata.annotations.csi\.volume\.kubernetes\.io/nodeid}'"
 
-alias tflock='terraform providers lock -platform=darwin_arm64; terraform providers lock -platform=darwin_amd64; terraform providers lock -platform=linux_amd64'
+alias jaws="ssh -D 1080 -q -N jumpbox-aws.krane-labs.io"
+alias awslogin="aws sso login --profile administrator-access-kranelabs-identity"
+alias awsurl="open ~/Desktop/aws.html"
 
-alias kubenodes="kubectl get nodes -o custom-columns=NAME:'{.metadata.name}',REGION:'{.metadata.labels.topology\.kubernetes\.io/region}',ZONE:'{metadata.labels.topology\.kubernetes\.io/zone}',TYPE:'{metadata.labels.beta\.kubernetes\.io/instance-type}',ARCH:'{.metadata.labels.beta\.kubernetes\.io/arch}',CAPACITY_aws:'{.metadata.labels.eks\.amazonaws\.com/capacityType}'"
+alias sshpass="ssh -o PubkeyAuthentication=no"
 
-if [[ "$TERM" == "xterm-kitty" ]]; then
-  alias ssh="kitten ssh"
-fi
