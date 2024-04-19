@@ -19,17 +19,17 @@ alias ls='ls --color=tty'
 alias grep='grep  --color=auto --exclude-dir={.bzr,CVS,.git,.hg,.svn}'
 
 # scale deployment
-function _scale() {
+function scale() {
   kubectl scale deployment $1 --replicas=$2
 }
-function _scalests() {
+function scalests() {
   kubectl scale sts $1 --replicas=$2
 }
 
 # neovim for vimdiff
 alias vimdiff='nvim -d'
 
-alias kubenodes="kubectl get nodes -o custom-columns=NAME:'{.metadata.name}',REGION:'{.metadata.labels.topology\.kubernetes\.io/region}',ZONE:'{metadata.labels.topology\.kubernetes\.io/zone}',TYPE:'{metadata.labels.beta\.kubernetes\.io/instance-type}',ARCH:'{.metadata.labels.beta\.kubernetes\.io/arch}',CAPACITY_aws:'{.metadata.labels.eks\.amazonaws\.com/capacityType}',NODEID:'{.metadata.annotations.csi\.volume\.kubernetes\.io/nodeid}'"
+alias kubenodes="kubectl get nodes -o custom-columns=NAME:'{.metadata.name}',ZONE:'{metadata.labels.topology\.kubernetes\.io/zone}',TYPE:'{metadata.labels.beta\.kubernetes\.io/instance-type}',ARCH:'{.metadata.labels.beta\.kubernetes\.io/arch}',CAPACITY_aws:'{.metadata.labels.eks\.amazonaws\.com/capacityType}',CAPACITY_karp:'{.metadata.labels.karpenter\.sh/capacity-type}',NODEID:'{.metadata.annotations.csi\.volume\.kubernetes\.io/nodeid}'"
 
 alias jaws="ssh -D 1080 -q -N jumpbox-aws.krane-labs.io"
 alias awslogin="aws sso login --profile administrator-access-kranelabs-identity"

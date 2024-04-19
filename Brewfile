@@ -37,6 +37,7 @@ brew 'git'
 brew 'git-lfs'
 brew 'watch'
 brew 'svn' # I know, I know. But cask `font-source-code-pro` seems to require this!?
+brew 'ipinfo-cli' # ipinfo
 #brew 'gnupg2' # doesn't this come with GPG tools?
 #brew 'grep'
 #brew 'httpie'
