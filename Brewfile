@@ -131,10 +131,10 @@ cask 'charles'
 cask 'handbrake'
 cask 'spotify'
 cask 'tripmode'
-#cask 'tunnelblick'
+cask 'tunnelblick'
 cask 'adguard'
 cask 'hazel'
-cask 'grammarly'
+#cask 'grammarly'
 cask 'backblaze'
 cask 'firefox'
 #cask 'github'
@@ -227,7 +227,7 @@ cask 'cleanshot' # nice screenshots and editing
 cask 'clockify' # time tracker
 #cask 'clocker' # time zone aware clock in the menu bar
 
-cask 'logi-options-plus' #for logitech keyboard stuff
+#cask 'logi-options-plus' #for logitech keyboard stuff - GARBAGE. Don't use anymore ...
 cask 'nordvpn' # vpn
 cask 'openvpn-connect' # vpn
 
