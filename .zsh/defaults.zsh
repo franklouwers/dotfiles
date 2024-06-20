@@ -13,4 +13,11 @@ export PATH="$HOME/bin:${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 export USE_GKE_GCLOUD_AUTH_PLUGIN=True
 
 # Share history
-set share_history
+setopt share_history
+
+# colorize less (also see lesspipe)
+export LESS="-R"
+
+# use fzf-lessopen
+#export LESSOPEN="|/opt/homebrew/bin/lesspipe.sh %s" # regular lessopen
+export LESSOPEN="| lessfilter-fzf %s"

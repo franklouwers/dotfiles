@@ -28,54 +28,21 @@ brew 'doctl' # digital ocean
 brew 'upcloud-cli' #UpCloud
 
 
-# other
+# format / syntax / text
 brew 'yamlfmt' # yaml formatter
 brew 'bat' # "cat" on steroids
 brew 'glow' # for md files
-brew 'deno' # JS runtime, vim plugin 'peek.nvim' needs this
-brew 'git'
-brew 'git-lfs'
+brew 'lesspipe'
 brew 'watch'
-brew 'svn' # I know, I know. But cask `font-source-code-pro` seems to require this!?
-brew 'ipinfo-cli' # ipinfo
-#brew 'gnupg2' # doesn't this come with GPG tools?
-#brew 'grep'
-#brew 'httpie'
-brew 'gh' # official github tools
-brew 'procmail' # because it includes lockfile!
-brew 'mackup'
-brew 'mas' # Mac App Store manager
-brew 'pkg-config' # https://github.com/driesvints/dotfiles/issues/20
-brew 'trash' # Manage the Trash bin
-#brew 'tree' # List directories in a tree structure
-brew 'sipcalc'
 brew 'jq'
 brew 'yq'
-brew 'mtr'
-brew 'csshx'
-brew 'recode'
-brew 'telnet'
-brew 'nmap'
-brew 'p7zip'
-brew 'go'
-brew 'gopls'
-brew 'ghostscript'
-brew 'imagemagick'
 brew 'pwgen'
-#brew 'antigen' # zsh framework
-brew 'go-bindata'
+brew 'recode'
+brew 'ripgrep' # faster grep
 brew 'fzf'
 brew 'coreutils' # gnu coreutils
-brew 'exercism' #exercism.io companion app
-brew 'hyperfine' # cli benchmark tool
-brew 'luajit' # I don't often do lua. But when I do, I want FAST lua
-brew 'luarocks' # lua packages
-brew 'pgcli' # good postgres cli client
-brew 'neovim' # vim but neo
-brew 'lazygit' # git for neovim
-brew 'java' # used to be a cask
-brew 'ripgrep' # faster grep
-brew 'wget' # yeah, can't get rid of this one yet
+brew 'fd' # better find, my noevim setup uses this
+brew 'oxide' # better z, which is a better cd
 
 # code formatters
 brew 'prettier' # maybe move to npm install?
@@ -84,18 +51,49 @@ brew 'stylua' # lua
 brew 'flake8' # python
 brew 'google-java-format' # java
 
-brew 'fd' # better find, my noevim setup uses this
-brew 'oxide' # better z, which is a better cd
+# dev tools
+brew 'git'
+brew 'git-lfs'
+brew 'svn' # I know, I know. But cask `font-source-code-pro` seems to require this!?
+brew 'gh' # official github tools
+brew 'pkg-config' # https://github.com/driesvints/dotfiles/issues/20
+
+# dev - language specific
+brew 'go'
+brew 'gopls'
+brew 'go-bindata'
+brew 'luajit' # fast lua should be fast
+brew 'luarocks' # lua packages
+brew 'java' # used to be a cask
+
+# neovim and co
+brew 'neovim' # vim but neo
+brew 'lazygit' # git for neovim
 
 
-# Development
-#brew 'php'
-#brew 'php@7.2'
-#brew 'mysql'
-#brew 'nginx'
-#brew 'n' # multiple node-js versions
-#brew 'redis'
-#brew 'pinentry-mac'
+# other
+brew 'deno' # JS runtime, vim plugin 'peek.nvim' needs this
+brew 'ipinfo-cli' # ipinfo
+#brew 'gnupg2' # doesn't this come with GPG tools?
+#brew 'grep'
+#brew 'httpie'
+#brew 'procmail' # because it includes lockfile!
+brew 'mackup'
+brew 'mas' # Mac App Store manager
+brew 'trash' # Manage the Trash bin
+#brew 'tree' # List directories in a tree structure
+brew 'sipcalc'
+brew 'mtr'
+brew 'csshx'
+brew 'telnet'
+brew 'nmap'
+brew 'p7zip'
+brew 'ghostscript'
+brew 'imagemagick'
+brew 'exercism' #exercism.io companion app
+brew 'hyperfine' # cli benchmark tool
+brew 'pgcli' # good postgres cli client
+brew 'wget' # yeah, can't get rid of this one yet
 
 brew 'asdf' # version management
 

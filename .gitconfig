@@ -23,3 +23,6 @@
 
 [github]
   user = franklouwers
+
+[alias]
+   pushf = push --force-with-lease --force-if-includes
