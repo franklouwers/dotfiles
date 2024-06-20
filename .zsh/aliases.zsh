@@ -10,8 +10,9 @@ alias vim=nvim
 alias vi=nvim
 
 alias k=kubectl
+
 # get kube image for pod
-function _k_img() {
+function k_img() {
   kubectl get pods -o name | grep $1  | xargs kubectl get -o yaml | grep image:
 }
 
@@ -36,4 +37,3 @@ alias awslogin="aws sso login --profile administrator-access-kranelabs-identity"
 alias awsurl="open ~/Desktop/aws.html"
 
 alias sshpass="ssh -o PubkeyAuthentication=no"
-

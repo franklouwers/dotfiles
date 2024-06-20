@@ -111,7 +111,6 @@ brew 'zsh'
 brew 'zplug'
 brew 'zsh-completions'
 brew 'zsh-syntax-highlighting'
-brew 'starship' # shell
 brew 'dockutil'
 brew 'marp-cli' # MARP, voor markdown presentaties
 brew 'mike-engel/jwt-cli/jwt-cli' # jwt cli
