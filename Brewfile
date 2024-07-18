@@ -167,13 +167,9 @@ cask 'rar' # compression
 
 # Fonts
 cask 'font-lato'
-cask 'font-source-code-pro'
-cask 'font-sauce-code-pro-nerd-font'
+cask 'font-meslo-for-powerlevel10k'
 cask 'font-inter'
 cask 'font-mullish'
-#cask 'font-source-sans-pro'
-#cask 'font-source-serif-pro'
-#cask 'karabiner-elements'
 cask 'abbyy-finereader-pdf'
 cask 'eid-be'
 cask 'eid-be-viewer'
@@ -249,3 +245,5 @@ cask 'nordvpn' # vpn
 # https://www.canon-europe.com/support/consumer_products/products/printers/laser/i-sensys_lbp613cdw.html?type=drivers&driverdetailid=tcm:13-1943119&os=macos%2010.15%20%28catalina%29&language=en
 # Camo
 
+# iterm2 color scheme catppuccin-mocha
+# mesloNGS-10
