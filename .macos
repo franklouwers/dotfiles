@@ -2,6 +2,9 @@
 #
 # inspiration from https://github.com/SixArm/macos-defaults/blob/main/macos-defaults
 # and https://macos-defaults.com/#🙋-what-s-a-defaults-command
+#
+
+# TODO next time also check https://github.com/Lissy93/dotfiles/tree/master/scripts/macos-setup
 
 # Close any open System Preferences panes, to prevent them from overriding
 # settings we’re about to change

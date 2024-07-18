@@ -78,6 +78,7 @@ brew 'ipinfo-cli' # ipinfo
 #brew 'grep'
 #brew 'httpie'
 #brew 'procmail' # because it includes lockfile!
+brew 'swaks' # mail debuggingk
 brew 'mackup'
 brew 'mas' # Mac App Store manager
 brew 'trash' # Manage the Trash bin
@@ -226,7 +227,8 @@ cask 'clockify' # time tracker
 
 #cask 'logi-options-plus' #for logitech keyboard stuff - GARBAGE. Don't use anymore ...
 cask 'nordvpn' # vpn
-cask 'openvpn-connect' # vpn
+#cask 'openvpn-connect' # vpn, not installed anymore, tunnelblick is significantly better
+
 
 # Mac App Store
 #mas 'Keynote'
