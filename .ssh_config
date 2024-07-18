@@ -4,6 +4,7 @@ Include ~/.dotfiles/ssh_config-secret
 ## Default
 Host *
   AddKeysToAgent yes
+
 #  UseKeychain yes # e.g. Forklift needs this for sftp
   ServerAliveInterval 60
   IdentityAgent "~/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock"
@@ -12,3 +13,4 @@ Host *
   ControlPath ~/.ssh/control_%C
   ControlMaster auto
   ControlPersist 1h
+  ForwardAgent yes
