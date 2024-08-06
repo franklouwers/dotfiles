@@ -1,4 +1,3 @@
-# Taps
 tap 'homebrew/cask'
 tap 'homebrew/cask-fonts'
 tap 'homebrew/cask-versions'
@@ -9,13 +8,15 @@ tap 'azure/kubelogin'
 tap 'bufbuild/buf'
 tap 'mike-engel/jwt-cli'
 tap 'UpCloudLtd/tap'
+tap "natesales/repo", "https://github.com/natesales/repo"
 
 
-# Binaries
-#
 # cloud provider and IaC / Kubernetes stuff
 brew 'awscli' # AWS
-brew 'terraform'
+brew 'terraform' # still need this for backwards compatibility
+brew "terraform-ls"
+brew "terraform-lsp"
+brew "opentofu" # new kid on the block
 brew 'kubectx'
 brew 'k9s' # kuberetes master controller cli
 brew 'stern' # multiple "kubectl logs -f" at once
@@ -35,6 +36,7 @@ brew 'glow' # for md files
 brew 'lesspipe'
 brew 'watch'
 brew 'jq'
+brew "natesales/repo/q" # dns powertool
 brew 'yq'
 brew 'pwgen'
 brew 'recode'
@@ -88,13 +90,15 @@ brew 'mtr'
 brew 'csshx'
 brew 'telnet'
 brew 'nmap'
-brew 'p7zip'
+brew 'p7zip' # better zip (includes good encryption)
+brew "xz" # encryption
 brew 'ghostscript'
 brew 'imagemagick'
 brew 'exercism' #exercism.io companion app
 brew 'hyperfine' # cli benchmark tool
 brew 'pgcli' # good postgres cli client
 brew 'wget' # yeah, can't get rid of this one yet
+brew 'yt-dpl' #youtubedownload
 
 brew 'asdf' # version management
 
@@ -106,6 +110,7 @@ brew 'terminal-notifier'  # send apple notifs from the cli
 brew 'diff-so-fancy' # so fancy diffs±
 
 brew 'bufbuild/buf/buf'
+brew "k6" # ab butter better (benchmarks)
 
 # zshzsh
 brew 'zsh'
@@ -122,14 +127,12 @@ cask 'session-manager-plugin' # AWS ssm
 cask 'alfred'
 cask '1Password' # you know, for passwords
 cask 'keepingyouawake'
-cask 'discord'
 cask 'dropbox'
 cask 'calibre'
 cask 'charles'
 cask 'handbrake'
 cask 'spotify'
 cask 'tripmode'
-cask 'tunnelblick'
 cask 'adguard'
 cask 'hazel'
 #cask 'grammarly'
@@ -189,8 +192,11 @@ cask 'zoom' # you know, for zoom
 
 cask 'notion' # notion.so
 
-cask 'openvpn-connect' # openvpn connect
+
+# messaging
 cask 'telegram' # telegram messaging
+cask 'whatsapp'
+cask 'discord'
 
 #cask 'cask-drivers/yubico-yubikey-manager' # Yubico manager
 
@@ -222,8 +228,13 @@ cask 'clockify' # time tracker
 #cask 'clocker' # time zone aware clock in the menu bar
 
 #cask 'logi-options-plus' #for logitech keyboard stuff - GARBAGE. Don't use anymore ...
+
 cask 'nordvpn' # vpn
-#cask 'openvpn-connect' # vpn, not installed anymore, tunnelblick is significantly better
+cask 'openvpn-connect' # openvpn connect, for testing (use tunnelblick)
+cask 'tunnelblick'
+cask 'wireshark'
+
+cask 'chatgpt'
 
 
 # Mac App Store
@@ -238,6 +249,16 @@ cask 'nordvpn' # vpn
 #mas 'SimpleMind Lite'
 #mas 'WireGuard'
 #mas 'Velja'
+
+mas "1Password for Safari", id: 1569813296
+mas "Keynote", id: 409183694
+mas "Numbers", id: 409203825
+mas "Pages", id: 409201541
+mas "Photomator", id: 1444636541
+mas "SQLPro for MSSQL", id: 828466809
+mas "TestFlight", id: 899247664
+mas "Toggl Track", id: 1291898086
+mas "Xmind", id: 1327661892
 
 # not here yet:
 #
