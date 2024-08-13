@@ -29,8 +29,6 @@ else
     # Fetch secrets and store them in the secrets file
     # Example usage: fetch_and_save_secret "myaccount.1password.com" "uuid-of-secret-item" "API_KEY"
     fetch_and_save_secret "louwers" "op://Personal/chatgpt.nvim token/credential" "OPENAI_API_KEY"
-    fetch_and_save_secret "kranelabs" "op://Private/UpCloud - frank for Terraform/password" "UPCLOUD_PASSWORD"
-    fetch_and_save_secret "kranelabs" "op://Private/UpCloud - frank for Terraform/username" "UPCLOUD_USERNAME"
 
     # Source the newly created secrets file
     source "$secrets_file"
