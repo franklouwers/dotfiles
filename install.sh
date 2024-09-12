@@ -50,6 +50,7 @@ asdf install golang latest
 asdf global golang $(asdf list golang)
 . $(brew --prefix)/opt/asdf/libexec/asdf.sh
 go install golang.org/x/tools/cmd/goimports@latest
+go install golang.org/x/tools/gopls@latest
 
 ## NodeJS
 asdf plugin-add nodejs https://github.com/asdf-vm/asdf-nodejs.git
@@ -100,7 +101,7 @@ cp ipv6-toggle.1s.sh $HOME/.config/swiftbar
 
 ### mark-text isn't properly signed
 # needed as long as https://github.com/marktext/marktext/issues/2983 is open
-xattr -r -d com.apple.quarantine /Applications/MarkText.app
+#xattr -r -d com.apple.quarantine /Applications/MarkText.app
 
 # Set macOS preferences
 # We will run this last because this will reload the shell
