@@ -1,5 +1,5 @@
 Include ~/.orbstack/ssh/config
-Include ~/.dotfiles/ssh_config-secret
+Include ~/.dotfiles-pvt/.ssh/ssh_config-secret
 
 ## Default
 Host *
