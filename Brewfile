@@ -137,7 +137,8 @@ cask 'orbstack' # better docker desktop
 cask 'swiftbar' # custom entries in the menubar
 #cask 'mark-text' # markdown, actually good but no longer maintained
 #cask 'deepl' # translations (use chatgpt)
-cask "hiddenbar" # hide menu bar
+#cask "hiddenbar" # hide menu bar
+cask 'jordanbaird-ice' # hide menu bar
 cask 'transmission'
 cask 'rar' # compression
 
