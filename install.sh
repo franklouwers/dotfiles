@@ -13,6 +13,8 @@ if test ! $(which brew); then
 	eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
 
+git clone git@github.com:franklouwers/dotfiles-pvt.git $HOME/.dotfile-pvt
+
 # We use submodules in this repo...
 git submodule init
 git submodule update
@@ -54,8 +56,8 @@ asdf plugin-add nodejs https://github.com/asdf-vm/asdf-nodejs.git
 #bash -c '${ASDF_DATA_DIR:=$HOME/.asdf}/plugins/nodejs/bin/import-release-team-keyring'
 #asdf install nodejs lts
 #asdf global nodejs lts
-asdf install nodejs 18.18.0
-asdf global nodejs 18.18.0
+asdf install nodejs 20.17.0
+asdf global nodejs 20.17.0
 . $(brew --prefix)/opt/asdf/libexec/asdf.sh
 
 ## Ruby
@@ -69,7 +71,7 @@ gem install solargraph
 gem install ruby-lsp
 
 ## Symlink the Mackup config file to the home directory
-ln -s $HOME/.dotfiles/.mackup.cfg $HOME/.mackup.cfg
+ln -s $HOME/.dotfiles/.mackup.cfg $HOME/.mackup.cfg # do we still use this? TODO
 
 # vim lsp
 npm install --global dockerfile-language-server-nodejs # dockerfile
@@ -78,10 +80,6 @@ npm install --global yarn
 npm install --global @funboxteam/optimizt # optmize images for the web ### TODO: fix me
 npm install -i -g yaml-language-server    # yamlls
 npm install -i -g bash-language-server    # yamlls
-
-# Set macOS preferences
-# We will run this last because this will reload the shell
-source .macos
 
 open -a Dropbox
 
@@ -104,6 +102,10 @@ cp ipv6-toggle.1s.sh $HOME/.config/swiftbar
 # needed as long as https://github.com/marktext/marktext/issues/2983 is open
 xattr -r -d com.apple.quarantine /Applications/MarkText.app
 
+# Set macOS preferences
+# We will run this last because this will reload the shell
+source macos-settings.sh
+
 # only now install Rosetta2. Everything above should (?) work without Rosetta2 :)
 
 echo 'If you wish to install Rosetta2, run the following command:'
@@ -112,3 +114,4 @@ echo '  sudo softwareupdate --install-rosetta'
 echo ''
 
 echo "may the force be with you!"
+echo "Also check $HOME/.dotfiles-pvt"
