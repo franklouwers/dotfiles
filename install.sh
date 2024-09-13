@@ -2,6 +2,13 @@
 
 echo "Setting up your Mac..."
 
+if [ "$TERM_PROGRAM" != "Apple_Terminal" ]; then
+  echo "Error: This script must be run in Apple Terminal. Mac OS doesn't grant other terminals (eg iTerm) the same access."
+  echo "If you're sure you want to continu, set the TERM_PROGRAM envvar to 'Apple_Terminal'"
+  exit 1
+fi
+
+
 mkdir -p ~/.ssh/control
 chmod 700 ~/.ssh
 ln -s $HOME/.dotfiles/.ssh_config $HOME/.ssh/config
@@ -16,8 +23,9 @@ fi
 git clone git@github.com:franklouwers/dotfiles-pvt.git $HOME/.dotfile-pvt
 
 # We use submodules in this repo...
-git submodule init
-git submodule update
+# no we don't ...
+#git submodule init
+#git submodule update
 
 # Update Homebrew recipes
 brew update
