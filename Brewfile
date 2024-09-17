@@ -1,6 +1,3 @@
-tap 'homebrew/cask'
-tap 'homebrew/cask-fonts'
-tap 'homebrew/cask-versions'
 tap 'homebrew/bundle'
 tap 'franklouwers/franklouwers'
 tap 'kreuzwerker/taps'
@@ -13,7 +10,7 @@ tap "natesales/repo", "https://github.com/natesales/repo"
 
 # cloud provider and IaC / Kubernetes stuff
 brew 'awscli' # AWS
-brew 'terraform' # still need this for backwards compatibility
+#brew 'terraform' # still need this for backwards compatibility
 brew "terraform-ls"
 brew "terraform-lsp"
 brew "opentofu" # new kid on the block
@@ -41,7 +38,7 @@ brew 'ripgrep' # faster grep
 brew 'fzf'
 brew 'coreutils' # gnu coreutils
 brew 'fd' # better find, my noevim setup uses this
-brew 'oxide' # better z, which is a better cd
+brew 'zoxide' # better z, which is a better cd
 
 # code formatters
 brew 'prettier' # maybe move to npm install?
@@ -91,7 +88,7 @@ brew 'imagemagick'
 brew 'exercism' #exercism.io companion app
 brew 'hyperfine' # cli benchmark tool
 brew 'pgcli' # good postgres cli client
-brew 'yt-dpl' #youtubedownload
+brew 'yt-dlp' #youtubedownload
 
 brew 'asdf' # version management
 
@@ -146,11 +143,11 @@ cask 'rar' # compression
 cask 'font-lato'
 cask 'font-meslo-for-powerlevel10k'
 cask 'font-inter'
-cask 'font-mullish'
+cask 'font-mulish'
+
 cask 'abbyy-finereader-pdf'
 cask 'eid-be'
 cask 'eid-be-viewer'
-cask 'robo-3t'
 cask 'rectangle'
 
 cask '1password-cli'
@@ -163,7 +160,7 @@ cask 'microsoft-powerpoint'
 cask 'microsoft-remote-desktop'
 cask 'visual-studio-code'
 
-cask 'fujitsu-scansnap-home' # to connect the scanner directly
+cask 'fujitsu-scansnap-home' # to connect the scanner directly. warning, needs rosetta
 
 cask 'imageoptim' # image optimizer (for web and other)
 

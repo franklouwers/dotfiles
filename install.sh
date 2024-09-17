@@ -30,6 +30,9 @@ git clone git@github.com:franklouwers/dotfiles-pvt.git $HOME/.dotfile-pvt
 # Update Homebrew recipes
 brew update
 
+# Rosetta: some of our Brew installs require it
+sudo softwareupdate --install-rosetta
+
 # Install all our dependencies with bundle (See Brewfile)
 brew tap homebrew/bundle
 brew bundle
@@ -115,11 +118,6 @@ cp ipv6-toggle.1s.sh $HOME/.config/swiftbar
 # We will run this last because this will reload the shell
 source macos-settings.sh
 
-# only now install Rosetta2. Everything above should (?) work without Rosetta2 :)
-
-echo 'If you wish to install Rosetta2, run the following command:'
-echo ''
-echo '  sudo softwareupdate --install-rosetta'
 echo ''
 
 echo "may the force be with you!"
