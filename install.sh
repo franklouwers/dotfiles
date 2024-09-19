@@ -20,7 +20,7 @@ if test ! $(which brew); then
 	eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
 
-git clone git@github.com:franklouwers/dotfiles-pvt.git $HOME/.dotfile-pvt
+git clone git@github.com:franklouwers/dotfiles-pvt.git $HOME/.dotfiles-pvt
 
 # We use submodules in this repo...
 # no we don't ...

@@ -185,6 +185,15 @@ defaults write com.apple.mail DraftsViewerAttributes -dict-add "SortOrder" -stri
 # "Sort by newest to oldest"
 defaults write com.apple.mail DraftsViewerAttributes -dict-add "SortedDescending" -string "yes"
 
+# No sounds for new mails / sending mail / ...
+default write com.apple.mail NewMessagesSoundName -string ""
+default write com.apple.mail NewMessagesSoundName PlayMailSounds -int 0
+
+# Larger fonts (yes, showing my age)
+default write com.apple.mail NSFont -string "HelveticaNeue"
+default write com.apple.mail NSFontSize -int 14
+
+
 
 ####### Terminal
 # Only use UTF-8 in Terminal.app.

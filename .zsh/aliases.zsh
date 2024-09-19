@@ -41,3 +41,5 @@ alias sshpass="ssh -o PubkeyAuthentication=no"
 function jwtcheck() {
   kubectl get secret -o json jwt.$1.cicd | jq -r '.data."access.jwt"' | base64 -D | jwt decode -j -  | jq '.payload."https://api.oqton.ai/claims"'
 }
+
+alias allow_unnotarized="xattr -r -d com.apple.quarantine"

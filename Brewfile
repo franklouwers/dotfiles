@@ -167,6 +167,7 @@ cask 'imageoptim' # image optimizer (for web and other)
 #cask 'zoom' # you know, for zoom
 
 cask 'notion' # notion.so
+cask 'notion-calendar' # notion.so calendar
 
 
 # messaging
@@ -197,6 +198,7 @@ cask 'cleanshot' # nice screenshots and editing
 #cask 'clocker' # time zone aware clock in the menu bar
 
 #cask 'logi-options-plus' #for logitech keyboard stuff - GARBAGE. Don't use anymore ...
+cask 'steermouse' # replacement for the logi bloatware
 
 cask 'nordvpn' # vpn
 cask 'openvpn-connect' # openvpn connect, for testing (use tunnelblick)
