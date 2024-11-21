@@ -133,6 +133,7 @@ cask 'iterm2'
 cask 'orbstack' # better docker desktop
 cask 'swiftbar' # custom entries in the menubar
 #cask 'mark-text' # markdown, actually good but no longer maintained
+cask 'marked' # markdown viewer ($)
 #cask 'deepl' # translations (use chatgpt)
 #cask "hiddenbar" # hide menu bar
 cask 'jordanbaird-ice' # hide menu bar

@@ -1,11 +1,16 @@
 Include ~/.orbstack/ssh/config
 Include ~/.dotfiles-pvt/.ssh/ssh_config-secret
 
+Host ssh.dev.azure.com
+  IdentitiesOnly yes
+  IdentityFile ~/.ssh/1pkeys/azure.pub
+
+Host github.com
+  IdentitiesOnly yes
+  IdentityFile ~/.ssh/1pkeys/github.pub
+
 ## Default
 Host *
-  AddKeysToAgent yes
-
-#  UseKeychain yes # e.g. Forklift needs this for sftp
   ServerAliveInterval 60
   IdentityAgent "~/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock"
 
@@ -13,4 +18,5 @@ Host *
   ControlPath ~/.ssh/control_%C
   ControlMaster auto
   ControlPersist 1h
-  ForwardAgent yes
+  ForwardAgent no
+#  UseKeychain yes # e.g. Forklift needs this for sftp

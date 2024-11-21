@@ -26,3 +26,6 @@ export LESSOPEN="| lessfilter-fzf %s"
 export GOROOT=$(go env GOROOT)
 export GOPATH=$(go env GOPATH)
 export PATH="$PATH:$(go env GOPATH)/bin"
+
+# Krew
+export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"

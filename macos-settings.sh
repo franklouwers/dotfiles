@@ -128,7 +128,9 @@ defaults write com.apple.Safari HomePage -string "about:blank"
 defaults write com.apple.Safari DebugSnapshotsUpdatePolicy -int 2
 
 # Developers menu
-defaults write com.apple.Safari IncludeDevelopMenu -bool true
+defaults write com.apple.Safari IncludeDevelopMenu -int 1 # 2024 sequoia: seems to an Int now
+defaults write com.apple.Safari "WebKitPreferences.developerExtrasEnabled" -int 1 # 2024 sequoia: seems to an Int now
+
 defaults write com.apple.Safari WebKitDeveloperExtrasEnabledPreferenceKey -bool true
 defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebKit2DeveloperExtrasEnabled -bool true
 #defaults write NSGlobalDomain WebKitDeveloperExtras -bool true

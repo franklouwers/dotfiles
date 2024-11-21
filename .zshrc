@@ -61,4 +61,3 @@ zcomet compinit
 # hooks
 _evalcache /opt/homebrew/bin/brew shellenv
 _evalcache zoxide init zsh
-
