@@ -43,3 +43,11 @@ function jwtcheck() {
 }
 
 alias allow_unnotarized="xattr -r -d com.apple.quarantine"
+
+function gitclean() {
+  git branch --sort=-committerdate --format='%(refname:short)' | while IFS= read -r branch; do
+  if [[ -z $(git log -1 --since='7 days ago' -s "$branch") ]]; then
+    git branch -D "$branch"
+  fi
+done
+}

@@ -29,3 +29,6 @@ export PATH="$PATH:$(go env GOPATH)/bin"
 
 # Krew
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
+
+# because iterm2 has silly defaults (and apple as well)
+ulimit -n 987654
