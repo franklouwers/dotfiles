@@ -16,7 +16,7 @@ fi
 [[ ! -f ~/.p10k.zsh ]] || zcomet snippet ~/.p10k.zsh
 
 # asdf
-zcomet snippet /opt/homebrew/opt/asdf/libexec/asdf.sh
+#zcomet snippet /opt/homebrew/opt/asdf/libexec/asdf.sh
 
 # aliases
 zcomet snippet $HOME/.zsh/aliases.zsh

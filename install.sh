@@ -51,32 +51,35 @@ git clone git@github.com:franklouwers/neovim-config.git $HOME/.config/nvim
 # p10k config
 ln -s $HOME/.dotfiles/p10k.zsh $HOME/.p10k.zsh
 
+# Ghostty config
+ln -s $HOME/.dotfiles/ghostty $HOME/.config/
+
 ### Install asdf plugins
-. $(brew --prefix)/opt/asdf/libexec/asdf.sh
+#. $(brew --prefix)/opt/asdf/libexec/asdf.sh
 
 ## Golang
-asdf plugin-add golang https://github.com/kennyp/asdf-golang.git
+#asdf plugin-add golang https://github.com/kennyp/asdf-golang.git
 # after go getting: asdf reshim golang
-asdf install golang latest
-asdf global golang $(asdf list golang)
-. $(brew --prefix)/opt/asdf/libexec/asdf.sh
-go install golang.org/x/tools/cmd/goimports@latest
-go install golang.org/x/tools/gopls@latest
+#asdf install golang latest
+#asdf global golang $(asdf list golang)
+#. $(brew --prefix)/opt/asdf/libexec/asdf.sh
+#go install golang.org/x/tools/cmd/goimports@latest
+#go install golang.org/x/tools/gopls@latest
 
 ## NodeJS
-asdf plugin-add nodejs https://github.com/asdf-vm/asdf-nodejs.git
+#asdf plugin-add nodejs https://github.com/asdf-vm/asdf-nodejs.git
 #bash -c '${ASDF_DATA_DIR:=$HOME/.asdf}/plugins/nodejs/bin/import-release-team-keyring'
 #asdf install nodejs lts
 #asdf global nodejs lts
-asdf install nodejs 20.17.0
-asdf global nodejs 20.17.0
-. $(brew --prefix)/opt/asdf/libexec/asdf.sh
+#asdf install nodejs 20.17.0
+#asdf global nodejs 20.17.0
+#. $(brew --prefix)/opt/asdf/libexec/asdf.sh
 
 ## Ruby
-asdf plugin-add ruby https://github.com/asdf-vm/asdf-ruby.git
-asdf install ruby latest
-asdf global ruby $(asdf list ruby)
-. $(brew --prefix)/opt/asdf/libexec/asdf.sh
+#asdf plugin-add ruby https://github.com/asdf-vm/asdf-ruby.git
+#asdf install ruby latest
+#asdf global ruby $(asdf list ruby)
+#. $(brew --prefix)/opt/asdf/libexec/asdf.sh
 # Install global ruby packages
 gem install yaml2json
 gem install solargraph
@@ -97,8 +100,8 @@ open -a Dropbox
 
 # requires rosetta!
 ## Helm
-asdf plugin-add helm
-asdf install helm latest
+#asdf plugin-add helm
+#asdf install helm latest
 
 #ssh-add --apple-use-keychain ~/.ssh/id_*
 

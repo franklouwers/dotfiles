@@ -51,3 +51,5 @@ function gitclean() {
   fi
 done
 }
+
+alias kubecheck="kubectl df-pv; pluto detect-helm -owide -v2"

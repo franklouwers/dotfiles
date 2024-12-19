@@ -58,9 +58,9 @@ brew 'pkg-config' # https://github.com/driesvints/dotfiles/issues/20
 brew 'tldr' #better man
 
 # dev - language specific
-#brew 'go' # -> moved to asdf
-#brew 'gopls' # -> moved to asdf
-#brew 'go-bindata' # -> moved to asdf
+brew 'go'
+brew 'gopls'
+#brew 'go-bindata'
 brew 'luajit' # fast lua should be fast
 brew 'luarocks' # lua packages
 brew 'java' # used to be a cask
@@ -91,7 +91,7 @@ brew 'hyperfine' # cli benchmark tool
 brew 'pgcli' # good postgres cli client
 brew 'yt-dlp' #youtubedownload
 
-brew 'asdf' # version management
+#brew 'asdf' # version management
 
 brew 'grep' # gnu grep
 
@@ -102,6 +102,8 @@ brew 'diff-so-fancy' # so fancy diffs±
 
 brew 'bufbuild/buf/buf'
 brew "k6" # ab but better (benchmarks)
+brew 'FairwindsOps/tap/pluto' # kubernetes depreciation check
+brew 'mike-engel/jwt-cli/jwt-cli' # jwt cli
 
 # zshzsh
 brew 'zsh'
@@ -110,7 +112,6 @@ brew 'zsh-completions'
 brew 'zsh-syntax-highlighting'
 brew 'dockutil' # apple Dock
 brew 'marp-cli' # MARP, voor markdown presentaties
-brew 'mike-engel/jwt-cli/jwt-cli' # jwt cli
 
 
 # Apps
@@ -131,6 +132,7 @@ cask 'firefox'
 cask 'google-chrome'
 #cask 'gpg-suite'
 cask 'iterm2'
+cask 'ghostty'
 cask 'orbstack' # better docker desktop
 cask 'swiftbar' # custom entries in the menubar
 #cask 'mark-text' # markdown, actually good but no longer maintained

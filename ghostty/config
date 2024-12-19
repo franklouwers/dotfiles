@@ -1,0 +1,26 @@
+### colors and co ###
+bold-is-bright = true
+
+# red-ish
+cursor-color = d82f1d
+
+cursor-style = block
+
+
+
+
+
+### key bindings ###
+#### quick access
+keybind = global:cmd+§=toggle_quick_terminal
+
+### selections, mouse, urls...
+#https://ghostty.org/docs/config/reference#mouse-scroll-multiplier
+#mouse-scroll-multiplier = 0.3
+
+### consider ###
+#scrollback-limit
+
+
+# modern zsh
+command=/opt/homebrew/bin/zsh

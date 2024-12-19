@@ -25,6 +25,7 @@
   user = franklouwers
 
 [alias]
-   pushf = push --force-with-lease --force-if-includes
+  pushf = push --force-with-lease --force-if-includes
+  pullm = pull origin main --no-ff
 [pull]
-	ff = only
+	rebase = false
