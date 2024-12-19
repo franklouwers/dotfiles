@@ -26,3 +26,5 @@
 
 [alias]
    pushf = push --force-with-lease --force-if-includes
+[pull]
+	ff = only

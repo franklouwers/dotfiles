@@ -39,6 +39,7 @@ brew 'fzf'
 brew 'coreutils' # gnu coreutils
 brew 'fd' # better find, my noevim setup uses this
 brew 'zoxide' # better z, which is a better cd
+brew 'marksman' # markdown lsp
 
 # code formatters
 brew 'prettier' # maybe move to npm install?
