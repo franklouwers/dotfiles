@@ -30,5 +30,12 @@ export PATH="$PATH:$(go env GOPATH)/bin"
 # Krew
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 
-# because iterm2 has silly defaults (and apple as well)
+# because apple macos has silly defaults buts Terminal cheats
 ulimit -n 987654
+
+# Ruby
+export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
+export LDFLAGS="-L/opt/homebrew/opt/ruby/lib"
+export CPPFLAGS="-I/opt/homebrew/opt/ruby/include"
+
+export PKG_CONFIG_PATH="/opt/homebrew/opt/ruby/lib/pkgconfig"
