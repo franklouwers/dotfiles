@@ -6,7 +6,8 @@ tap 'bufbuild/buf'
 tap 'mike-engel/jwt-cli'
 tap 'UpCloudLtd/tap'
 tap "natesales/repo", "https://github.com/natesales/repo"
-
+tap 'suzuki-shunsuke/tfmv' # rename terraform things
+tap "buo/cask-upgrade" #cask-upgrade - brew cu to upgrade MAS apps
 
 # cloud provider and IaC / Kubernetes stuff
 brew 'awscli' # AWS
@@ -22,6 +23,7 @@ brew 'ansible-lint'
 brew 'azure/kubelogin/kubelogin'
 brew 'azure-cli'
 brew 'doctl' # digital ocean
+brew 'tfmv/tfmv' # rename terraform things
 
 # format / syntax / text
 brew 'yamlfmt' # yaml formatter
@@ -60,10 +62,12 @@ brew 'tldr' #better man
 # dev - language specific
 brew 'go'
 brew 'gopls'
+brew 'rust' # cargo + rust
 #brew 'go-bindata'
 brew 'luajit' # fast lua should be fast
 brew 'luarocks' # lua packages
 brew 'java' # used to be a cask
+brew 'ruby'
 
 # neovim and co
 brew 'neovim' # vim but neo

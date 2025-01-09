@@ -93,8 +93,10 @@ npm install --global dockerfile-language-server-nodejs # dockerfile
 npm install --global yarn
 
 npm install --global @funboxteam/optimizt # optmize images for the web ### TODO: fix me
-npm install -i -g yaml-language-server    # yamlls
-npm install -i -g bash-language-server    # yamlls
+npm install -g yaml-language-server    # yamlls
+npm install -g bash-language-server    # yamlls
+npm install -g https://github.com/lttb/gh-actions-language-server # standalone github actions LSP
+npm install -g bun # like all the cool kidz in town do
 
 open -a Dropbox
 
