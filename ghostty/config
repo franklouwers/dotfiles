@@ -2,13 +2,17 @@
 bold-is-bright = true
 
 # red-ish
-cursor-color = d82f1d
+#cursor-color = d82f1d
 
-cursor-style = block
+cursor-style = block_hollow
 
+theme = my-citruszest
 
+# will reset to bar otherwise
+shell-integration-features = no-cursor
 
-
+# make sure ballance is right (if not set, could cause p10k right prompt to be off)
+window-padding-balance = true
 
 ### key bindings ###
 #### quick access
