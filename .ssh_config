@@ -15,7 +15,7 @@ Host *
   IdentityAgent "~/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock"
 
   #Speed up reconnects
-  ControlPath ~/.ssh/control_%C
+  ControlPath ~/.ssh/control_%r@%h_%p
   ControlMaster auto
   ControlPersist 1h
   ForwardAgent no
