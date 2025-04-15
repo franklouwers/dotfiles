@@ -14,6 +14,9 @@ export USE_GKE_GCLOUD_AUTH_PLUGIN=True
 
 # Share history
 setopt share_history
+export HISTSIZE=100000
+export HISTFILESIZE=100000
+export SAVEHIST=100000
 
 # colorize less (also see lesspipe)
 export LESS="-R"

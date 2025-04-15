@@ -53,3 +53,7 @@ done
 }
 
 alias kubecheck="kubectl df-pv; pluto detect-helm -owide -v2"
+
+function terminfoghostty() {
+  infocmp -x | ssh $1 -- tic -x -
+}
