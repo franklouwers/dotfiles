@@ -188,12 +188,12 @@ defaults write com.apple.mail DraftsViewerAttributes -dict-add "SortOrder" -stri
 defaults write com.apple.mail DraftsViewerAttributes -dict-add "SortedDescending" -string "yes"
 
 # No sounds for new mails / sending mail / ...
-default write com.apple.mail NewMessagesSoundName -string ""
-default write com.apple.mail NewMessagesSoundName PlayMailSounds -int 0
+defaults write com.apple.mail NewMessagesSoundName -string ""
+defaults write com.apple.mail PlayMailSounds 0
 
 # Larger fonts (yes, showing my age)
-default write com.apple.mail NSFont -string "HelveticaNeue"
-default write com.apple.mail NSFontSize -int 14
+defaults write com.apple.mail NSFont -string "HelveticaNeue"
+defaults write com.apple.mail NSFontSize -int 14
 
 
 
@@ -450,7 +450,7 @@ if hash dockutil 2> /dev/null; then
     'Reminders' 'TV'
   )
   apps_to_add_to_dock=(
-    'iTerm' 'Safari' 'Firefox' 'Slack' 'Notion'
+    'Ghostty' 'Safari' 'Firefox' 'Slack' 'Notion'
   )
   system_apps_to_add_to_dock=(
     'Messages' 'Mail' 'Calendar'
