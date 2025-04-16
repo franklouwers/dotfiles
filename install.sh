@@ -80,6 +80,9 @@ ln -s $HOME/.dotfiles/ghostty $HOME/.config/
 #asdf install ruby latest
 #asdf global ruby $(asdf list ruby)
 #. $(brew --prefix)/opt/asdf/libexec/asdf.sh
+
+_evalcache /opt/homebrew/bin/brew shellenv
+
 # Install global ruby packages
 gem install yaml2json
 gem install solargraph
