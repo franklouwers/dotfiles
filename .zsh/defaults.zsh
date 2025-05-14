@@ -42,3 +42,6 @@ export LDFLAGS="-L/opt/homebrew/opt/ruby/lib"
 export CPPFLAGS="-I/opt/homebrew/opt/ruby/include"
 
 export PKG_CONFIG_PATH="/opt/homebrew/opt/ruby/lib/pkgconfig"
+
+# defaults for wtfis. Be careful with -g, as greynoise has a low default api limit
+export WTFIS_DEFAULTS="-a -u"

@@ -1,13 +1,13 @@
 Include ~/.orbstack/ssh/config
 Include ~/.dotfiles-pvt/.ssh/ssh_config-secret
 
-Host ssh.dev.azure.com
-  IdentitiesOnly yes
-  IdentityFile ~/.ssh/1pkeys/azure.pub
+# Host ssh.dev.azure.com
+#   IdentitiesOnly yes
+#   IdentityFile ~/.ssh/1pkeys/azure.pub
 
-Host github.com
-  IdentitiesOnly yes
-  IdentityFile ~/.ssh/1pkeys/github.pub
+# Host github.com
+#   IdentitiesOnly yes
+#   IdentityFile ~/.ssh/1pkeys/github.pub
 
 ## Default
 Host *

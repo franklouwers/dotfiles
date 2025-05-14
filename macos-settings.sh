@@ -409,7 +409,7 @@ sudo mdutil -E / > /dev/null
 defaults write com.apple.dock "orientation" -string "left"
 
 # Set Icon size in the Dock to small:
-defaults write com.apple.dock "tilesize" -int "24"
+defaults write com.apple.dock "tilesize" -int "32"
 
 # Make Dock icons of hidden applications translucent.
 defaults write com.apple.dock showhidden -bool true
@@ -550,3 +550,5 @@ defaults write com.apple.menuextra.clock ShowSeconds -bool "false"
 chflags nohidden ~/Library
 
 for app in Safari Finder Dock Mail SystemUIServer; do killall "$app" >/dev/null 2>&1; done
+
+sudo chmod -N ~/.Trash # remove special permissions from trash, otherwise eg Hazel can't remove

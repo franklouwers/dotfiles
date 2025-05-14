@@ -8,13 +8,15 @@ tap 'UpCloudLtd/tap'
 tap "natesales/repo", "https://github.com/natesales/repo"
 tap 'suzuki-shunsuke/tfmv' # rename terraform things
 tap "buo/cask-upgrade" #cask-upgrade - brew cu to upgrade MAS apps
+tap 'fairwindsops/tap' # for pluto
 
 # cloud provider and IaC / Kubernetes stuff
 brew 'awscli' # AWS
-#brew 'terraform' # still need this for backwards compatibility
 brew "terraform-ls"
 brew "terraform-lsp"
 brew "opentofu" # new kid on the block
+brew 'terraform' # still need this for backwards compatibility
+brew `helm`
 brew 'kubectx'
 brew 'k9s' # kuberetes master controller cli
 brew 'stern' # multiple "kubectl logs -f" at once
@@ -23,7 +25,7 @@ brew 'ansible-lint'
 brew 'azure/kubelogin/kubelogin'
 brew 'azure-cli'
 brew 'doctl' # digital ocean
-brew 'tfmv/tfmv' # rename terraform things
+brew 'suzuki-shunsuke/tfmv/tfmv' # rename terraform things
 
 # format / syntax / text
 brew 'yamlfmt' # yaml formatter
@@ -109,6 +111,8 @@ brew "k6" # ab but better (benchmarks)
 brew 'FairwindsOps/tap/pluto' # kubernetes depreciation check
 brew 'mike-engel/jwt-cli/jwt-cli' # jwt cli
 
+brew 'wtfis` # what the frak is ? (ip / domain lookup on steroids)
+
 # zshzsh
 brew 'zsh'
 brew 'zplug'
@@ -135,7 +139,7 @@ cask 'backblaze'
 cask 'firefox'
 cask 'google-chrome'
 #cask 'gpg-suite'
-cask 'iterm2'
+#cask 'iterm2'
 cask 'ghostty'
 cask 'orbstack' # better docker desktop
 cask 'swiftbar' # custom entries in the menubar
@@ -213,7 +217,8 @@ cask 'openvpn-connect' # openvpn connect, for testing (use tunnelblick)
 cask 'tunnelblick'
 cask 'wireshark'
 
-cask 'chatgpt'
+cask 'chatgpt' # my friend Chadd
+cask 'claude' # my friend klood
 
 
 # Mac App Store
@@ -229,7 +234,7 @@ mas "Xmind", id: 1327661892
 
 # not here yet:
 #
-# cpdf and cpdfsqueeze -> //www.coherentpdf.com/
+# cpdf and cpdfsqueeze -> https://github.com/coherentgraphics/cpdf-binaries
 # https://www.canon-europe.com/support/consumer_products/products/printers/laser/i-sensys_lbp613cdw.html?type=drivers&driverdetailid=tcm:13-1943119&os=macos%2010.15%20%28catalina%29&language=en
 
 # iterm2 color scheme catppuccin-mocha

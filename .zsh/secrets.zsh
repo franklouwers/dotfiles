@@ -29,6 +29,9 @@ else
     # Fetch secrets and store them in the secrets file
     # Example usage: fetch_and_save_secret "myaccount.1password.com" "uuid-of-secret-item" "API_KEY"
     fetch_and_save_secret "louwers" "op://Personal/chatgpt.nvim token/credential" "OPENAI_API_KEY"
+    fetch_and_save_secret "louwers" "op://Personal/VirusTotal/api" "VT_API_KEY"
+    fetch_and_save_secret "louwers" "op://Personal/Greynoise/api" "GREYNOISE_API_KEY"
+    fetch_and_save_secret "louwers" "op://Personal/AbuseIPDB/api" "ABUSEIPDB_API_KEY"
 
     # Source the newly created secrets file
     source "$secrets_file"
