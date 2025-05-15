@@ -231,6 +231,7 @@ mas "SQLPro for MSSQL", id: 828466809
 mas "TestFlight", id: 899247664
 mas "Toggl Track", id: 1291898086
 mas "Xmind", id: 1327661892
+mas "Velja", id: 1607635845
 
 # not here yet:
 #
