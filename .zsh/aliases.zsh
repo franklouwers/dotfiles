@@ -4,6 +4,7 @@ alias reloaddns="dscacheutil -flushcache && sudo killall -HUP mDNSResponder"
 
 # Github PR
 alias pr="gh pr create --web"
+alias openprs="gh pr list"
 
 # Neovim, not vim or vi
 alias vim=nvim
@@ -52,7 +53,7 @@ function gitclean() {
 done
 }
 
-alias kubecheck="kubectl df-pv; pluto detect-helm -owide -v2"
+alias kubecheck="kubectl df-pv; pluto detect-helm -owide -v2; kubectl version"
 
 function terminfoghostty() {
   infocmp -x | ssh $1 -- tic -x -

@@ -6,7 +6,7 @@ bold-is-bright = true
 
 cursor-style = block_hollow
 
-theme = my-citruszest
+theme = "Everforest Dark - Hard"
 
 # will reset to bar otherwise
 shell-integration-features = no-cursor
@@ -28,3 +28,9 @@ keybind = global:cmd+§=toggle_quick_terminal
 
 # modern zsh
 command=/opt/homebrew/bin/zsh
+#keybind = shift+enter=text:\n
+
+keybind = ctrl+h=goto_split:left
+keybind = ctrl+j=goto_split:bottom
+keybind = ctrl+k=goto_split:top
+keybind = ctrl+l=goto_split:right
