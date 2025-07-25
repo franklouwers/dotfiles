@@ -1,242 +1,371 @@
-tap 'homebrew/bundle'
-tap 'franklouwers/franklouwers'
-tap 'kreuzwerker/taps'
-tap 'azure/kubelogin'
-tap 'bufbuild/buf'
-tap 'mike-engel/jwt-cli'
-tap 'UpCloudLtd/tap'
+tap "azure/kubelogin"
+tap "bufbuild/buf"
+tap "buo/cask-upgrade"
+tap "fairwindsops/tap"
+tap "franklouwers/franklouwers"
+tap "kreuzwerker/taps"
+tap "mike-engel/jwt-cli"
 tap "natesales/repo", "https://github.com/natesales/repo"
-tap 'suzuki-shunsuke/tfmv' # rename terraform things
-tap "buo/cask-upgrade" #cask-upgrade - brew cu to upgrade MAS apps
-tap 'fairwindsops/tap' # for pluto
+tap "suzuki-shunsuke/tfmv"
 
-# cloud provider and IaC / Kubernetes stuff
-brew 'awscli' # AWS
+## data and general purpose tools
+# Archive manager for data compression and backups
+cask "rar"
+# General-purpose data compression with high compression ratio
+brew "xz"
+# GNU File, Shell, and Text utilities
+brew "coreutils"
+# Simple, fast and user-friendly alternative to find
+brew "fd"
+# Command-line fuzzy finder written in Go
+brew "fzf"
+# Interpreter for PostScript and PDF
+brew "ghostscript"
+# Render markdown on the CLI
+brew "glow"
+# GNU grep, egrep and fgrep
+brew "grep"
+# Clone of cat(1) with syntax highlighting and Git integration
+brew "bat"
+# Tools and libraries to manipulate images in many formats
+brew "imagemagick"
+# Official CLI for the IPinfo IP Address API
+brew "ipinfo-cli"
+# Lightweight and flexible command-line JSON processor
+brew "jq"
+# Input filter for the pager less
+brew "lesspipe"
+# Easily convert Marp Markdown files into static HTML/CSS, PDF, PPT and images
+brew "marp-cli"
+# 7-Zip (high compression file archiver) implementation
+brew "p7zip"
+# CLI for Postgres with auto-completion and syntax highlighting
+brew "pgcli"
+# Convert character set (charsets)
+brew "recode"
+# Search tool like grep and The Silver Searcher
+brew "ripgrep"
+# Display directories as trees (with optional color/HTML output)
+brew "tree"
+# Executes a program periodically, showing output fullscreen
+brew "watch"
+# Process YAML, JSON, XML, CSV and properties documents from the CLI
+brew "yq"
+# Feature-rich command-line audio/video downloader
+brew "yt-dlp"
+# Super fast CLI tool to decode and encode JWTs built in Rust
+brew "mike-engel/jwt-cli/jwt-cli"
+
+
+## IaaC: Ansible, tofu and others
+# Automate deployment, configuration, and upgrading
+brew "ansible"
+# Checks ansible playbooks for practices and behaviour
+brew "ansible-lint"
+# Drop-in replacement for Terraform. Infrastructure as Code Tool
+brew "opentofu"
+# Tool to build, change, and version infrastructure
+brew "terraform"
+
+## Cloud management tools (non-IaaC), including kube tools
+# Official Amazon AWS command-line interface
+brew "awscli"
+# Bring your existing Azure resources under the management of Terraform
+brew "aztfexport"
+# Microsoft Azure CLI 2.0
+brew "azure-cli"
+# Command-line tool for DigitalOcean
+brew "doctl"
+# Command-line tool to interact with exercism.io
+brew "exercism"
+# Kubernetes package manager
+brew "helm"
+# Kubernetes CLI To Manage Your Clusters In Style!
+brew "k9s"
+# Tool that can switch between kubectl contexts easily and create aliases
+brew "kubectx"
+# Command-line interface for https://speedtest.net bandwidth tests
+brew "speedtest-cli"
+# Tail multiple Kubernetes pods & their containers
+brew "stern"
+# A Kubernetes credential (exec) plugin implementing azure authentication
+brew "azure/kubelogin/kubelogin"
+# Detect deprecated Kubernetes apiVersions
+brew "fairwindsops/tap/pluto"
+# Set of tools to manage resources and applications hosted on Google Cloud
+cask "gcloud-cli"
+# Plugin for AWS CLI to start and end sessions that connect to managed instances
+cask "session-manager-plugin"
+
+## dev tools excluding interpreters/compilers, but including language servers
+# Tool for generating GNU Standards-compliant Makefiles
+brew "automake"
+# Python code formatter
+brew "black"
+# Good-lookin' diffs with diff-highlight and more
+brew "diff-so-fancy"
+# Lint your Python code for style and logical errors
+brew "flake8"
+# GitHub command-line tool
+brew "gh"
+# Distributed revision control system
+brew "git"
+# Git extension for versioning large files
+brew "git-lfs"
+# Reformats Java source code to comply with Google Java Style
+brew "google-java-format"
+# Language server for the Go language
+brew "gopls"
+# Simple terminal UI for git commands
+brew "lazygit"
+# Version of the SSL/TLS protocol forked from OpenSSL
+brew "libressl"
+# Library for USB device access
+brew "libusb"
+# Package manager for the Lua programming language
+brew "luarocks"
+# Language Server Protocol for Markdown
+brew "marksman"
+# Ambitious Vim-fork focused on extensibility and agility
+brew "neovim"
+# Package compiler and linker metadata toolkit
+brew "pkgconf"
+# Code formatter for JavaScript, CSS, JSON, GraphQL, Markdown, YAML
+brew "prettier"
+# Opinionated Lua code formatter
+brew "stylua"
+# Terraform Language Server
 brew "terraform-ls"
-brew "terraform-lsp"
-brew "opentofu" # new kid on the block
-brew 'terraform' # still need this for backwards compatibility
-brew `helm`
-brew 'kubectx'
-brew 'k9s' # kuberetes master controller cli
-brew 'stern' # multiple "kubectl logs -f" at once
-brew 'ansible'
-brew 'ansible-lint'
-brew 'azure/kubelogin/kubelogin'
-brew 'azure-cli'
-brew 'doctl' # digital ocean
-brew 'suzuki-shunsuke/tfmv/tfmv' # rename terraform things
+# CLI to rename Terraform resources and generate moved blocks
+brew "tfmv"
+# Extensible command-line tool to format YAML files
+brew "yamlfmt"
+# The best way of working with Protocol Buffers.
+brew "bufbuild/buf/buf"
 
-# format / syntax / text
-brew 'yamlfmt' # yaml formatter
-brew 'bat' # "cat" on steroids
-brew 'glow' # for md files
-brew 'lesspipe'
-brew 'watch'
-brew 'jq'
-brew "natesales/repo/q" # dns powertool
-brew 'yq'
-brew 'pwgen'
-brew 'recode'
-brew 'ripgrep' # faster grep
-brew 'fzf'
-brew 'coreutils' # gnu coreutils
-brew 'fd' # better find, my noevim setup uses this
-brew 'zoxide' # better z, which is a better cd
-brew 'marksman' # markdown lsp
+## dev tools: compilers / interpreters
+# Secure runtime for JavaScript and TypeScript
+brew "deno"
+# GNU compiler collection
+brew "gcc"
+# Open source programming language to build simple/reliable/efficient software
+brew "go"
+# Development kit for the Java programming language
+brew "openjdk"
+# Just-In-Time Compiler (JIT) for the Lua programming language
+brew "luajit"
+# Powerful, clean, object-oriented scripting language
+brew "ruby"
+# Safe, concurrent, practical language
+brew "rust"
 
-# code formatters
-brew 'prettier' # maybe move to npm install?
-brew 'black' # python
-brew 'stylua' # lua
-brew 'flake8' # python
-brew 'google-java-format' # java
+## sysadmin tools
+# Provides SOCKS and HTTPS proxy support to SSH
+brew "connect"
+# Cluster ssh tool for Terminal.app
+brew "csshx"
+# Improved top (interactive process viewer)
+brew "htop"
+# Command-line benchmarking tool
+brew "hyperfine"
+# Modern load testing tool, using Go and JavaScript
+brew "k6"
+# 'traceroute' and 'ping' in a single tool
+brew "mtr"
+# Port scanning utility for large networks
+brew "nmap"
+# Password generator
+brew "pwgen"
+# Advanced console-based IP subnet calculator
+brew "sipcalc"
+# SMTP command-line test tool
+brew "swaks"
+# User interface to the TELNET protocol
+brew "telnet"
+# Passive hostname, domain, and IP lookup tool
+brew "wtfis"
+# dns general purpose tool
+brew "natesales/repo/q"
+# Disk partitioning tool
+cask "gdisk"
 
-# dev tools
-brew 'git'
-brew 'git-lfs'
-#brew 'svn' # I know, I know. But cask `font-source-code-pro` seems to require this!?
-brew 'gh' # official github tools
-brew 'pkg-config' # https://github.com/driesvints/dotfiles/issues/20
+## mac specific
+# Tool for managing dock items
+brew "dockutil"
+# List USB devices, just like the Linux lsusb command
+brew "lsusb"
+# Mac App Store command-line interface
+brew "mas"
+# Send macOS User Notifications from the command-line
+brew "terminal-notifier"
+# CLI tool that moves files or folder to the trash
+brew "trash"
 
-brew 'tldr' #better man
+## zsh and co
+# Shell extension to navigate your filesystem faster
+brew "zoxide"
+# Next-generation plugin manager for zsh
+brew "zplug"
+# UNIX shell (command interpreter)
+brew "zsh"
+# Additional completion definitions for zsh
+brew "zsh-completions"
+# Fish shell like syntax highlighting for zsh
+brew "zsh-syntax-highlighting"
 
-# dev - language specific
-brew 'go'
-brew 'gopls'
-brew 'rust' # cargo + rust
-#brew 'go-bindata'
-brew 'luajit' # fast lua should be fast
-brew 'luarocks' # lua packages
-brew 'java' # used to be a cask
-brew 'ruby'
+## Casks: data
+# Password manager that keeps all passwords secure behind one password
+cask "1password"
+# Command-line interface for 1Password
+cask "1password-cli"
+# Scan, OCR, and convert documents to searchable PDFs and other formats
+#cask "abbyy-finereader-pdf"
+# E-book reader
+cask "adobe-digital-editions"
+# E-books management software
+cask "calibre"
+# Screen capturing tool
+cask "cleanshot"
+# Voice and text chat software
+cask "discord"
+# Client for the Dropbox cloud storage service
+cask "dropbox"
+# Fujitsu ScanSnap Scanner software
+cask "fujitsu-scansnap-home"
+# Client for the Google Drive storage service
+cask "google-drive"
+# Open-source video transcoder
+cask "handbrake-app"
+# Tool to optimise images to a smaller size
+cask "imageoptim"
+# Previewer for Markdown, MultiMarkdown and other text markup languages
+cask "marked-app"
+# Spreadsheet software
+cask "microsoft-excel"
+# Presentation software
+cask "microsoft-powerpoint"
+# Word processor
+cask "microsoft-word"
+# MQTT explorer
+cask "mqtt-explorer"
+# Cross-platform MQTT 5.0 Desktop Client
+cask "mqttx"
+# App to write, plan, collaborate, and get organised
+cask "notion"
+# Calendar for professionals and teams
+cask "notion-calendar"
+# Email client integrated with Notion workspace
+cask "notion-mail"
+# PDF reader, editor and annotator
+cask "pdf-expert"
+# Team communication and collaboration software
+cask "slack"
+# Messaging app with a focus on speed and security
+cask "telegram"
+# Open-source BitTorrent client
+cask "transmission"
+# Open-source code editor
+cask "visual-studio-code"
+# Native desktop client for WhatsApp
+cask "whatsapp"
 
-# neovim and co
-brew 'neovim' # vim but neo
-brew 'lazygit' # git for neovim
-
-
-# other
-brew 'deno' # JS runtime, vim plugin 'peek.nvim' needs this
-brew 'ipinfo-cli' # ipinfo
-brew 'swaks' # mail debuggingk
-#brew 'mackup'
-brew 'mas' # Mac App Store manager
-brew 'trash' # Manage the Trash bin
-brew 'sipcalc'
-brew 'mtr'
-brew 'csshx'
-brew 'telnet'
-brew 'nmap'
-brew 'p7zip' # better zip (includes good encryption)
-brew "xz" # encryption
-brew 'ghostscript'
-brew 'imagemagick'
-brew 'exercism' #exercism.io companion app
-brew 'hyperfine' # cli benchmark tool
-brew 'pgcli' # good postgres cli client
-brew 'yt-dlp' #youtubedownload
-
-#brew 'asdf' # version management
-
-brew 'grep' # gnu grep
-
-#brew 'ykman' # cli tool for Yubico Key Manager
-
-brew 'terminal-notifier'  # send apple notifs from the cli
-brew 'diff-so-fancy' # so fancy diffs±
-
-brew 'bufbuild/buf/buf'
-brew "k6" # ab but better (benchmarks)
-brew 'FairwindsOps/tap/pluto' # kubernetes depreciation check
-brew 'mike-engel/jwt-cli/jwt-cli' # jwt cli
-
-brew 'wtfis` # what the frak is ? (ip / domain lookup on steroids)
-
-# zshzsh
-brew 'zsh'
-brew 'zplug'
-brew 'zsh-completions'
-brew 'zsh-syntax-highlighting'
-brew 'dockutil' # apple Dock
-brew 'marp-cli' # MARP, voor markdown presentaties
-
-
-# Apps
-cask 'session-manager-plugin' # AWS ssm
-cask 'alfred'
-cask '1Password' # you know, for passwords
-cask 'keepingyouawake'
-cask 'dropbox'
-cask 'calibre'
-cask 'charles'
-cask 'handbrake'
-cask 'spotify'
-cask 'tripmode'
-cask 'adguard'
-cask 'hazel'
-cask 'backblaze'
-cask 'firefox'
-cask 'google-chrome'
-#cask 'gpg-suite'
-#cask 'iterm2'
-cask 'ghostty'
-cask 'orbstack' # better docker desktop
-cask 'swiftbar' # custom entries in the menubar
-#cask 'mark-text' # markdown, actually good but no longer maintained
-cask 'marked' # markdown viewer ($)
-#cask 'deepl' # translations (use chatgpt)
-#cask "hiddenbar" # hide menu bar
-cask 'jordanbaird-ice' # hide menu bar
-cask 'transmission'
-cask 'rar' # compression
-
-# Fonts
-cask 'font-lato'
-cask 'font-meslo-for-powerlevel10k'
-cask 'font-inter'
-cask 'font-mulish'
-
-cask 'abbyy-finereader-pdf'
-cask 'eid-be'
-cask 'eid-be-viewer'
-cask 'rectangle'
-
-cask '1password-cli'
-cask 'google-cloud-sdk'
-cask 'google-drive'
-#cask 'microsoft-office'
-cask 'microsoft-word'
-cask 'microsoft-excel'
-cask 'microsoft-powerpoint'
-cask 'microsoft-remote-desktop'
-cask 'visual-studio-code'
-
-cask 'fujitsu-scansnap-home' # to connect the scanner directly. warning, needs rosetta
-
-cask 'imageoptim' # image optimizer (for web and other)
-
-#cask 'zoom' # you know, for zoom
-
-cask 'notion' # notion.so
-cask 'notion-calendar' # notion.so calendar
+## Casks: mac tools
+# Application launcher and productivity software
+#cask "alfred"
+# Terminal emulator that uses platform-native UI and GPU acceleration
+#cask "ghostty"
+# Automated organisation
+#cask "hazel"
+# Terminal emulator as alternative to Apple's Terminal app
+#cask "iterm2"
+# Menu bar manager
+#cask "jordanbaird-ice"
+# Tool to prevent the system from going into sleep mode
+cask "keepingyouawake"
+# Move and resize windows using keyboard shortcuts or snap areas
+#cask "rectangle"
+# Customise mouse buttons, wheels and cursor speed
+#cask "steermouse"
+# Menu bar customization tool
+#cask "swiftbar"
+# Control your data usage on slow or expensive networks
+cask "tripmode"
 
 
-# messaging
-cask 'telegram' # telegram messaging
-cask 'whatsapp'
-cask 'discord'
-
-#cask 'cask-drivers/yubico-yubikey-manager' # Yubico manager
-
-
-
-# Quicklook
-cask 'slack'
-#cask 'pdf-expert'
-
-cask 'adobe-digital-editions' # ePUB protected by Adobe DRM
-
-#cask 'camo-studio' # use iphone as webcam
-
-cask 'ransomwhere' # generic ransomware activity detection. https://objective-see.com/products/ransomwhere.html
-# requires rosetta!
-cask 'knockknock' # who there? https://objective-see.com/products/knockknock.html
-cask 'blockblock' # monitor persistent locations and un-notorized code
-
-cask 'cleanshot' # nice screenshots and editing
-
-#cask 'clockify' # time tracker
-#cask 'clocker' # time zone aware clock in the menu bar
-
-#cask 'logi-options-plus' #for logitech keyboard stuff - GARBAGE. Don't use anymore ...
-cask 'steermouse' # replacement for the logi bloatware
-
-cask 'nordvpn' # vpn
-cask 'openvpn-connect' # openvpn connect, for testing (use tunnelblick)
-cask 'tunnelblick'
-cask 'wireshark'
-
-cask 'chatgpt' # my friend Chadd
-cask 'claude' # my friend klood
+## Casks: network, security and backup
+# Stand alone ad blocker
+cask "adguard"
+# Data backup and storage service
+cask "backblaze"
+# Monitors common persistence locations
+cask "blockblock"
+# Web debugging Proxy application
+cask "charles"
+# Tool to show what is persistently installed on the computer
+cask "knockknock"
+# Protect your personal files
+cask "ransomwhere"
+# Network protocol analyzer
+cask "wireshark-app"
 
 
-# Mac App Store
-mas "1Password for Safari", id: 1569813296
-mas "Keynote", id: 409183694
-mas "Numbers", id: 409203825
-mas "Pages", id: 409201541
-mas "Photomator", id: 1444636541
-mas "SQLPro for MSSQL", id: 828466809
-mas "TestFlight", id: 899247664
-mas "Toggl Track", id: 1291898086
-mas "Xmind", id: 1327661892
-mas "Velja", id: 1607635845
+## Casks: VPN
+# VPN client for secure internet access and private browsing
+cask "nordvpn"
+# Client program for the OpenVPN Access Server
+cask "openvpn-connect"
+# Free and open-source OpenVPN client
+cask "tunnelblick"
 
-# not here yet:
-#
-# cpdf and cpdfsqueeze -> https://github.com/coherentgraphics/cpdf-binaries
-# https://www.canon-europe.com/support/consumer_products/products/printers/laser/i-sensys_lbp613cdw.html?type=drivers&driverdetailid=tcm:13-1943119&os=macos%2010.15%20%28catalina%29&language=en
+## Casks: AI
+# OpenAI's official ChatGPT desktop app
+cask "chatgpt"
+# Anthropic's official Claude AI desktop app
+cask "claude"
 
-# iterm2 color scheme catppuccin-mocha
-# mesloNGS-10
+## Casks: belgian eID
+cask "eid-be"
+cask "eid-be-viewer"
+
+## Casks: browsers
+# Web browser
+cask "firefox"
+# Web browser
+cask "google-chrome"
+
+## Casks: remote management, kube and docker
+# Kubernetes IDE
+cask "lens"
+# Remote desktop client
+cask "microsoft-remote-desktop"
+# Replacement for Docker Desktop
+#cask "orbstack"
+# Virtual machines UI using QEMU
+cask "utm"
+
+## Fonts
+cask "font-inter"
+cask "font-lato"
+cask "font-meslo-for-powerlevel10k"
+cask "font-mulish"
+
+## Entertainment
+# Music streaming service
+cask "spotify"
+
+# Apple store apps
+# make sure you're logged in first
+# mas "1Password for Safari", id: 1569813296
+# mas "Apple Configurator", id: 1037126344
+# mas "CrystalFetch", id: 6454431289
+# mas "eID-Signer", id: 1407740667
+# mas "Keynote", id: 409183694
+# mas "Numbers", id: 409203825
+# mas "Pages", id: 409201541
+# mas "Photomator", id: 1444636541
+# mas "SQLPro for MSSQL", id: 828466809
+# mas "TestFlight", id: 899247664
+# mas "Toggl Track", id: 1291898086
+## mas "Velja", id: 1607635845
+# mas "Xcode", id: 497799835
+# mas "Xmind", id: 1327661892
