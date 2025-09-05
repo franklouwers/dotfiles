@@ -58,3 +58,6 @@ alias kubecheck="kubectl df-pv; pluto detect-helm -owide -v2; kubectl version"
 function terminfoghostty() {
   infocmp -x | ssh $1 -- tic -x -
 }
+
+alias stackitlogin='stackit auth login && export STACKIT_SERVICE_ACCOUNT_TOKEN=$(stackit auth get-access-token 2>/dev/stdout)'
+alias restack='export STACKIT_SERVICE_ACCOUNT_TOKEN=$(stackit auth get-access-token 2>/dev/stdout)'

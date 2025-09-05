@@ -61,8 +61,3 @@ zcomet compinit
 # hooks
 _evalcache /opt/homebrew/bin/brew shellenv
 _evalcache zoxide init zsh
-
-# krew path
-export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
-
-alias claude="/Users/frank/.claude/local/claude"

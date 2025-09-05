@@ -1,0 +1,207 @@
+#!/usr/bin/env node
+
+const https = require('https');
+
+// Free API options (no key required)
+const API_ENDPOINTS = {
+  // Primary: exchangerate-api.com (free tier: 1500 requests/month)
+  primary: 'https://api.exchangerate-api.com/v4/latest/',
+  // Fallback: fixer.io has a free tier but requires signup
+  // Alternative: currencyapi.com, exchangeratesapi.io
+};
+
+// Function to fetch exchange rates from API
+function getExchangeRates(baseCurrency) {
+  return new Promise((resolve, reject) => {
+    const url = `${API_ENDPOINTS.primary}${baseCurrency}`;
+
+    https.get(url, (res) => {
+      let data = '';
+
+      res.on('data', (chunk) => {
+        data += chunk;
+      });
+
+      res.on('end', () => {
+        try {
+          const response = JSON.parse(data);
+
+          if (response.rates) {
+            resolve(response.rates);
+          } else {
+            reject(new Error('Invalid API response format'));
+          }
+        } catch (error) {
+          reject(new Error('Failed to parse API response: ' + error.message));
+        }
+      });
+    }).on('error', (error) => {
+      reject(new Error('API request failed: ' + error.message));
+    });
+  });
+}
+
+// Function to evaluate mathematical expressions safely
+function evaluateExpression(expression) {
+  // Remove spaces and validate characters (only allow numbers, +, -, *, /, ., ,, parentheses)
+  const cleanExpr = expression.replace(/\s/g, '');
+
+  // Security check - only allow safe mathematical characters
+  if (!/^[0-9+\-*/.(),]+$/.test(cleanExpr)) {
+    throw new Error('Invalid characters in mathematical expression');
+  }
+
+  // Normalize European decimal format (comma as decimal separator)
+  // But be careful not to replace commas that might be in thousands separators
+  let normalizedExpr = cleanExpr;
+
+  // Replace commas that are followed by exactly 2 digits and then an operator or end
+  normalizedExpr = normalizedExpr.replace(/,(\d{2})(?=[+\-*/)]|$)/g, '.$1');
+
+  // Remove any remaining commas (thousands separators)
+  normalizedExpr = normalizedExpr.replace(/,/g, '');
+
+  try {
+    // Use Function constructor as a safer alternative to eval
+    const result = Function(`"use strict"; return (${normalizedExpr})`)();
+
+    if (typeof result !== 'number' || isNaN(result)) {
+      throw new Error('Expression did not evaluate to a valid number');
+    }
+
+    return result;
+  } catch (error) {
+    throw new Error('Invalid mathematical expression: ' + error.message);
+  }
+}
+
+// Function to parse input string
+function parseInput(input) {
+  const trimmedInput = input.trim().toLowerCase();
+
+  // Try to match full format first: "amount currency to currency"
+  let match = trimmedInput.match(/^([0-9+\-*/.(),\s]+)\s*([a-z]{3})\s*to\s*([a-z]{3})$/);
+
+  if (match) {
+    const amountExpression = match[1].trim();
+    const fromCurrency = match[2].toUpperCase();
+    const toCurrency = match[3].toUpperCase();
+
+    // Evaluate the mathematical expression
+    const amount = evaluateExpression(amountExpression);
+
+    if (amount <= 0) {
+      throw new Error('Amount must be positive');
+    }
+
+    return {
+      amount: amount,
+      originalExpression: amountExpression,
+      fromCurrency,
+      toCurrency
+    };
+  }
+
+  // Try to match just amount (no currencies) - default to USD to EUR
+  match = trimmedInput.match(/^([0-9+\-*/.(),\s]+)$/);
+
+  if (match) {
+    const amountExpression = match[1].trim();
+
+    // Evaluate the mathematical expression
+    const amount = evaluateExpression(amountExpression);
+
+    if (amount <= 0) {
+      throw new Error('Amount must be positive');
+    }
+
+    return {
+      amount: amount,
+      originalExpression: amountExpression,
+      fromCurrency: 'USD',
+      toCurrency: 'EUR'
+    };
+  }
+
+  throw new Error('Invalid format. Use: "amount [currency to currency]" (e.g., "100", "100 usd to eur", or "24.53 + 27.08 usd to eur")');
+}
+
+// Function to format number with commas
+function formatNumber(num) {
+  return num.toLocaleString('en-US', {
+    minimumFractionDigits: 2,
+    maximumFractionDigits: 2
+  });
+}
+
+// Main conversion function
+async function convertCurrency(input) {
+  try {
+    const { amount, originalExpression, fromCurrency, toCurrency } = parseInput(input);
+
+    // Show the original expression and calculated amount
+    if (originalExpression && originalExpression !== amount.toString()) {
+      console.log(`Expression: ${originalExpression} = ${formatNumber(amount)} ${fromCurrency}`);
+    }
+
+    // Show if using default currencies
+    if (fromCurrency === 'USD' && toCurrency === 'EUR' && !input.toLowerCase().includes('usd') && !input.toLowerCase().includes('eur')) {
+      console.log(`Using default currencies: USD to EUR`);
+    }
+
+    console.log(`Converting ${formatNumber(amount)} ${fromCurrency} to ${toCurrency}...`);
+
+    // Get exchange rates with base currency as source
+    const rates = await getExchangeRates(fromCurrency);
+
+    if (!rates[toCurrency]) {
+      throw new Error(`Currency ${toCurrency} not supported or invalid`);
+    }
+
+    const exchangeRate = rates[toCurrency];
+    const convertedAmount = amount * exchangeRate;
+
+    console.log(`Exchange rate: 1 ${fromCurrency} = ${exchangeRate} ${toCurrency}`);
+    console.log(`Result: ${formatNumber(convertedAmount)} ${toCurrency}`);
+
+    return {
+      originalAmount: amount,
+      originalExpression,
+      fromCurrency,
+      toCurrency,
+      exchangeRate,
+      convertedAmount
+    };
+  } catch (error) {
+    console.error('Error:', error.message);
+    return null;
+  }
+}
+
+// Command line interface
+if (require.main === module) {
+  const input = process.argv.slice(2).join(' ');
+
+  if (!input) {
+    console.log('Usage: node currency_converter.js "amount [currency to currency]"');
+    console.log('Examples:');
+    console.log('  node currency_converter.js "100"                    # Defaults to USD to EUR');
+    console.log('  node currency_converter.js "24.53 + 27.08"         # Defaults to USD to EUR');
+    console.log('  node currency_converter.js "645,77 usd to eur"');
+    console.log('  node currency_converter.js "1501.57 eur to usd"');
+    console.log('  node currency_converter.js "2,180.35 usd to eur"');
+    console.log('  node currency_converter.js "24.53 + 27.08 usd to eur"');
+    console.log('  node currency_converter.js "(100 + 50) * 2 usd to eur"');
+    console.log('');
+    console.log('Default: USD to EUR (when no currencies specified)');
+    console.log('Supported operations: +, -, *, /, parentheses');
+    console.log('Supported currencies: USD, EUR, GBP, JPY, CAD, AUD, CHF, CNY, and 160+ more');
+    console.log('Data provided by exchangerate-api.com');
+    process.exit(1);
+  }
+
+  convertCurrency(input);
+}
+
+// Export for use as module
+module.exports = { convertCurrency, getExchangeRates, parseInput };

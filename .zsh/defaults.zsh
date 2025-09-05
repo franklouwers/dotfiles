@@ -25,11 +25,6 @@ export LESS="-R"
 #export LESSOPEN="|/opt/homebrew/bin/lesspipe.sh %s" # regular lessopen
 export LESSOPEN="| lessfilter-fzf %s"
 
-# GO envvars
-export GOROOT=$(go env GOROOT)
-export GOPATH=$(go env GOPATH)
-export PATH="$PATH:$(go env GOPATH)/bin"
-
 # Krew
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 
@@ -45,3 +40,8 @@ export PKG_CONFIG_PATH="/opt/homebrew/opt/ruby/lib/pkgconfig"
 
 # defaults for wtfis. Be careful with -g, as greynoise has a low default api limit
 export WTFIS_DEFAULTS="-a -u"
+
+# GO envvars
+export GOROOT=$(go env GOROOT)
+export GOPATH=$(go env GOPATH)
+export PATH="$PATH:$(go env GOPATH)/bin"
