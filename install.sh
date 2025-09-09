@@ -34,15 +34,17 @@ brew update
 sudo softwareupdate --install-rosetta
 
 # Install all our dependencies with bundle (See Brewfile)
-brew tap homebrew/bundle
 brew bundle
 
 # zsh files from here...
+rm $HOME/.zshrc || true
+rm -rf $HOME/.zsh || true
 ln -s $HOME/.dotfiles/.zshrc $HOME/
 ln -s $HOME/.dotfiles/.zsh $HOME/
 
 # git config
 ln -s $HOME/.dotfiles/.gitconfig $HOME/
+ln -s $HOME/.dotfiles/.gitignore_global $HOME/.gitignore
 
 # Neovim files from repo
 mkdir -p $HOME/.config
@@ -52,7 +54,7 @@ git clone git@github.com:franklouwers/neovim-config.git $HOME/.config/nvim
 ln -s $HOME/.dotfiles/p10k.zsh $HOME/.p10k.zsh
 
 # Ghostty config
-ln -s $HOME/.dotfiles/ghostty $HOME/.config/
+#ln -s $HOME/.dotfiles/ghostty $HOME/.config/
 
 ### Install asdf plugins
 #. $(brew --prefix)/opt/asdf/libexec/asdf.sh
@@ -81,15 +83,19 @@ ln -s $HOME/.dotfiles/ghostty $HOME/.config/
 #asdf global ruby $(asdf list ruby)
 #. $(brew --prefix)/opt/asdf/libexec/asdf.sh
 
-_evalcache /opt/homebrew/bin/brew shellenv
+eval $(/opt/homebrew/bin/brew shellenv)
 
 # Install global ruby packages
+export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
+export LDFLAGS="-L/opt/homebrew/opt/ruby/lib"
+export CPPFLAGS="-I/opt/homebrew/opt/ruby/include"
+
 gem install yaml2json
 gem install solargraph
 gem install ruby-lsp
 
 ## Symlink the Mackup config file to the home directory
-ln -s $HOME/.dotfiles/.mackup.cfg $HOME/.mackup.cfg # do we still use this? TODO
+#ln -s $HOME/.dotfiles/.mackup.cfg $HOME/.mackup.cfg # do we still use this? TODO
 
 # vim lsp
 npm install --global dockerfile-language-server-nodejs # dockerfile

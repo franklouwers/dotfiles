@@ -7,6 +7,7 @@ tap "kreuzwerker/taps"
 tap "mike-engel/jwt-cli"
 tap "natesales/repo", "https://github.com/natesales/repo"
 tap "suzuki-shunsuke/tfmv"
+tap "stackitcloud/tap"
 
 ## data and general purpose tools
 # Archive manager for data compression and backups
@@ -70,6 +71,8 @@ brew "terraform"
 ## Cloud management tools (non-IaaC), including kube tools
 # Official Amazon AWS command-line interface
 brew "awscli"
+# Official Stackit-cli companion
+cask "stackitcloud/stackit"
 # Bring your existing Azure resources under the management of Terraform
 brew "aztfexport"
 # Microsoft Azure CLI 2.0
@@ -102,6 +105,8 @@ cask "session-manager-plugin"
 brew "automake"
 # Python code formatter
 brew "black"
+# Extremely fast Python package installer and resolver, written in Rust
+brew "uv"
 # Good-lookin' diffs with diff-highlight and more
 brew "diff-so-fancy"
 # Lint your Python code for style and logical errors
@@ -285,7 +290,7 @@ cask "keepingyouawake"
 # Move and resize windows using keyboard shortcuts or snap areas
 #cask "rectangle"
 # Customise mouse buttons, wheels and cursor speed
-#cask "steermouse"
+cask "steermouse" # yep, steel need this
 # Menu bar customization tool
 #cask "swiftbar"
 # Control your data usage on slow or expensive networks
@@ -320,8 +325,9 @@ cask "tunnelblick"
 ## Casks: AI
 # OpenAI's official ChatGPT desktop app
 cask "chatgpt"
-# Anthropic's official Claude AI desktop app
+# Anthropic's official Claude AI desktop app and cli companion
 cask "claude"
+cask "claude-code"
 
 ## Casks: belgian eID
 cask "eid-be"
@@ -336,18 +342,21 @@ cask "google-chrome"
 ## Casks: remote management, kube and docker
 # Kubernetes IDE
 cask "lens"
-# Remote desktop client
-cask "microsoft-remote-desktop"
-# Replacement for Docker Desktop
-#cask "orbstack"
+# Remote desktop client - deprecated
+#cask "microsoft-remote-desktop" - deprecated
+# Replacement for Docker Desktop - there are still things `container` can't do
+cask "orbstack"
 # Virtual machines UI using QEMU
 cask "utm"
+# Apple's Container thingie
+cask "container"
 
 ## Fonts
 cask "font-inter"
 cask "font-lato"
 cask "font-meslo-for-powerlevel10k"
 cask "font-mulish"
+cask "font-open-dyslexic"
 
 ## Entertainment
 # Music streaming service

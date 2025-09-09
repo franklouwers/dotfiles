@@ -50,7 +50,7 @@ zcomet snippet $HOME/.zsh/defaults.zsh
 zcomet snippet $HOME/.zsh/secrets.zsh
 
 # orbstack
-zcomet snippet $HOME/.orbstack/shell/init.zsh
+#zcomet snippet $HOME/.orbstack/shell/init.zsh
 
 # yubikey ssh agent
 #export SSH_AUTH_SOCK="/opt/homebrew/var/run/yubikey-agent.sock"
