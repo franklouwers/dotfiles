@@ -61,3 +61,7 @@ function terminfoghostty() {
 
 alias stackitlogin='stackit auth login && export STACKIT_SERVICE_ACCOUNT_TOKEN=$(stackit auth get-access-token 2>/dev/stdout)'
 alias restack='export STACKIT_SERVICE_ACCOUNT_TOKEN=$(stackit auth get-access-token 2>/dev/stdout)'
+
+# bat
+alias cat='bat --style=plain'
+alias catp='bat'  # with style

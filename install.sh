@@ -47,11 +47,14 @@ ln -s $HOME/.dotfiles/.gitconfig $HOME/
 ln -s $HOME/.dotfiles/.gitignore_global $HOME/.gitignore
 
 # Neovim files from repo
-mkdir -p $HOME/.config
 git clone git@github.com:franklouwers/neovim-config.git $HOME/.config/nvim
 
 # p10k config
 ln -s $HOME/.dotfiles/p10k.zsh $HOME/.p10k.zsh
+
+# bat themes
+ln -s $HOME/.dotfiles/bat $HOME/.config/bat
+bat cache --build
 
 # Ghostty config
 #ln -s $HOME/.dotfiles/ghostty $HOME/.config/

@@ -2,10 +2,13 @@
   email = frank@louwers.be
   name = Frank Louwers
   signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIPzAulvKp8l2cHRIVhi1c3Z8uprO7UrwENZShOT5S/gu
+
 [gpg]
   format = ssh
+
 [gpg "ssh"]
   program = /Applications/1Password.app/Contents/MacOS/op-ssh-sign
+
 [commit]
   gpgsign = true
 
@@ -17,6 +20,7 @@
 
 [init]
   defaultBranch = main
+
 [push]
   autoSetupRemote = true
   default = current
@@ -27,5 +31,19 @@
 [alias]
   pushf = push --force-with-lease --force-if-includes
   pullm = pull origin main --no-ff
+
 [pull]
 	rebase = false
+
+[core]
+    pager = delta
+
+[interactive]
+    diffFilter = delta --color-only
+
+[delta]
+    navigate = true  # use n and N to move between diff sections
+ #   dark = true      # or light = true, or omit for auto-detection
+
+[merge]
+    conflictStyle = zdiff3

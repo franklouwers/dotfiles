@@ -45,3 +45,11 @@ export WTFIS_DEFAULTS="-a -u"
 export GOROOT=$(go env GOROOT)
 export GOPATH=$(go env GOPATH)
 export PATH="$PATH:$(go env GOPATH)/bin"
+
+# Delta, better (git) diffs
+export GIT_PAGER='delta'
+export DELTA_PAGER='less -R'
+
+# Bat
+export BAT_THEME="everforest-soft"
+export MANPAGER="sh -c 'col -bx | bat -l man -p'"
