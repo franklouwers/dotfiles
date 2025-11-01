@@ -18,5 +18,6 @@ Host *
   ControlPath ~/.ssh/control/%r@%h_%p
   ControlMaster auto
   ControlPersist 1h
+
   ForwardAgent no
-#  UseKeychain yes # e.g. Forklift needs this for sftp
+  SendEnv -LC_*

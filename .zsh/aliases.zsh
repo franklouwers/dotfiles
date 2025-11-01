@@ -53,7 +53,7 @@ function gitclean() {
 done
 }
 
-alias kubecheck="kubectl df-pv; pluto detect-helm -owide -v2; kubectl version"
+alias kubecheck="kubectl df-pv; pluto detect-helm -owide -v2; kubectl version; kubectl get certificaterequests.cert-manager.io -A | grep -i False"
 
 function terminfoghostty() {
   infocmp -x | ssh $1 -- tic -x -

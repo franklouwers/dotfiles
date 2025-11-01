@@ -53,3 +53,6 @@ export DELTA_PAGER='less -R'
 # Bat
 export BAT_THEME="everforest-soft"
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+
+# Claude
+export PATH="$HOME/.local/bin:$PATH"

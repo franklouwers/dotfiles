@@ -110,6 +110,9 @@ npm install -g bash-language-server    # yamlls
 npm install -g https://github.com/lttb/gh-actions-language-server # standalone github actions LSP
 npm install -g bun # like all the cool kidz in town do
 
+# df-pv
+curl https://krew.sh/df-pv | bash
+
 open -a Dropbox
 
 # requires rosetta!
@@ -123,9 +126,9 @@ open -a Dropbox
 gcloud components install gke-gcloud-auth-plugin
 
 mkdir -p $HOME/bin
-cp -a bin/* $HOME/bin
-mkdir -p $HOME/.config/swiftbar
-cp ipv6-toggle.1s.sh $HOME/.config/swiftbar
+#cp -a bin/* $HOME/bin
+#mkdir -p $HOME/.config/swiftbar
+#cp ipv6-toggle.1s.sh $HOME/.config/swiftbar
 
 ### mark-text isn't properly signed
 # needed as long as https://github.com/marktext/marktext/issues/2983 is open
