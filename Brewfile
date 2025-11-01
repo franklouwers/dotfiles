@@ -276,7 +276,7 @@ cask "whatsapp"
 
 ## Casks: mac tools
 # Application launcher and productivity software
-#cask "alfred"
+cask "alfred" # sorry apple, but alfred still beats spotlight, even in Tahoe
 # Terminal emulator that uses platform-native UI and GPU acceleration
 #cask "ghostty"
 # Automated organisation

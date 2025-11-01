@@ -551,4 +551,9 @@ chflags nohidden ~/Library
 
 for app in Safari Finder Dock Mail SystemUIServer; do killall "$app" >/dev/null 2>&1; done
 
+# Load key shortcuts
+defaults import com.apple.symbolichotkeys ./keys.xml
+/System/Library/PrivateFrameworks/SystemAdministration.framework/Resources/activateSettings -u
+
+
 sudo chmod -N ~/.Trash # remove special permissions from trash, otherwise eg Hazel can't remove
