@@ -72,7 +72,7 @@ brew "terraform"
 # Official Amazon AWS command-line interface
 brew "awscli"
 # Official Stackit-cli companion
-cask "stackitcloud/stackit"
+cask "stackitcloud/tap/stackit"
 # Bring your existing Azure resources under the management of Terraform
 brew "aztfexport"
 # Microsoft Azure CLI 2.0
@@ -99,8 +99,18 @@ brew "fairwindsops/tap/pluto"
 cask "gcloud-cli"
 # Plugin for AWS CLI to start and end sessions that connect to managed instances
 cask "session-manager-plugin"
+# Cloudflare workers cli
+brew "cloudflare-wrangler"
 
 ## dev tools excluding interpreters/compilers, but including language servers
+# helm language server
+brew "helm-ls"
+# ansible language server
+brew "ansible-language-server"
+# Ruby LSP
+brew "ruby-lsp"
+# Python LSP
+brew "python-lsp-server"
 # Tool for generating GNU Standards-compliant Makefiles
 brew "automake"
 # Python code formatter
@@ -129,6 +139,8 @@ brew "libressl"
 brew "libusb"
 # Package manager for the Lua programming language
 brew "luarocks"
+# Lua LS
+brew "lua-language-server"
 # Language Server Protocol for Markdown
 brew "marksman"
 # Ambitious Vim-fork focused on extensibility and agility
@@ -137,10 +149,8 @@ brew "neovim"
 brew "pkgconf"
 # Code formatter for JavaScript, CSS, JSON, GraphQL, Markdown, YAML
 brew "prettier"
-# Opinionated Lua code formatter
-brew "stylua"
-# Terraform Language Server
-brew "terraform-ls"
+# OpenTofu Language Server
+brew "tofu-ls"
 # CLI to rename Terraform resources and generate moved blocks
 brew "tfmv"
 # Extensible command-line tool to format YAML files
@@ -349,18 +359,19 @@ cask "orbstack"
 # Virtual machines UI using QEMU
 cask "utm"
 # Apple's Container thingie
-cask "container"
+brew "container"
 
 ## Fonts
 cask "font-inter"
 cask "font-lato"
 cask "font-meslo-for-powerlevel10k"
 cask "font-mulish"
-cask "font-open-dyslexic"
+cask "font-opendyslexic"
 
 ## Entertainment
 # Music streaming service
 cask "spotify"
+cask "tidal"
 
 # Apple store apps
 # make sure you're logged in first
