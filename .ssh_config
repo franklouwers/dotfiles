@@ -9,10 +9,13 @@ Include ~/.dotfiles-pvt/.ssh/ssh_config-secret
 #   IdentitiesOnly yes
 #   IdentityFile ~/.ssh/1pkeys/github.pub
 
-## Default
+  ## Default
 Host *
   ServerAliveInterval 60
   IdentityAgent "~/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock"
+
+  # prefer post-quantum Kex
+  KexAlgorithms sntrup761x25519-sha512@openssh.com,curve25519-sha256,curve25519-sha256@libssh.org
 
   #Speed up reconnects
   ControlPath ~/.ssh/control/%r@%h_%p

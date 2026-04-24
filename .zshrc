@@ -64,3 +64,12 @@ _evalcache zoxide init zsh
 
 # krew path
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
+
+# pnpm
+export PNPM_HOME="/Users/frank/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
+source ~/.safe-chain/scripts/init-posix.sh # Safe-chain Zsh initialization script

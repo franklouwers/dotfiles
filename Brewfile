@@ -103,6 +103,10 @@ cask "session-manager-plugin"
 brew "cloudflare-wrangler"
 
 ## dev tools excluding interpreters/compilers, but including language servers
+# Typescript language server
+brew "typescript-language-server"
+# Volar / Vue language server
+brew "vue-language-server"
 # helm language server
 brew "helm-ls"
 # ansible language server
@@ -141,6 +145,8 @@ brew "libusb"
 brew "luarocks"
 # Lua LS
 brew "lua-language-server"
+# lua styling
+brew "stylua"
 # Language Server Protocol for Markdown
 brew "marksman"
 # Ambitious Vim-fork focused on extensibility and agility

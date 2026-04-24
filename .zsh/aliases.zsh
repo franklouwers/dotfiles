@@ -65,3 +65,7 @@ alias restack='export STACKIT_SERVICE_ACCOUNT_TOKEN=$(stackit auth get-access-to
 # bat
 alias cat='bat --style=plain'
 alias catp='bat'  # with style
+
+# silly printers that can't print complex pdfs
+function pdfsilly() { gs -dNOPAUSE -dBATCH -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -sOutputFile="${1%.pdf}_fixed.pdf" "$1"; }
+
