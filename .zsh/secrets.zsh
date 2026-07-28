@@ -36,6 +36,7 @@ else
     fetch_and_save_secret "louwers" "op://Personal/AbuseIPDB/api" "ABUSEIPDB_API_KEY"
     fetch_and_save_secret "louwers" "op://Personal/toggl api/credential" "TOGGL_API_KEY"
     fetch_and_save_secret "louwers" "op://Personal/billit api Kiwazo/credential" "BILLIT_API_KEY"
+    fetch_and_save_secret "louwers" "op://Personal/Huggingface READ creds/credential" "HF_TOKEN"
 
     # Source the newly created secrets file
     source "$secrets_file"

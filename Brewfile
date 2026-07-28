@@ -304,9 +304,10 @@ cask "alfred" # sorry apple, but alfred still beats spotlight, even in Tahoe
 # Tool to prevent the system from going into sleep mode
 cask "keepingyouawake"
 # Move and resize windows using keyboard shortcuts or snap areas
-#cask "rectangle"
+cask "rectangle"
 # Customise mouse buttons, wheels and cursor speed
-cask "steermouse" # yep, steel need this
+#cask "steermouse"
+cask "mos"
 # Menu bar customization tool
 #cask "swiftbar"
 # Control your data usage on slow or expensive networks
